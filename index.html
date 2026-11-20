@@ -1,0 +1,1250 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>MPSC Career Hub — राज्यसेवा, गट-ब, गट-क | पूर्ण मोफत</title>
+<meta name="description" content="MPSC च्या राज्यसेवा, गट-ब आणि गट-क परीक्षांचा पूर्ण अभ्यासक्रम मराठीत, एकाच ठिकाणी — परीक्षा पॅटर्न, विषयवार घटक, पुस्तकांची यादी आणि तयारीच्या टिप्स. पूर्णपणे मोफत." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --surface2:#eef1f6;
+    --ink:#16233a; --ink2:#43536e; --line:#d8dfea;
+    --navy:#0b2c4a; --navy2:#10395f;
+    --saffron:#e8760a; --saffron-soft:#fdf0e0;
+    --green:#177245; --green-soft:#e4f3ea;
+    --red:#b3372f;
+    --chip:#e8edf4;
+    --shadow:0 2px 10px rgba(11,44,74,.08);
+    --head:'Baloo 2',system-ui,sans-serif;
+    --body:'Mukta',system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1522; --surface:#16222f; --surface2:#1c2c3f;
+      --ink:#e8eef7; --ink2:#a9b8cd; --line:#2c3f57;
+      --navy:#0a1f36; --navy2:#12365e;
+      --saffron:#f08c2e; --saffron-soft:#3a2a16;
+      --green:#4cc38a; --green-soft:#173528;
+      --chip:#22344d;
+      --shadow:0 2px 10px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2.25rem}
+  a{color:var(--navy2)}
+  @media (prefers-color-scheme: dark){ a{color:#8fc1f5} }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 64px}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--navy);color:#fff;margin:0 -16px;padding:30px 20px 26px;border-radius:0 0 22px 22px}
+  @media(min-width:700px){.hero{padding:40px 36px 32px}}
+  .hero h1{font-family:var(--head);font-size:clamp(28px,5.4vw,44px);line-height:1.2;margin:0 0 8px;font-weight:800}
+  .hero h1 .hl{color:#ffb25e}
+  .hero p{margin:0 0 14px;color:#d7e4f2;max-width:720px;font-size:17px}
+  .hero .truth{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 14px;font-size:15.5px;color:#eef4fb;max-width:760px}
+  .hero .truth strong{color:#ffb25e}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .hero-stats .stat{background:rgba(255,255,255,.08);border-radius:10px;padding:8px 14px;font-size:15px}
+  .hero-stats .stat b{font-family:var(--head);font-size:19px;color:#fff;display:block;line-height:1.15}
+  .hero-stats .stat span{color:#bcd2ea;font-size:13.5px}
+
+  /* ---------- Controls ---------- */
+  .controls{position:sticky;top:0;z-index:20;background:var(--bg);padding:14px 0 10px}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .tab{font-family:var(--body);font-weight:700;font-size:16px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 18px;cursor:pointer;min-height:44px}
+  .tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .searchrow{display:flex;gap:8px}
+  .searchrow input{flex:1;font-family:var(--body);font-size:16px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);min-height:46px}
+  .searchrow input:focus{outline:2px solid var(--saffron);outline-offset:1px;border-color:transparent}
+  .search-note{font-size:14px;color:var(--ink2);margin:8px 2px 0;min-height:20px}
+
+  /* ---------- Exam cards (overview) ---------- */
+  .overview{display:grid;gap:14px;margin:18px 0 6px}
+  @media(min-width:820px){.overview{grid-template-columns:repeat(3,1fr)}}
+  .ocard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+  .ocard h2{font-family:var(--head);font-size:22px;margin:0 0 2px}
+  .ocard .posts{color:var(--ink2);font-size:14.5px;margin:0 0 12px}
+  .ocard ul{list-style:none;margin:0 0 14px;padding:0;font-size:15.5px}
+  .ocard ul li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .ocard ul li:last-child{border-bottom:none}
+  .ocard ul li b{font-family:var(--head);white-space:nowrap}
+  .jump{display:inline-block;background:var(--saffron);color:#fff;font-weight:700;text-decoration:none;border-radius:10px;padding:10px 16px;font-size:15.5px;min-height:44px}
+  .tag{display:inline-block;background:var(--saffron-soft);color:var(--saffron);font-weight:700;font-size:13px;border-radius:999px;padding:2px 10px;margin-bottom:8px}
+  @media (prefers-color-scheme: dark){ .tag{color:#ffb25e} }
+
+  /* ---------- Exam sections ---------- */
+  .exam{margin-top:34px}
+  .exam-head{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .exam-head h2{font-family:var(--head);font-size:clamp(24px,4.5vw,32px);margin:0;line-height:1.25}
+  .exam-head .sub{color:var(--ink2);margin:2px 0 0;font-size:15.5px;flex-basis:100%}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px;box-shadow:var(--shadow)}
+  .card h3{font-family:var(--head);font-size:20px;margin:0 0 10px}
+  .card h4{font-family:var(--head);font-size:17.5px;margin:18px 0 6px;color:var(--navy2)}
+  @media (prefers-color-scheme: dark){ .card h4{color:#8fc1f5} }
+  .card h4:first-of-type{margin-top:6px}
+  .card p{margin:6px 0}
+  .small{font-size:14.5px;color:var(--ink2)}
+
+  .ptable{width:100%;border-collapse:collapse;font-size:15.5px;margin:6px 0 4px}
+  .ptable th,.ptable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  .ptable th{background:var(--surface2);font-family:var(--head);font-weight:700}
+  .ptable td.num,.ptable th.num{text-align:center;white-space:nowrap}
+  .stack-note{display:none}
+
+  .topics{list-style:none;margin:4px 0;padding:0}
+  .topics li{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;border-radius:10px;border:1px solid transparent}
+  .topics li:nth-child(odd){background:var(--surface2)}
+  .topics li .t{flex:1}
+  .topics li .t b{font-weight:700}
+  .done-btn{flex:none;font-family:var(--body);font-size:13.5px;font-weight:700;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);border-radius:999px;padding:4px 12px;cursor:pointer;min-height:36px;min-width:64px}
+  .done-btn[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+  li.is-done .t{color:var(--ink2);text-decoration:line-through;text-decoration-thickness:1px}
+  .progress{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden;margin:10px 0 4px;border:1px solid var(--line)}
+  .progress i{display:block;height:100%;width:0;background:var(--green);transition:width .3s ease}
+  .progress-label{font-size:14px;color:var(--ink2)}
+
+  .books{list-style:none;margin:4px 0;padding:0}
+  .books li{padding:8px 0;border-bottom:1px dashed var(--line)}
+  .books li:last-child{border-bottom:none}
+  .books b{font-weight:700}
+  .books .for{color:var(--ink2);font-size:14.5px}
+
+  .tips{background:var(--green-soft);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:15.5px}
+  .tips b{color:var(--green)}
+  .warnbox{background:var(--saffron-soft);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:15.5px}
+  .warnbox b{color:var(--saffron)}
+  @media (prefers-color-scheme: dark){ .warnbox b{color:#ffb25e} }
+
+  /* ---------- Quiz ---------- */
+  .quiz-intro{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;border-radius:16px;padding:18px 20px;margin-top:16px}
+  .quiz-intro h2{font-family:var(--head);font-size:21px;margin:0 0 4px}
+  .quiz-intro p{margin:0;color:#d7e4f2;font-size:15px;max-width:640px}
+  .quiz-intro .links{display:flex;gap:8px;flex-wrap:wrap}
+  .quiz-intro .links a{background:var(--saffron);color:#fff;font-weight:700;text-decoration:none;border-radius:10px;padding:10px 14px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+  .quiz-card{border-top:4px solid var(--saffron)}
+  .quiz-card h3{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .quiz-card h3 .qbadge{background:var(--saffron);color:#fff;font-size:13px;font-family:var(--body);font-weight:700;border-radius:999px;padding:2px 10px}
+  .stage-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 4px}
+  .stage-btn{font-family:var(--body);font-weight:700;font-size:15px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:9px 14px;cursor:pointer;min-height:46px;text-align:left}
+  .stage-btn small{display:block;font-weight:500;font-size:13px;color:var(--ink2)}
+  .stage-btn[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .stage-btn[aria-pressed="true"] small{color:#bcd2ea}
+  .stage-btn .best{display:block;font-size:12.5px;font-weight:700;color:var(--green)}
+  .stage-btn[aria-pressed="true"] .best{color:#8fe3b6}
+  .quiz-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14.5px;color:var(--ink2);margin:12px 0 6px}
+  .quiz-meta b{color:var(--ink);font-family:var(--head)}
+  .qbar{height:9px;background:var(--surface2);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:14px}
+  .qbar i{display:block;height:100%;background:var(--saffron);transition:width .3s ease}
+  .qtext{font-size:18px;font-weight:700;line-height:1.5;margin:0 0 12px}
+  .opts{display:grid;gap:9px}
+  @media(min-width:700px){.opts{grid-template-columns:1fr 1fr}}
+  .opt{font-family:var(--body);font-size:16px;text-align:left;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:12px 14px;cursor:pointer;min-height:52px;width:100%}
+  .opt:hover:not(:disabled){border-color:var(--saffron)}
+  .opt:disabled{cursor:default;opacity:1}
+  .opt .ol{display:inline-block;font-family:var(--head);font-weight:800;color:var(--saffron);margin-right:8px}
+  .opt.is-right{background:var(--green-soft);border-color:var(--green)}
+  .opt.is-wrong{background:#fbeae8;border-color:var(--red)}
+  @media (prefers-color-scheme: dark){ .opt.is-wrong{background:#3d201d} }
+  .explain{display:none;border-radius:12px;padding:12px 14px;margin-top:12px;font-size:15.5px;background:var(--surface2)}
+  .explain.show{display:block}
+  .explain .verdict{font-family:var(--head);font-weight:800;display:block;margin-bottom:2px}
+  .explain .verdict.ok{color:var(--green)}
+  .explain .verdict.no{color:var(--red)}
+  .quiz-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+  .qbtn{font-family:var(--body);font-weight:700;font-size:15.5px;border-radius:10px;padding:11px 18px;cursor:pointer;min-height:46px;border:1.5px solid var(--navy);background:var(--navy);color:#fff}
+  .qbtn.alt{background:var(--surface);color:var(--ink);border-color:var(--line)}
+  .qbtn.saffron{background:var(--saffron);border-color:var(--saffron)}
+  .qbtn.skip{background:var(--surface);color:var(--ink2);border-color:var(--line)}
+  .qbtn.skip:hover{border-color:var(--saffron);color:var(--ink)}
+  .quiz-result{text-align:center;padding:10px 4px 4px}
+  .quiz-result .score{font-family:var(--head);font-size:44px;font-weight:800;line-height:1.1;color:var(--navy2)}
+  @media (prefers-color-scheme: dark){ .quiz-result .score{color:#8fc1f5} }
+  .quiz-result .msg{font-size:17px;margin:6px 0 2px}
+  .quiz-result .sub2{color:var(--ink2);font-size:15px;margin:0}
+  .quiz-result .quiz-actions{justify-content:center}
+  .qbtn.next10{display:block;width:100%;font-size:19px;padding:16px 20px;margin-top:16px;border-radius:12px;box-shadow:var(--shadow)}
+  .quiz-result .cumul{font-size:15.5px;color:var(--ink2);margin:8px 0 2px}
+  .quiz-result .cumul b{color:var(--ink)}
+  .quiz-start p{margin:6px 0}
+
+  .hidden{display:none !important}
+  .noresult{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--ink2);margin-top:16px}
+
+  /* ---------- Footer sections ---------- */
+  .foot{margin-top:38px}
+  .foot .card h3{font-size:19px}
+  .steps{margin:6px 0;padding-left:22px}
+  .steps li{margin:6px 0}
+  footer{margin-top:30px;color:var(--ink2);font-size:14px;text-align:center}
+  footer a{font-weight:600}
+
+  @media(max-width:560px){
+    .ptable thead{display:none}
+    .ptable,.ptable tbody,.ptable tr,.ptable td{display:block;width:100%}
+    .ptable tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+    .ptable td{border:none;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}
+    .ptable td:last-child{border-bottom:none}
+    .ptable td::before{content:attr(data-l);font-weight:700;font-family:var(--head);color:var(--ink2);flex:none}
+    .ptable td.num{text-align:right}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .progress i{transition:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <h1>MPSC Career Hub — <span class="hl">सगळं एकाच ठिकाणी, पूर्ण मोफत</span></h1>
+    <p>राज्यसेवा, गट-ब आणि गट-क — तिन्ही परीक्षांचा विषयवार अभ्यासक्रम, परीक्षा पॅटर्न, पुस्तकांची यादी आणि तयारीच्या टिप्स. मराठीत, सोप्या भाषेत.</p>
+    <div class="hero-stats">
+      <div class="stat"><b>३</b><span>परीक्षा एकाच साइटवर</span></div>
+      <div class="stat"><b>पूर्व + मुख्य</b><span>दोन्ही टप्प्यांचा अभ्यासक्रम</span></div>
+      <div class="stat"><b>₹०</b><span>कोणतेही शुल्क नाही</span></div>
+      <div class="stat"><b>मराठी</b><span>पूर्ण माहिती मराठीत</span></div>
+      <div class="stat"><b>१०० फेऱ्या क्विझ</b><span>३ टप्पे · प्रति टप्पा १,००० प्रश्न · प्रत्येक फेरीत वेगळे १०</span></div>
+    </div>
+  </header>
+
+  <!-- ================= OVERVIEW ================= -->
+  <section class="overview" aria-label="परीक्षांचा आढावा">
+    <article class="ocard">
+      <span class="tag">गट-अ व राजपत्रित गट-ब</span>
+      <h2>राज्यसेवा परीक्षा</h2>
+      <p class="posts">उपजिल्हाधिकारी, पोलीस उपअधीक्षक, तहसीलदार, गटविकास अधिकारी व इतर राजपत्रित पदे</p>
+      <ul>
+        <li><span>पूर्व परीक्षा</span><b>४०० गुण</b></li>
+        <li><span>मुख्य परीक्षा</span><b>१७५० गुण</b></li>
+        <li><span>मुलाखत</span><b>२७५ गुण</b></li>
+        <li><span>मुख्यचे स्वरूप</span><b>वर्णनात्मक</b></li>
+      </ul>
+      <a class="jump" href="#rajyaseva">अभ्यासक्रम पहा ↓</a>
+    </article>
+    <article class="ocard">
+      <span class="tag">अराजपत्रित गट-ब</span>
+      <h2>गट-ब संयुक्त परीक्षा</h2>
+      <p class="posts">सहायक कक्ष अधिकारी (ASO), राज्य कर निरीक्षक (STI), पोलीस उपनिरीक्षक (PSI), दुय्यम निरीक्षक</p>
+      <ul>
+        <li><span>पूर्व परीक्षा</span><b>१०० गुण</b></li>
+        <li><span>मुख्य परीक्षा</span><b>४०० गुण</b></li>
+        <li><span>PSI जास्तीचे</span><b>शारीरिक + मुलाखत</b></li>
+        <li><span>मुख्यचे स्वरूप</span><b>वस्तुनिष्ठ</b></li>
+      </ul>
+      <a class="jump" href="#gat-b">अभ्यासक्रम पहा ↓</a>
+    </article>
+    <article class="ocard">
+      <span class="tag">अराजपत्रित गट-क</span>
+      <h2>गट-क संयुक्त परीक्षा</h2>
+      <p class="posts">तलाठी (ग्राम महसूल अधिकारी), लिपिक-टंकलेखक, कर सहाय्यक, उद्योग निरीक्षक, दुय्यम निरीक्षक (उत्पादन शुल्क)</p>
+      <ul>
+        <li><span>पूर्व परीक्षा</span><b>१०० गुण</b></li>
+        <li><span>मुख्य परीक्षा</span><b>४०० गुण</b></li>
+        <li><span>काही पदांना</span><b>टंकलेखन अर्हता</b></li>
+        <li><span>मुख्यचे स्वरूप</span><b>वस्तुनिष्ठ</b></li>
+      </ul>
+      <a class="jump" href="#gat-c">अभ्यासक्रम पहा ↓</a>
+    </article>
+  </section>
+
+  <!-- ================= QUIZ INTRO ================= -->
+  <section class="quiz-intro" aria-label="सराव क्विझ">
+    <div>
+      <h2>सराव क्विझ — प्रत्येक परीक्षेसाठी ३ टप्पे</h2>
+    </div>
+    <div class="links">
+      <a href="#quiz-rajyaseva">राज्यसेवा क्विझ</a>
+      <a href="#quiz-gat-b">गट-ब क्विझ</a>
+      <a href="#quiz-gat-c">गट-क क्विझ</a>
+    </div>
+  </section>
+
+  <!-- ================= CONTROLS ================= -->
+  <div class="controls">
+    <div class="tabs" role="group" aria-label="परीक्षा निवडा">
+      <button class="tab" data-tab="all" aria-pressed="true">सगळ्या परीक्षा</button>
+      <button class="tab" data-tab="rajyaseva" aria-pressed="false">राज्यसेवा</button>
+      <button class="tab" data-tab="gat-b" aria-pressed="false">गट-ब</button>
+      <button class="tab" data-tab="gat-c" aria-pressed="false">गट-क</button>
+    </div>
+    <div class="searchrow">
+      <input id="search" type="search" placeholder="घटक शोधा — उदा. भूगोल, संविधान, व्याकरण, अर्थव्यवस्था…" aria-label="अभ्यासक्रमात शोधा" />
+    </div>
+    <p class="search-note" id="searchNote"></p>
+  </div>
+
+  <div class="noresult hidden" id="noResult">हा घटक सापडला नाही. दुसरा शब्द वापरून पहा — उदा. “इतिहास”, “अंकगणित”, “चालू घडामोडी”.</div>
+
+  <!-- ================= RAJYASEVA ================= -->
+  <section class="exam" id="rajyaseva" data-exam="rajyaseva">
+    <div class="exam-head">
+      <h2>१. राज्यसेवा परीक्षा</h2>
+      <p class="sub">महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा → राज्यसेवा मुख्य परीक्षा (वर्णनात्मक) → मुलाखत. पूर्व परीक्षा सर्व राजपत्रित गट-अ व गट-ब संवर्गांसाठी एकच असते; तिचे गुण अंतिम निवडीत धरले जात नाहीत, ती फक्त मुख्य परीक्षेची पात्रता ठरवते.</p>
+    </div>
+
+    <div class="card">
+      <h3>परीक्षा पॅटर्न</h3>
+      <table class="ptable">
+        <thead><tr><th>टप्पा / पेपर</th><th>विषय</th><th class="num">प्रश्न</th><th class="num">गुण</th><th class="num">वेळ</th><th>स्वरूप</th></tr></thead>
+        <tbody>
+          <tr><td data-l="टप्पा">पूर्व — पेपर १</td><td data-l="विषय">सामान्य अध्ययन</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">२ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ · गुणवत्तेसाठी</td></tr>
+          <tr><td data-l="टप्पा">पूर्व — पेपर २</td><td data-l="विषय">CSAT (अभियोग्यता चाचणी)</td><td class="num" data-l="प्रश्न">८०</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">२ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ · अर्हताकारी (किमान ३३%)</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर १</td><td data-l="विषय">मराठी भाषा</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">३००</td><td class="num" data-l="वेळ">३ तास</td><td data-l="स्वरूप">वर्णनात्मक · अर्हताकारी (किमान २५%)</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर २</td><td data-l="विषय">इंग्रजी भाषा</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">३००</td><td class="num" data-l="वेळ">३ तास</td><td data-l="स्वरूप">वर्णनात्मक · अर्हताकारी (किमान २५%)</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर ३</td><td data-l="विषय">निबंध</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">२५०</td><td class="num" data-l="वेळ">३ तास</td><td data-l="स्वरूप">वर्णनात्मक · गुणवत्तेसाठी</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर ४ ते ७</td><td data-l="विषय">सामान्य अध्ययन १, २, ३, ४</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">प्रत्येकी २५०</td><td class="num" data-l="वेळ">३ तास</td><td data-l="स्वरूप">वर्णनात्मक · गुणवत्तेसाठी</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर ८ व ९</td><td data-l="विषय">वैकल्पिक विषय — पेपर १ व २</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">प्रत्येकी २५०</td><td class="num" data-l="वेळ">३ तास</td><td data-l="स्वरूप">वर्णनात्मक · गुणवत्तेसाठी</td></tr>
+          <tr><td data-l="टप्पा">मुलाखत</td><td data-l="विषय">व्यक्तिमत्त्व चाचणी</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">२७५</td><td class="num" data-l="वेळ">—</td><td data-l="स्वरूप">अंतिम गुणवत्ता = १७५० + २७५ = २०२५</td></tr>
+        </tbody>
+      </table>
+      <p class="small">नकारात्मक गुण: प्रत्येक चुकीच्या उत्तरासाठी त्या प्रश्नाच्या गुणांपैकी १/४ (२५%) गुण वजा. CSAT मधील “निर्णय क्षमता व समस्या निराकरण” प्रश्नांना आणि न सोडवलेल्या प्रश्नांना हा नियम लागू नाही. दोन्ही पूर्व पेपर देणे बंधनकारक आहे. वैकल्पिक विषय पूर्व परीक्षेचा अर्ज भरतानाच निवडावा लागतो, नंतर बदलता येत नाही.</p>
+      <div class="warnbox"><b>आगामी बदल —</b> आयोगाच्या २०२६ मधील सूचनांनुसार <b>२०२७ च्या राज्यसेवा मुख्य परीक्षेपासून वैकल्पिक विषय राहणार नाही</b>; मग गुणवत्तेसाठी ५ पेपर (निबंध + GS १–४ = १२५० गुण) आणि मुलाखत १७५ गुण अशी रचना असेल. अर्ज करण्यापूर्वी त्या वर्षाची अधिकृत जाहिरात व परीक्षा योजना mpsc.gov.in वर नक्की तपासा.</div>
+      <div class="progress" aria-hidden="true"><i data-progress="rajyaseva"></i></div>
+      <p class="progress-label" data-progress-label="rajyaseva">तुमची प्रगती: ० / ० घटक झाले (ही नोंद फक्त या भेटीपुरती राहते)</p>
+    </div>
+
+    <div class="card">
+      <h3>पूर्व परीक्षा — विषयवार अभ्यासक्रम</h3>
+      <h4>पेपर १ · सामान्य अध्ययन (२०० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>चालू घडामोडी</b> — राज्य, राष्ट्रीय व आंतरराष्ट्रीय महत्त्वाच्या घटना</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>इतिहास</b> — भारताचा इतिहास व भारतीय राष्ट्रीय चळवळ, महाराष्ट्रावर विशेष भर</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भूगोल</b> — महाराष्ट्र, भारत व जगाचा भूगोल: प्राकृतिक, सामाजिक व आर्थिक</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>राज्यव्यवस्था व प्रशासन</b> — संविधान, राजकीय व्यवस्था, पंचायती राज, नगर प्रशासन, सार्वजनिक धोरण, हक्कविषयक मुद्दे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>आर्थिक व सामाजिक विकास</b> — शाश्वत विकास, दारिद्र्य, समावेशन, लोकसंख्या, सामाजिक क्षेत्रातील उपक्रम</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>पर्यावरण</b> — पर्यावरण, जैवविविधता व हवामान बदल यांवरील सर्वसाधारण मुद्दे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सामान्य विज्ञान</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर २ · CSAT (२०० गुण, अर्हताकारी — किमान ३३%)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>आकलन</b> — उतारे वाचून प्रश्नांची उत्तरे (Comprehension)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>आंतरव्यक्ती कौशल्ये</b> — संवाद कौशल्यासह</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>तार्किक क्षमता व विश्लेषण क्षमता</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>निर्णय क्षमता व समस्या निराकरण</b> (या प्रश्नांना नकारात्मक गुण नाहीत)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सामान्य मानसिक क्षमता</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>मूलभूत अंकगणित व माहिती विश्लेषण</b> — संख्या व त्यांचे संबंध, क्रम, आलेख-तक्ते वाचणे (दहावी स्तर)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>मराठी व इंग्रजी भाषा आकलन</b> (दहावी / बारावी स्तर)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>मुख्य परीक्षा — विषयवार अभ्यासक्रम</h3>
+      <h4>पेपर १ व २ · मराठी आणि इंग्रजी (प्रत्येकी ३०० गुण, अर्हताकारी)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t">गंभीर स्वरूपाचे लेखन वाचून समजणे आणि विचार स्पष्ट, नेमकेपणाने मांडणे — उतारा, सारांश, व्याकरण, शब्दसंग्रह व संक्षेपण (दहावी स्तर). या पेपरचे गुण क्रमवारीत मोजले जात नाहीत, पण किमान २५% गुण अनिवार्य.</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ३ · निबंध (२५० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t">दिलेल्या विषयांवर निबंध — विषयाला धरून राहणे, विचारांची व्यवस्थित मांडणी आणि नेमकेपणाने लिहिणे अपेक्षित. मराठी किंवा इंग्रजी माध्यम निवडता येते.</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ४ · सामान्य अध्ययन १ — भारतीय वारसा व संस्कृती, इतिहास, भूगोल व समाज (२५० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>कला व संस्कृती</b> — प्राचीन ते आधुनिक काळातील कला, साहित्य व स्थापत्य; भक्ती चळवळ, विशेषतः महाराष्ट्रातील संत चळवळ</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>आधुनिक भारत</b> — अठराव्या शतकाच्या मध्यापासूनचा इतिहास, स्वातंत्र्यलढा, स्वातंत्र्योत्तर एकत्रीकरण व पुनर्रचना</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>जागतिक इतिहास</b> — औद्योगिक क्रांती, महायुद्धे, वसाहतवाद व वसाहतवादाचा अंत, साम्यवाद, भांडवलशाही, समाजवाद</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भारतीय समाज</b> — समाजाची वैशिष्ट्ये व विविधता, महिलांची भूमिका, लोकसंख्या, दारिद्र्य व विकासाचे प्रश्न, नागरीकरण, जागतिकीकरणाचे परिणाम</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>प्राकृतिक भूगोल</b> — जगाच्या भू-आकृती, नैसर्गिक संसाधनांचे वितरण, उद्योगांचे स्थानिकीकरण, भूकंप, त्सुनामी, ज्वालामुखी, चक्रीवादळे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ५ · सामान्य अध्ययन २ — प्रशासन, संविधान, राज्यव्यवस्था, सामाजिक न्याय व आंतरराष्ट्रीय संबंध (२५० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>संविधान व संघराज्य</b> — भारतीय संविधान, संघराज्य व्यवस्था, अधिकारांचे केंद्र-राज्य विभाजन, इतर देशांच्या संविधानांशी तुलना</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>शासन संस्था</b> — संसद व राज्य विधिमंडळे, कार्यपालिका, न्यायपालिका, स्थानिक स्वराज्य संस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>संस्था व आयोग</b> — घटनात्मक, वैधानिक, नियामक व अर्ध-न्यायिक संस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>धोरणे व कल्याण</b> — शासकीय धोरणे व हस्तक्षेप, कल्याणकारी योजना, आरोग्य, शिक्षण व मनुष्यबळ, दारिद्र्य व भूक</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सुशासन</b> — पारदर्शकता, उत्तरदायित्व, ई-प्रशासन, नागरी संस्था, लोकशाहीत नागरी सेवांची भूमिका</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>आंतरराष्ट्रीय संबंध</b> — भारत व शेजारी देश, द्विपक्षीय-प्रादेशिक-जागतिक करार, आंतरराष्ट्रीय संस्था व मंच</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ६ · सामान्य अध्ययन ३ — तंत्रज्ञान, आर्थिक विकास, जैवविविधता, पर्यावरण, सुरक्षा व आपत्ती व्यवस्थापन (२५० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>अर्थव्यवस्था</b> — भारतीय अर्थव्यवस्था व नियोजन, समावेशक वाढ, शासकीय अर्थसंकल्प, उदारीकरणाचे परिणाम, पायाभूत सुविधा व गुंतवणूक प्रारूपे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>शेती</b> — पीक पद्धती, सिंचन, कृषी विपणन, अनुदाने, किमान आधारभूत किंमत, सार्वजनिक वितरण व्यवस्था, अन्न प्रक्रिया, जमीन सुधारणा</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>विज्ञान व तंत्रज्ञान</b> — माहिती तंत्रज्ञान, अंतराळ, संगणक, रोबोटिक्स, नॅनो व जैवतंत्रज्ञान, बौद्धिक संपदा हक्क</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>पर्यावरण</b> — संवर्धन, प्रदूषण व ऱ्हास, पर्यावरणीय प्रभाव मूल्यांकन</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सुरक्षा व आपत्ती</b> — अंतर्गत सुरक्षा, सायबर सुरक्षा, मनी लाँडरिंग, सीमा व्यवस्थापन, सुरक्षा दले, आपत्ती व्यवस्थापन</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ७ · सामान्य अध्ययन ४ — नीतिमत्ता, सचोटी व अभिवृत्ती (२५० गुण)</h4>
+      <ul class="topics" data-topics="rajyaseva">
+        <li><span class="t"><b>नीतिमत्ता व मानवी मूल्ये</b> — नीतिमत्तेचे सार, मानवी व्यवहार, महान नेते व सुधारकांकडून मिळालेले धडे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अभिवृत्ती व नागरी सेवा मूल्ये</b> — सचोटी, निष्पक्षता, वस्तुनिष्ठता, सार्वजनिक सेवेसाठी समर्पण, सहानुभूती व सहिष्णुता</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भावनिक बुद्धिमत्ता</b> — संकल्पना व प्रशासनातील उपयोग</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>प्रशासनातील नीतिमत्ता</b> — सचोटी (Probity), माहितीचा अधिकार, आचारसंहिता, कार्यसंस्कृती, भ्रष्टाचाराची आव्हाने + केस स्टडी</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर ८ व ९ · वैकल्पिक विषय (प्रत्येकी २५० गुण) — २६ विषयांपैकी १</h4>
+      <p>कृषी · पशुसंवर्धन व पशुवैद्यकीय शास्त्र · मानवशास्त्र · वनस्पतीशास्त्र · रसायनशास्त्र · स्थापत्य अभियांत्रिकी · वाणिज्य व लेखाशास्त्र · अर्थशास्त्र · विद्युत अभियांत्रिकी · भूगोल · भूशास्त्र · इतिहास · कायदा · व्यवस्थापन · मराठी साहित्य · गणित · यांत्रिकी अभियांत्रिकी · वैद्यकशास्त्र · तत्त्वज्ञान · भौतिकशास्त्र · राज्यशास्त्र व आंतरराष्ट्रीय संबंध · मानसशास्त्र · लोकप्रशासन · समाजशास्त्र · सांख्यिकी · प्राणीशास्त्र</p>
+      <div class="tips"><b>कोचिंगवाले सांगतात तोच मुद्दा, मोफत —</b> वैकल्पिक विषय पदवीत शिकलेला किंवा GS शी ओव्हरलॅप होणारा (उदा. इतिहास, भूगोल, राज्यशास्त्र, लोकप्रशासन) निवडल्यास तयारीचा भार कमी होतो. विषय निवडताना मागील प्रश्नपत्रिका एकदा वाचून मगच निर्णय घ्या.</div>
+    </div>
+
+    <div class="card">
+      <h3>पुस्तकांची यादी — राज्यसेवा</h3>
+      <ul class="books">
+        <li><b>पाया (आधी हे)</b> — राज्य मंडळाची ५वी–१२वी व NCERT ची ६वी–१२वी पुस्तके (इतिहास, भूगोल, विज्ञान, नागरिकशास्त्र) <span class="for">· सर्व विषयांचा पाया</span></li>
+        <li><b>Indian Polity</b> — एम. लक्ष्मीकांत · <b>भारताची राज्यघटना आणि प्रशासन</b> — रंजन कोळंबे · <b>पंचायतराज</b> — किशोर लवटे <span class="for">· राज्यशास्त्र</span></li>
+        <li><b>आधुनिक भारताचा इतिहास</b> — ग्रोवर व बेल्हेकर · <b>महाराष्ट्राचा इतिहास</b> — जयसिंगराव पवार <span class="for">· इतिहास</span></li>
+        <li><b>महाराष्ट्राचा भूगोल</b> — ए. बी. सवदी · <b>भारताचा भूगोल</b> — माजिद हुसेन / सवदी · <b>Oxford School Atlas</b> <span class="for">· भूगोल</span></li>
+        <li><b>भारतीय अर्थव्यवस्था</b> — रंजन कोळंबे · किरण देसले (भाग १ व २) <span class="for">· अर्थशास्त्र</span></li>
+        <li><b>विज्ञान व तंत्रज्ञान</b> — रंजन कोळंबे · <b>पर्यावरण व परिस्थितिकी</b> — तुषार घोरपडे <span class="for">· विज्ञान / पर्यावरण</span></li>
+        <li><b>सुगम मराठी व्याकरण व लेखन</b> — मो. रा. वाळिंबे · बाळासाहेब शिंदे (इंग्रजी व्याकरण) <span class="for">· भाषा पेपर</span></li>
+        <li><b>चालू घडामोडी</b> — दररोज वृत्तपत्र (लोकमत / सकाळ + The Hindu किंवा Indian Express) · योजना व लोकराज्य मासिके · महाराष्ट्र आर्थिक पाहणी व अर्थसंकल्प</li>
+      </ul>
+      <div class="tips"><b>मागील प्रश्नपत्रिकांत वारंवार दिसलेले घटक —</b> महाराष्ट्राचा भूगोल (नद्या, धरणे, पिके, मृदा), समाजसुधारक व स्वातंत्र्य चळवळ, संविधानातील कलमे व पंचायतराज, महाराष्ट्राच्या योजना व अर्थसंकल्प. या घटकांवर जास्त प्रश्न विचारण्याची पद्धत आहे — त्यांना प्राधान्य द्या.</div>
+    </div>
+
+    <div class="card quiz-card" id="quiz-rajyaseva">
+      <h3>सराव क्विझ — राज्यसेवा <span class="qbadge">३ टप्पे · प्रति टप्पा १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
+      <div class="quiz-mount" data-quiz-mount="rajyaseva"></div>
+    </div>
+  </section>
+
+  <!-- ================= GROUP B ================= -->
+  <section class="exam" id="gat-b" data-exam="gat-b">
+    <div class="exam-head">
+      <h2>२. गट-ब संयुक्त परीक्षा (अराजपत्रित)</h2>
+      <p class="sub">पदे: सहायक कक्ष अधिकारी (ASO), राज्य कर निरीक्षक (STI), पोलीस उपनिरीक्षक (PSI), दुय्यम निरीक्षक / मुद्रांक निरीक्षक. संयुक्त पूर्व परीक्षा → गट-ब मुख्य परीक्षा. फक्त PSI साठी शारीरिक चाचणी व मुलाखत जास्तीची असते.</p>
+    </div>
+
+    <div class="card">
+      <h3>परीक्षा पॅटर्न</h3>
+      <table class="ptable">
+        <thead><tr><th>टप्पा / पेपर</th><th>विषय</th><th class="num">प्रश्न</th><th class="num">गुण</th><th class="num">वेळ</th><th>स्वरूप</th></tr></thead>
+        <tbody>
+          <tr><td data-l="टप्पा">पूर्व परीक्षा</td><td data-l="विषय">सामान्य क्षमता चाचणी</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">१००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ · पदवी स्तर</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर १</td><td data-l="विषय">मराठी ५० प्रश्न (१०० गुण) + इंग्रजी ५० प्रश्न (१०० गुण) — पेपर एकूण २०० गुण</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर २</td><td data-l="विषय">सामान्य अध्ययन व बुद्धिमत्ता चाचणी</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ</td></tr>
+          <tr><td data-l="टप्पा">फक्त PSI</td><td data-l="विषय">शारीरिक चाचणी + मुलाखत</td><td class="num" data-l="प्रश्न">—</td><td class="num" data-l="गुण">१०० + ४०</td><td class="num" data-l="वेळ">—</td><td data-l="स्वरूप">मुख्यनंतर</td></tr>
+        </tbody>
+      </table>
+      <p class="small">नकारात्मक गुण: प्रत्येक चुकीच्या उत्तरासाठी १/४ गुण वजा. पूर्व परीक्षेचे माध्यम मराठी व इंग्रजी, दर्जा पदवी स्तर. (परीक्षा योजना: पूर्व — ९ ऑक्टोबर २०२४; मुख्य — ५ डिसेंबर २०२२.)</p>
+      <div class="progress" aria-hidden="true"><i data-progress="gat-b"></i></div>
+      <p class="progress-label" data-progress-label="gat-b">तुमची प्रगती: ० / ० घटक झाले (ही नोंद फक्त या भेटीपुरती राहते)</p>
+    </div>
+
+    <div class="card">
+      <h3>पूर्व परीक्षा — अभ्यासक्रम (सामान्य क्षमता चाचणी, १०० गुण)</h3>
+      <ul class="topics" data-topics="gat-b">
+        <li><span class="t"><b>इतिहास</b> — आधुनिक भारताचा, विशेषतः महाराष्ट्राचा इतिहास</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भूगोल</b> — महाराष्ट्राच्या विशेष अभ्यासासह: पृथ्वी, जगातील विभाग, हवामान, अक्षांश-रेखांश, महाराष्ट्रातील जमिनीचे प्रकार, पर्जन्यमान, प्रमुख पिके, शहरे, नद्या, उद्योगधंदे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अर्थव्यवस्था</b> — भारतीय अर्थव्यवस्था: राष्ट्रीय उत्पन्न, शेती, उद्योग, परकीय व्यापार, बँकिंग, लोकसंख्या, दारिद्र्य व बेरोजगारी, मुद्रा व राजकोषीय नीती · शासकीय अर्थव्यवस्था: अर्थसंकल्प, लेखा, लेखापरीक्षण</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>चालू घडामोडी</b> — जागतिक तसेच महाराष्ट्रासह भारतातील</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>राज्यशास्त्र</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सामान्य विज्ञान</b> — भौतिकशास्त्र, रसायनशास्त्र, प्राणिशास्त्र, वनस्पतीशास्त्र, आरोग्यशास्त्र</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अंकगणित</b> — बेरीज, वजाबाकी, गुणाकार, भागाकार, दशांश, अपूर्णांक, टक्केवारी</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>बुद्धिमापन चाचणी</b> — उमेदवार किती लवकर व अचूकपणे विचार करू शकतो हे आजमावणारे प्रश्न</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>मुख्य परीक्षा — अभ्यासक्रम</h3>
+      <h4>पेपर १ · मराठी व इंग्रजी (२०० गुण)</h4>
+      <ul class="topics" data-topics="gat-b">
+        <li><span class="t"><b>मराठी</b> — सर्वसामान्य शब्दसंग्रह, वाक्यरचना, व्याकरण, म्हणी व वाक्प्रचार यांचा अर्थ आणि उपयोग, उताऱ्यावरील प्रश्नांची उत्तरे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>इंग्रजी</b> — Common Vocabulary, Sentence Structure, Grammar, Idioms &amp; Phrases यांचा अर्थ व उपयोग, उताऱ्यावरील प्रश्न (Comprehension)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर २ · सामान्य अध्ययन व बुद्धिमत्ता चाचणी (२०० गुण)</h4>
+      <ul class="topics" data-topics="gat-b">
+        <li><span class="t"><b>बुद्धिमत्ता चाचणी</b> — जलद व अचूक विचारक्षमता तपासणारे प्रश्न</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>चालू घडामोडी</b> — जागतिक तसेच भारतातील</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अंकगणित व सांख्यिकी</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>कायदे</b> — माहिती अधिकार अधिनियम २००५ व महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>राज्यघटना व राज्यव्यवस्था</b> — घटनानिर्मिती, प्रस्तावना, महत्त्वाची कलमे व ठळक वैशिष्ट्ये, केंद्र-राज्य संबंध, मूलभूत हक्क व कर्तव्ये, मार्गदर्शक तत्त्वे, राज्यपाल, मुख्यमंत्री व मंत्रिमंडळ, राज्य विधिमंडळ, स्थानिक स्वराज्य संस्था, न्यायपालिका</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भारताचा व महाराष्ट्राचा भूगोल</b> — प्राकृतिक विभाग, हवामान, पर्जन्यमान व तापमान, नद्या, पर्वत व पठारे, राजकीय व प्रशासकीय विभाग, वने व खनिजे, लोकसंख्या व स्थलांतर, ग्रामीण वस्त्या व झोपडपट्ट्यांचे प्रश्न · पर्यावरण: प्रदूषण, पर्यावरणीय आपत्ती, संवर्धन संस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>विज्ञान व तंत्रज्ञान</b> — भौतिकशास्त्र, रसायनशास्त्र, प्राणिशास्त्र, वनस्पतीशास्त्र · दूर संवेदन (Remote Sensing), हवाई व ड्रोन छायाचित्रण, GIS व त्याचे उपयोजन · माहिती व संप्रेषण तंत्रज्ञान (ICT)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अर्थव्यवस्था व नियोजन</b> — समग्रलक्षी अर्थशास्त्र, वृद्धी व विकास, सार्वजनिक वित्त, आंतरराष्ट्रीय व्यापार व भांडवल · भारतीय अर्थव्यवस्थेची आव्हाने व सुधारणा, शेती व ग्रामीण विकास, सहकार, मौद्रिक व वित्तीय क्षेत्र, उद्योग व सेवा क्षेत्र, पायाभूत सुविधा · महाराष्ट्राची अर्थव्यवस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <div class="tips"><b>कोचिंगवाले सांगतात तोच मुद्दा, मोफत —</b> गट-ब मुख्य पेपर २ मध्ये RTI २००५ व महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५ हे दोन छोटे घटक जवळजवळ हमखास गुण देतात — कमी पानांत जास्त गुण. तसेच पेपर १ मधील मराठी व्याकरण व म्हणी-वाक्प्रचार हा सर्वात जास्त गुण मिळवून देणारा भाग आहे.</div>
+    </div>
+
+    <div class="card">
+      <h3>पुस्तकांची यादी — गट-ब</h3>
+      <ul class="books">
+        <li><b>पाया</b> — राज्य मंडळाची ५वी–१२वी पुस्तके (इतिहास, भूगोल, विज्ञान, नागरिकशास्त्र)</li>
+        <li><b>भारताची राज्यघटना आणि प्रशासन</b> — रंजन कोळंबे · <b>Indian Polity</b> — एम. लक्ष्मीकांत <span class="for">· राज्यशास्त्र</span></li>
+        <li><b>महाराष्ट्राचा भूगोल</b> — ए. बी. सवदी · <b>भारताचा भूगोल</b> — सवदी / दीपस्तंभ <span class="for">· भूगोल</span></li>
+        <li><b>भारतीय अर्थव्यवस्था</b> — रंजन कोळंबे / किरण देसले <span class="for">· अर्थशास्त्र</span></li>
+        <li><b>सुगम मराठी व्याकरण व लेखन</b> — मो. रा. वाळिंबे · <b>इंग्रजी व्याकरण</b> — बाळासाहेब शिंदे <span class="for">· पेपर १</span></li>
+        <li><b>अंकगणित व बुद्धिमत्ता चाचणी</b> — पंढरीनाथ राणे <span class="for">· गणित / बुद्धिमत्ता</span></li>
+        <li><b>सामान्य ज्ञान</b> — तात्याचा ठोकळा (एकनाथ पाटील) · चालू घडामोडी वार्षिकी व दररोज वृत्तपत्र</li>
+        <li><b>मागील प्रश्नपत्रिका संच</b> — आयोगाच्या जुन्या प्रश्नपत्रिका व उत्तरतालिका (mpsc.gov.in वर मोफत)</li>
+      </ul>
+    </div>
+
+    <div class="card quiz-card" id="quiz-gat-b">
+      <h3>सराव क्विझ — गट-ब <span class="qbadge">३ टप्पे · प्रति टप्पा १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
+      <div class="quiz-mount" data-quiz-mount="gat-b"></div>
+    </div>
+  </section>
+
+  <!-- ================= GROUP C ================= -->
+  <section class="exam" id="gat-c" data-exam="gat-c">
+    <div class="exam-head">
+      <h2>३. गट-क संयुक्त परीक्षा (अराजपत्रित)</h2>
+      <p class="sub">पदे: तलाठी (ग्राम महसूल अधिकारी), लिपिक-टंकलेखक (मराठी / इंग्रजी), कर सहाय्यक, उद्योग निरीक्षक, दुय्यम निरीक्षक (राज्य उत्पादन शुल्क), तांत्रिक सहाय्यक. संयुक्त पूर्व परीक्षा → गट-क मुख्य परीक्षा. (सहायक मोटार वाहन निरीक्षक — AMVI — या पदाची मुख्य परीक्षा स्वतंत्र ३०० गुणांची असते.)</p>
+    </div>
+
+    <div class="card">
+      <h3>परीक्षा पॅटर्न</h3>
+      <table class="ptable">
+        <thead><tr><th>टप्पा / पेपर</th><th>विषय</th><th class="num">प्रश्न</th><th class="num">गुण</th><th class="num">वेळ</th><th>स्वरूप</th></tr></thead>
+        <tbody>
+          <tr><td data-l="टप्पा">पूर्व परीक्षा</td><td data-l="विषय">सामान्य क्षमता चाचणी</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">१००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ · पदवी स्तर</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर १</td><td data-l="विषय">मराठी ५० प्रश्न (१०० गुण) + इंग्रजी ५० प्रश्न (१०० गुण) — पेपर एकूण २०० गुण</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ</td></tr>
+          <tr><td data-l="टप्पा">मुख्य — पेपर २</td><td data-l="विषय">सामान्य अध्ययन व बुद्धिमत्ता चाचणी</td><td class="num" data-l="प्रश्न">१००</td><td class="num" data-l="गुण">२००</td><td class="num" data-l="वेळ">१ तास</td><td data-l="स्वरूप">वस्तुनिष्ठ</td></tr>
+        </tbody>
+      </table>
+      <p class="small">नकारात्मक गुण: प्रत्येक चुकीच्या उत्तरासाठी १/४ गुण वजा. लिपिक-टंकलेखक व कर सहाय्यक पदांसाठी विहित गतीचे टंकलेखन प्रमाणपत्र लागते — तपशील जाहिरातीत पहा. (परीक्षा योजना: पूर्व — ९ ऑक्टोबर २०२४; मुख्य — ५ डिसेंबर २०२२.)</p>
+      <div class="progress" aria-hidden="true"><i data-progress="gat-c"></i></div>
+      <p class="progress-label" data-progress-label="gat-c">तुमची प्रगती: ० / ० घटक झाले (ही नोंद फक्त या भेटीपुरती राहते)</p>
+    </div>
+
+    <div class="card">
+      <h3>पूर्व परीक्षा — अभ्यासक्रम (सामान्य क्षमता चाचणी, १०० गुण)</h3>
+      <p class="small">गट-ब व गट-क यांची पूर्व परीक्षा एकच संयुक्त असते, त्यामुळे अभ्यासक्रमही तोच आहे:</p>
+      <ul class="topics" data-topics="gat-c">
+        <li><span class="t"><b>इतिहास</b> — आधुनिक भारताचा, विशेषतः महाराष्ट्राचा इतिहास</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भूगोल</b> — महाराष्ट्राच्या विशेष अभ्यासासह: पृथ्वी, हवामान, अक्षांश-रेखांश, जमिनीचे प्रकार, पर्जन्यमान, प्रमुख पिके, शहरे, नद्या, उद्योगधंदे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अर्थव्यवस्था</b> — राष्ट्रीय उत्पन्न, शेती, उद्योग, परकीय व्यापार, बँकिंग, लोकसंख्या, दारिद्र्य व बेरोजगारी, मुद्रा व राजकोषीय नीती · अर्थसंकल्प, लेखा, लेखापरीक्षण</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>चालू घडामोडी</b> — जागतिक तसेच महाराष्ट्रासह भारतातील</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>राज्यशास्त्र</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>सामान्य विज्ञान</b> — भौतिकशास्त्र, रसायनशास्त्र, प्राणिशास्त्र, वनस्पतीशास्त्र, आरोग्यशास्त्र</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अंकगणित</b> — बेरीज, वजाबाकी, गुणाकार, भागाकार, दशांश, अपूर्णांक, टक्केवारी</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>बुद्धिमापन चाचणी</b> — जलद व अचूक विचारक्षमता तपासणारे प्रश्न</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>मुख्य परीक्षा — अभ्यासक्रम</h3>
+      <h4>पेपर १ · मराठी व इंग्रजी (२०० गुण)</h4>
+      <ul class="topics" data-topics="gat-c">
+        <li><span class="t"><b>मराठी</b> — सर्वसामान्य शब्दसंग्रह, वाक्यरचना, व्याकरण, म्हणी व वाक्प्रचार यांचा अर्थ आणि उपयोग, उताऱ्यावरील प्रश्नांची उत्तरे</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>इंग्रजी</b> — Common Vocabulary, Sentence Structure, Grammar, Idioms &amp; Phrases यांचा अर्थ व उपयोग, उताऱ्यावरील प्रश्न (Comprehension)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <h4>पेपर २ · सामान्य अध्ययन व बुद्धिमत्ता चाचणी (२०० गुण)</h4>
+      <ul class="topics" data-topics="gat-c">
+        <li><span class="t"><b>बुद्धिमत्ता चाचणी</b> — जलद व अचूक विचारक्षमता तपासणारे प्रश्न</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>चालू घडामोडी</b> — जागतिक तसेच भारतातील</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अंकगणित व सांख्यिकी</b></span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>कायदे</b> — माहिती अधिकार अधिनियम २००५ व महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>राज्यघटना व राज्यव्यवस्था</b> — घटनानिर्मिती, प्रस्तावना, महत्त्वाची कलमे व ठळक वैशिष्ट्ये, केंद्र-राज्य संबंध, मूलभूत हक्क व कर्तव्ये, मार्गदर्शक तत्त्वे, राज्यपाल, मुख्यमंत्री व मंत्रिमंडळ, राज्य विधिमंडळ, स्थानिक स्वराज्य संस्था, न्यायपालिका</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>भारताचा व महाराष्ट्राचा भूगोल</b> — प्राकृतिक विभाग, हवामान, पर्जन्यमान व तापमान, नद्या, पर्वत व पठारे, राजकीय व प्रशासकीय विभाग, वने व खनिजे, लोकसंख्या व स्थलांतर · पर्यावरण: प्रदूषण, पर्यावरणीय आपत्ती, संवर्धन संस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>विज्ञान व तंत्रज्ञान</b> — भौतिकशास्त्र, रसायनशास्त्र, प्राणिशास्त्र, वनस्पतीशास्त्र · दूर संवेदन, हवाई व ड्रोन छायाचित्रण, GIS · माहिती व संप्रेषण तंत्रज्ञान (ICT)</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+        <li><span class="t"><b>अर्थव्यवस्था व नियोजन</b> — समग्रलक्षी अर्थशास्त्र, वृद्धी व विकास, सार्वजनिक वित्त, आंतरराष्ट्रीय व्यापार व भांडवल · भारतीय अर्थव्यवस्था, शेती व ग्रामीण विकास, सहकार, वित्तीय क्षेत्र, उद्योग व सेवा क्षेत्र, पायाभूत सुविधा · महाराष्ट्राची अर्थव्यवस्था</span><button class="done-btn" aria-pressed="false">झालं ✓</button></li>
+      </ul>
+      <div class="tips"><b>कोचिंगवाले सांगतात तोच मुद्दा, मोफत —</b> गट-क मध्ये पेपर १ (मराठी + इंग्रजी) हा २०० गुणांचा असून तो पूर्णपणे व्याकरण-शब्दसंग्रहावर आहे — रोज ३० मिनिटे व्याकरण व म्हणी-वाक्प्रचार केल्यास सर्वात सोपे गुण इथेच मिळतात. तलाठी पदासाठी महाराष्ट्राचा भूगोल व महसूल-संबंधित चालू घडामोडींना जास्त वजन द्या.</div>
+    </div>
+
+    <div class="card">
+      <h3>पुस्तकांची यादी — गट-क</h3>
+      <ul class="books">
+        <li><b>पाया</b> — राज्य मंडळाची ५वी–१२वी पुस्तके (इतिहास, भूगोल, विज्ञान, नागरिकशास्त्र)</li>
+        <li><b>सुगम मराठी व्याकरण व लेखन</b> — मो. रा. वाळिंबे · <b>इंग्रजी व्याकरण</b> — बाळासाहेब शिंदे <span class="for">· पेपर १ (सर्वात महत्त्वाचे)</span></li>
+        <li><b>भारताची राज्यघटना आणि प्रशासन</b> — रंजन कोळंबे <span class="for">· राज्यशास्त्र</span></li>
+        <li><b>महाराष्ट्राचा भूगोल</b> — ए. बी. सवदी <span class="for">· भूगोल</span></li>
+        <li><b>भारतीय अर्थव्यवस्था</b> — रंजन कोळंबे / किरण देसले <span class="for">· अर्थशास्त्र</span></li>
+        <li><b>अंकगणित व बुद्धिमत्ता चाचणी</b> — पंढरीनाथ राणे <span class="for">· गणित / बुद्धिमत्ता</span></li>
+        <li><b>सामान्य ज्ञान</b> — तात्याचा ठोकळा (एकनाथ पाटील) · चालू घडामोडी वार्षिकी व दररोज वृत्तपत्र</li>
+        <li><b>मागील प्रश्नपत्रिका संच</b> — आयोगाच्या जुन्या प्रश्नपत्रिका व उत्तरतालिका (mpsc.gov.in वर मोफत)</li>
+      </ul>
+    </div>
+
+    <div class="card quiz-card" id="quiz-gat-c">
+      <h3>सराव क्विझ — गट-क <span class="qbadge">३ टप्पे · प्रति टप्पा १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
+      <div class="quiz-mount" data-quiz-mount="gat-c"></div>
+    </div>
+  </section>
+
+  <!-- ================= STRATEGY + SOURCES ================= -->
+  <div class="foot">
+    <div class="card">
+      <h3>तयारी कशी करावी — पैसे न देता</h3>
+      <ol class="steps">
+        <li><b>आधी पाया:</b> राज्य मंडळ व NCERT पुस्तकांपासून सुरुवात करा. कोणताही घटक थेट संदर्भ पुस्तकातून सुरू करू नका.</li>
+        <li><b>अभ्यासक्रम हातात ठेवा:</b> या पानावरील घटक एक-एक करून “झालं ✓” करत जा — अभ्यासक्रमाबाहेरचा अभ्यास म्हणजे वेळेचा अपव्यय.</li>
+        <li><b>मागील प्रश्नपत्रिका:</b> आयोगाच्या वेबसाइटवर जुन्या प्रश्नपत्रिका व उत्तरतालिका मोफत मिळतात. प्रत्येक विषयानंतर त्या विषयाचे जुने प्रश्न सोडवा — कोणते घटक वारंवार विचारले जातात हे स्वतःच कळेल.</li>
+        <li><b>चालू घडामोडी रोज:</b> दररोज एक मराठी वृत्तपत्र वाचून महत्त्वाच्या नोंदी करा; महिन्याअखेरीस मासिकातून उजळणी करा.</li>
+        <li><b>उजळणी व सराव चाचण्या:</b> वाचलेलं आठवड्यातून एकदा उजळा आणि वेळ लावून सराव पेपर सोडवा. या पानावरील प्रत्येक परीक्षेचे ३ टप्प्यांचे क्विझ सोडवून स्वतःची पातळी तपासा — सोप्या टप्प्यापासून परीक्षा-स्तरापर्यंत. नकारात्मक गुण असल्याने अंदाजे उत्तरे देणे टाळा.</li>
+        <li><b>राज्यसेवा मुख्यसाठी:</b> रोज एक उत्तर लिहिण्याचा सराव करा — वर्णनात्मक परीक्षेत लिहिण्याचा वेग व मांडणीच गुण ठरवते.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>पात्रता — थोडक्यात</h3>
+      <p><b>राज्यसेवा:</b> मान्यताप्राप्त विद्यापीठाची पदवी (काही संवर्गांसाठी विशिष्ट अर्हता). वय: किमान १९ वर्षे; कमाल — अमागास ३८ वर्षे, मागासवर्गीय / अनाथ / आर्थिक दुर्बल घटक ४३ वर्षे, दिव्यांग ४५ वर्षांपर्यंत. पदवीच्या शेवटच्या वर्षातील विद्यार्थी पूर्व परीक्षेला बसू शकतात.</p>
+      <p><b>गट-ब:</b> पदवी आवश्यक (PSI साठी शारीरिक पात्रता वेगळी). <b>गट-क:</b> पदांनुसार पदवी किंवा बारावी + टंकलेखन अर्हता. नेमकी पात्रता, वयोमर्यादा व आरक्षण हे प्रत्येक जाहिरातीनुसार बदलते — अर्ज करण्यापूर्वी त्या परीक्षेची अधिकृत जाहिरात नक्की वाचा.</p>
+    </div>
+
+    <div class="card">
+      <h3>अधिकृत माहिती व स्त्रोत</h3>
+      <p>हा अभ्यासक्रम महाराष्ट्र लोकसेवा आयोगाच्या अधिकृत परीक्षा योजना व अभ्यासक्रमावर आधारित, स्वतःच्या शब्दांत मराठीत मांडलेला आहे — राज्यसेवा परीक्षा योजना (२४ डिसेंबर २०२५), राजपत्रित पूर्व अभ्यासक्रम (७ डिसेंबर २०२२), अराजपत्रित पूर्व परीक्षा योजना (९ ऑक्टोबर २०२४) व गट-ब/गट-क मुख्य अभ्यासक्रम (५ डिसेंबर २०२२). योजना व जाहिरात यांत फरक असल्यास जाहिरातीतील तरतूदच ग्राह्य धरली जाते.</p>
+      <p>
+        अधिकृत वेबसाइट: <a href="https://mpsc.gov.in/home" target="_blank" rel="noopener">mpsc.gov.in</a> —
+        अभ्यासक्रम: Candidate Information → Examination → Syllabus of Examination · परीक्षा योजना: Scheme of Examination ·
+        अर्जासाठी: <a href="https://mpsconline.gov.in" target="_blank" rel="noopener">mpsconline.gov.in</a>
+      </p>
+      <p class="small">ही वेबसाइट आयोगाची अधिकृत वेबसाइट नाही. अंतिम व अद्ययावत माहितीसाठी नेहमी mpsc.gov.in च पहा. शेवटचे अद्यतन: १९ नोव्हेंबर २०२६.</p>
+    </div>
+  </div>
+
+  <footer>
+    MPSC Career Hub — राज्यसेवा · गट-ब · गट-क · पूर्णपणे मोफत · माहितीचा स्त्रोत:
+    <a href="https://mpsc.gov.in/home" target="_blank" rel="noopener">महाराष्ट्र लोकसेवा आयोग</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab');
+  var sections = document.querySelectorAll('.exam');
+  var searchInput = document.getElementById('search');
+  var searchNote = document.getElementById('searchNote');
+  var noResult = document.getElementById('noResult');
+  var currentTab = 'all';
+
+  function toDevDigits(s){
+    var map = {'0':'०','1':'१','2':'२','3':'३','4':'४','5':'५','6':'६','7':'७','8':'८','9':'९'};
+    return String(s).replace(/[0-9]/g, function(d){ return map[d]; });
+  }
+
+  function updateProgress(exam){
+    var items = document.querySelectorAll('.topics[data-topics="'+exam+'"] li');
+    var done = document.querySelectorAll('.topics[data-topics="'+exam+'"] li.is-done');
+    var bar = document.querySelector('[data-progress="'+exam+'"]');
+    var label = document.querySelector('[data-progress-label="'+exam+'"]');
+    if(bar){ bar.style.width = items.length ? (done.length/items.length*100) + '%' : '0%'; }
+    if(label){ label.textContent = 'तुमची प्रगती: ' + toDevDigits(done.length) + ' / ' + toDevDigits(items.length) + ' घटक झाले (ही नोंद फक्त या भेटीपुरती राहते)'; }
+  }
+
+  document.querySelectorAll('.done-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var li = btn.closest('li');
+      var on = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!on));
+      li.classList.toggle('is-done', !on);
+      var ul = btn.closest('.topics');
+      if(ul){ updateProgress(ul.getAttribute('data-topics')); }
+    });
+  });
+  ['rajyaseva','gat-b','gat-c'].forEach(updateProgress);
+
+  function applyFilters(){
+    var q = searchInput.value.trim().toLowerCase();
+    var visibleTopics = 0;
+    sections.forEach(function(sec){
+      var exam = sec.getAttribute('data-exam');
+      var tabOk = (currentTab === 'all' || currentTab === exam);
+      if(!tabOk){ sec.classList.add('hidden'); return; }
+      sec.classList.remove('hidden');
+      if(q){
+        sec.querySelectorAll('.topics li').forEach(function(li){
+          var hit = li.textContent.toLowerCase().indexOf(q) !== -1;
+          li.classList.toggle('hidden', !hit);
+          if(hit) visibleTopics++;
+        });
+        sec.querySelectorAll('.card').forEach(function(card){
+          var anyTopic = card.querySelectorAll('.topics li:not(.hidden)').length > 0;
+          var hasTopics = card.querySelectorAll('.topics li').length > 0;
+          var textHit = card.textContent.toLowerCase().indexOf(q) !== -1;
+          card.classList.toggle('hidden', hasTopics ? !anyTopic : !textHit);
+        });
+        var anyCard = sec.querySelectorAll('.card:not(.hidden)').length > 0;
+        sec.classList.toggle('hidden', !anyCard);
+      } else {
+        sec.querySelectorAll('.topics li').forEach(function(li){ li.classList.remove('hidden'); });
+        sec.querySelectorAll('.card').forEach(function(card){ card.classList.remove('hidden'); });
+      }
+    });
+    var anySection = document.querySelectorAll('.exam:not(.hidden)').length > 0;
+    noResult.classList.toggle('hidden', anySection);
+    searchNote.textContent = q ? ('“' + searchInput.value.trim() + '” साठी ' + toDevDigits(visibleTopics) + ' घटक सापडले') : '';
+  }
+
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      currentTab = tab.getAttribute('data-tab');
+      tabs.forEach(function(t){ t.setAttribute('aria-pressed', String(t === tab)); });
+      applyFilters();
+      if(currentTab !== 'all'){
+        var target = document.getElementById(currentTab);
+        if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      }
+    });
+  });
+  searchInput.addEventListener('input', applyFilters);
+
+  document.querySelectorAll('.jump').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').slice(1);
+      currentTab = 'all';
+      tabs.forEach(function(t){ t.setAttribute('aria-pressed', String(t.getAttribute('data-tab') === 'all')); });
+      applyFilters();
+    });
+  });
+
+  /* ================= QUIZ ================= */
+  function QQ(q,o,a,e){ return {q:q,o:o,a:a,e:e}; }
+  var QUIZZES = {
+    'rajyaseva': { name:'राज्यसेवा', stages:[
+      { label:'टप्पा १', sub:'सोपा · पायाभूत घटक', qs:[
+        QQ('महाराष्ट्र राज्याची स्थापना कोणत्या दिवशी झाली?', ['१५ ऑगस्ट १९४७','१ मे १९६०','२६ जानेवारी १९५०','१ नोव्हेंबर १९५६'], 1, '१ मे १९६० रोजी मुंबई राज्याचे विभाजन होऊन महाराष्ट्र व गुजरात ही राज्ये निर्माण झाली.'),
+        QQ('भारतीय संविधान कधी अंमलात आले?', ['१५ ऑगस्ट १९४७','२६ नोव्हेंबर १९४९','२६ जानेवारी १९५०','२ ऑक्टोबर १९५०'], 2, 'संविधान सभेने २६ नोव्हेंबर १९४९ रोजी संविधान स्वीकारले आणि २६ जानेवारी १९५० पासून ते अंमलात आले.'),
+        QQ('छत्रपती शिवाजी महाराजांचा जन्म कोणत्या किल्ल्यावर झाला?', ['रायगड','राजगड','शिवनेरी','प्रतापगड'], 2, '१९ फेब्रुवारी १६३० रोजी पुणे जिल्ह्यातील शिवनेरी किल्ल्यावर शिवाजी महाराजांचा जन्म झाला.'),
+        QQ('भारताची सर्वात लांब नदी कोणती?', ['यमुना','गोदावरी','ब्रह्मपुत्रा','गंगा'], 3, 'गंगा नदीची लांबी सुमारे २,५२५ किमी असून ती भारतातील सर्वात लांब नदी आहे.'),
+        QQ('पंचायतराज व्यवस्थेला घटनात्मक दर्जा कोणत्या घटनादुरुस्तीने मिळाला?', ['५२वी','६१वी','७३वी','८६वी'], 2, '७३व्या घटनादुरुस्तीने (१९९२) पंचायतराज संस्थांना घटनात्मक दर्जा मिळाला; ७४वी दुरुस्ती नगरपालिकांसाठी आहे.'),
+        QQ('क्षेत्रफळाने महाराष्ट्रातील सर्वात मोठा जिल्हा कोणता?', ['पुणे','नाशिक','अहिल्यानगर (अहमदनगर)','नागपूर'], 2, 'अहिल्यानगर (पूर्वीचे अहमदनगर) हा क्षेत्रफळाने राज्यातील सर्वात मोठा जिल्हा आहे.'),
+        QQ('लोकसभेचा सामान्य कार्यकाळ किती वर्षांचा असतो?', ['३ वर्षे','४ वर्षे','५ वर्षे','६ वर्षे'], 2, 'लोकसभेचा कार्यकाळ ५ वर्षांचा असतो; राज्यसभेच्या सदस्याचा कार्यकाळ ६ वर्षांचा असतो.'),
+        QQ('गोदावरी नदीला कोणते नाव दिले जाते?', ['उत्तर गंगा','दक्षिण गंगा','पश्चिम गंगा','महाराष्ट्र गंगा'], 1, 'दक्षिण भारतातील सर्वात मोठी नदी असल्याने गोदावरीला “दक्षिण गंगा” म्हणतात.'),
+        QQ('भारताची मध्यवर्ती बँक कोणती?', ['स्टेट बँक ऑफ इंडिया','रिझर्व्ह बँक ऑफ इंडिया','नाबार्ड','सेबी'], 1, 'रिझर्व्ह बँक ऑफ इंडिया (RBI) ही भारताची मध्यवर्ती बँक असून चलन व मौद्रिक धोरण तिच्याकडे असते.'),
+        QQ('सह्याद्री पर्वतरांग महाराष्ट्राच्या कोणत्या बाजूला आहे?', ['पूर्व','उत्तर','दक्षिण','पश्चिम'], 3, 'सह्याद्री (पश्चिम घाट) राज्याच्या पश्चिम बाजूला उत्तर-दक्षिण पसरलेली आहे.'),
+        QQ('भारतीय राज्यघटनेचे शिल्पकार म्हणून कोणाला ओळखले जाते?', ['पंडित जवाहरलाल नेहरू','डॉ. बाबासाहेब आंबेडकर','सरदार वल्लभभाई पटेल','डॉ. राजेंद्र प्रसाद'], 1, 'मसुदा समितीचे अध्यक्ष म्हणून डॉ. बाबासाहेब आंबेडकर यांना राज्यघटनेचे शिल्पकार म्हटले जाते.'),
+        QQ('राज्यपालाची नेमणूक कोण करतात?', ['मुख्यमंत्री','पंतप्रधान','राष्ट्रपती','सरन्यायाधीश'], 2, 'कलम १५५ नुसार राज्यपालाची नेमणूक राष्ट्रपती करतात.'),
+        QQ('महाराष्ट्रातील सर्वात लांब नदी कोणती?', ['कृष्णा','भीमा','गोदावरी','तापी'], 2, 'गोदावरीची महाराष्ट्रातील लांबी सुमारे ६६८ किमी असून ती राज्यातील सर्वात लांब नदी आहे.'),
+        QQ('ताजमहाल कोणत्या नदीच्या काठावर आहे?', ['गंगा','यमुना','गोदावरी','नर्मदा'], 1, 'आग्रा येथील ताजमहाल यमुना नदीच्या काठावर आहे.'),
+        QQ('सूर्यमालेतील सर्वात मोठा ग्रह कोणता?', ['शनी','मंगळ','गुरू','शुक्र'], 2, 'गुरू (Jupiter) हा सूर्यमालेतील सर्वात मोठा ग्रह आहे.'),
+        QQ('पाण्याचे रासायनिक सूत्र कोणते?', ['CO₂','O₂','H₂O','NaCl'], 2, 'पाणी म्हणजे हायड्रोजनचे दोन अणू व ऑक्सिजनचा एक अणू — H₂O.'),
+        QQ('प्रसिद्ध विठ्ठल मंदिर कोणत्या ठिकाणी आहे?', ['आळंदी','देहू','पंढरपूर','जेजुरी'], 2, 'पंढरपूर येथील विठ्ठल-रुक्मिणी मंदिरात आषाढी वारीसाठी लाखो वारकरी जमतात.'),
+        QQ('ऑलिंपिक खेळ दर किती वर्षांनी होतात?', ['२ वर्षांनी','३ वर्षांनी','४ वर्षांनी','५ वर्षांनी'], 2, 'उन्हाळी ऑलिंपिक दर चार वर्षांनी आयोजित केले जातात.'),
+        QQ('भारताचे पहिले राष्ट्रपती कोण?', ['डॉ. एस. राधाकृष्णन','डॉ. राजेंद्र प्रसाद','ज्ञानी झैलसिंग','डॉ. ए. पी. जे. अब्दुल कलाम'], 1, 'डॉ. राजेंद्र प्रसाद हे भारताचे पहिले राष्ट्रपती (१९५०–१९६२) होते.'),
+        QQ('महाराष्ट्राची राजधानी कोणती?', ['पुणे','नागपूर','मुंबई','नाशिक'], 2, 'मुंबई ही महाराष्ट्राची राजधानी असून नागपूर ही उपराजधानी (हिवाळी अधिवेशनाचे ठिकाण) आहे.')
+      ]},
+      { label:'टप्पा २', sub:'मध्यम · मुख्य घटक', qs:[
+        QQ('मूलभूत कर्तव्ये संविधानाच्या कोणत्या कलमात आहेत?', ['कलम ३२','कलम २१','कलम ५१-अ','कलम ३७०'], 2, '४२व्या घटनादुरुस्तीने (१९७६) भाग ४-अ मधील कलम ५१-अ मध्ये मूलभूत कर्तव्ये समाविष्ट केली.'),
+        QQ('गोदावरी नदीचा उगम कुठे होतो?', ['महाबळेश्वर','त्र्यंबकेश्वर','भीमाशंकर','अमरकंटक'], 1, 'गोदावरीचा उगम नाशिक जिल्ह्यातील त्र्यंबकेश्वर येथील ब्रह्मगिरी डोंगरात होतो.'),
+        QQ('सत्यशोधक समाजाची स्थापना कोणी व कोणत्या वर्षी केली?', ['महात्मा फुले — १८७३','छत्रपती शाहू महाराज — १८९४','डॉ. बाबासाहेब आंबेडकर — १९२४','लोकमान्य टिळक — १८९३'], 0, 'महात्मा ज्योतिराव फुले यांनी २४ सप्टेंबर १८७३ रोजी पुण्यात सत्यशोधक समाजाची स्थापना केली.'),
+        QQ('वस्तू व सेवा कर (GST) भारतात कधी लागू झाला?', ['१ एप्रिल २०१६','१ जुलै २०१७','१५ ऑगस्ट २०१७','१ जानेवारी २०१८'], 1, '१ जुलै २०१७ पासून देशभरात GST लागू झाला; त्यासाठी १०१वी घटनादुरुस्ती करण्यात आली.'),
+        QQ('महाराष्ट्र विधान परिषदेची एकूण सदस्य संख्या किती?', ['४८','७८','१२०','२८८'], 1, 'विधान परिषदेत ७८ सदस्य असतात; विधानसभेची सदस्य संख्या २८८ आहे.'),
+        QQ('नर्मदा व तापी नद्यांच्या दरम्यान कोणती पर्वतरांग आहे?', ['सह्याद्री','अरवली','विंध्य','सातपुडा'], 3, 'सातपुडा रांग नर्मदेच्या दक्षिणेला व तापीच्या उत्तरेला पूर्व-पश्चिम पसरलेली आहे.'),
+        QQ('रिझर्व्ह बँक ऑफ इंडियाची स्थापना कोणत्या वर्षी झाली?', ['१९३५','१९४७','१९४९','१९५५'], 0, 'RBI ची स्थापना १ एप्रिल १९३५ रोजी झाली आणि १ जानेवारी १९४९ रोजी तिचे राष्ट्रीयीकरण झाले.'),
+        QQ('“केसरी” व “मराठा” ही वृत्तपत्रे कोणाशी संबंधित आहेत?', ['गोपाळ कृष्ण गोखले','लोकमान्य बाळ गंगाधर टिळक','महात्मा गांधी','विनायक दामोदर सावरकर'], 1, '१८८१ मध्ये टिळक व आगरकर यांनी केसरी (मराठी) व मराठा (इंग्रजी) सुरू केले; पुढे टिळक त्यांचे संपादक झाले.'),
+        QQ('नियोजन आयोगाच्या जागी नीती आयोगाची स्थापना कधी झाली?', ['२६ जानेवारी २०१४','१ जानेवारी २०१५','१ एप्रिल २०१६','१ जुलै २०१७'], 1, '१ जानेवारी २०१५ रोजी नीती आयोग स्थापन झाला; पंतप्रधान त्याचे पदसिद्ध अध्यक्ष असतात.'),
+        QQ('कृष्णा नदीचा उगम कुठे होतो?', ['त्र्यंबकेश्वर','अमरकंटक','महाबळेश्वर','ब्रह्मगिरी'], 2, 'कृष्णा नदीचा उगम सातारा जिल्ह्यातील महाबळेश्वर येथे होतो.'),
+        QQ('कलम २८० कशाशी संबंधित आहे?', ['निवडणूक आयोग','वित्त आयोग','केंद्रीय लोकसेवा आयोग','नीती आयोग'], 1, 'कलम २८० नुसार राष्ट्रपती दर पाच वर्षांनी वित्त आयोग नेमतात.'),
+        QQ('भारतातील पहिली रेल्वे कोणत्या मार्गावर धावली (१८५३)?', ['दिल्ली–आग्रा','मुंबई–ठाणे','कोलकाता–हावडा','चेन्नई–अर्काट'], 1, '१६ एप्रिल १८५३ रोजी मुंबई (बोरीबंदर) ते ठाणे ही पहिली रेल्वे धावली.'),
+        QQ('मोहेंजोदडो कोणत्या नदीच्या काठावर वसले होते?', ['गंगा','यमुना','सिंधू','रावी'], 2, 'सिंधू संस्कृतीचे मोहेंजोदडो हे शहर सिंधू नदीच्या काठावर होते; हडप्पा रावीच्या काठावर होते.'),
+        QQ('भारतातील हरित क्रांतीचे जनक म्हणून कोणाला ओळखले जाते?', ['डॉ. वर्गीस कुरियन','डॉ. एम. एस. स्वामीनाथन','डॉ. होमी भाभा','डॉ. ए. पी. जे. अब्दुल कलाम'], 1, 'डॉ. एम. एस. स्वामीनाथन यांनी उच्च उत्पादन देणाऱ्या गहू-बियाण्यांमुळे हरित क्रांती घडवली; डॉ. कुरियन हे श्वेत क्रांतीचे जनक आहेत.'),
+        QQ('कलम ३२ ला डॉ. आंबेडकरांनी संविधानाचा ______ म्हटले आहे.', ['आत्मा व हृदय','मेंदू','पाया','शिखर'], 0, 'मूलभूत हक्कांच्या अंमलबजावणीसाठी सर्वोच्च न्यायालयात जाण्याचा हक्क (कलम ३२) हा संविधानाचा “आत्मा व हृदय” असल्याचे आंबेडकर म्हणाले.'),
+        QQ('कास पठार (फुलांचे पठार) कोणत्या जिल्ह्यात आहे?', ['पुणे','सातारा','कोल्हापूर','रत्नागिरी'], 1, 'सातारा जिल्ह्यातील कास पठार हा पश्चिम घाट जागतिक वारसा स्थळाचा भाग आहे.'),
+        QQ('मुंबई विद्यापीठाची स्थापना कोणत्या वर्षी झाली?', ['१८५७','१८८२','१९०५','१९४८'], 0, '१८५७ मध्ये मुंबई, कोलकाता व मद्रास विद्यापीठांची स्थापना झाली.'),
+        QQ('दुसरी गोलमेज परिषद कोणत्या वर्षी झाली?', ['१९३०','१९३१','१९३२','१९४२'], 1, 'दुसरी गोलमेज परिषद १९३१ मध्ये लंडनमध्ये झाली; महात्मा गांधी त्याला उपस्थित होते.'),
+        QQ('जम्मू-काश्मीरचा विशेष दर्जा कोणत्या कलमाशी संबंधित होता?', ['कलम ३५६','कलम ३६०','कलम ३७०','कलम ३१२'], 2, 'कलम ३७० अन्वये जम्मू-काश्मीरला विशेष दर्जा होता; ऑगस्ट २०१९ मध्ये तो रद्द करण्यात आला.'),
+        QQ('रिझर्व्ह बँकेच्या गव्हर्नरची नेमणूक कोण करते?', ['राष्ट्रपती','केंद्र सरकार','संसद','RBI चे संचालक मंडळ'], 1, 'RBI गव्हर्नरची नेमणूक केंद्र सरकार (पंतप्रधानांच्या अध्यक्षतेखालील नियुक्ती समिती) करते.')
+      ]},
+      { label:'टप्पा ३', sub:'कठीण · परीक्षा स्तर', qs:[
+        QQ('संविधान सभेचे तात्पुरते (हंगामी) अध्यक्ष कोण होते?', ['डॉ. राजेंद्र प्रसाद','डॉ. सच्चिदानंद सिन्हा','डॉ. बाबासाहेब आंबेडकर','पंडित जवाहरलाल नेहरू'], 1, '९ डिसेंबर १९४६ च्या पहिल्या बैठकीचे हंगामी अध्यक्ष डॉ. सच्चिदानंद सिन्हा होते; नंतर डॉ. राजेंद्र प्रसाद कायम अध्यक्ष झाले.'),
+        QQ('संविधानाचा “मूलभूत रचना” (Basic Structure) सिद्धांत कोणत्या खटल्यात मांडला गेला?', ['गोलकनाथ खटला','केशवानंद भारती खटला','मनेका गांधी खटला','विशाखा खटला'], 1, '१९७३ च्या केशवानंद भारती खटल्यात सर्वोच्च न्यायालयाने मूलभूत रचना सिद्धांत मांडला.'),
+        QQ('४२व्या घटनादुरुस्तीने (१९७६) प्रस्तावनेत कोणते शब्द जोडले गेले?', ['संघराज्य व लोकशाही','फक्त “समाजवादी”','फक्त “धर्मनिरपेक्ष”','“समाजवादी”, “धर्मनिरपेक्ष” व “एकात्मता”'], 3, '४२व्या दुरुस्तीने प्रस्तावनेत समाजवादी, धर्मनिरपेक्ष व एकात्मता हे शब्द जोडले गेले, म्हणून तिला “छोटे संविधान” म्हणतात.'),
+        QQ('राजकोषीय तूट (Fiscal Deficit) म्हणजे काय?', ['आयात व निर्यात यांतील फरक','महसुली उत्पन्न व महसुली खर्च यांतील फरक','सरकारचा एकूण खर्च व कर्जाव्यतिरिक्त एकूण मिळकत यांतील फरक','प्राथमिक तूट व व्याजदेयके यांतील फरक'], 2, 'राजकोषीय तूट = एकूण खर्च − (महसुली जमा + बिगर-कर्ज भांडवली जमा). ती सरकारच्या कर्ज गरजेचे प्रमाण दाखवते.'),
+        QQ('महाराष्ट्रातील खालीलपैकी कोणते स्थळ रामसर (Ramsar) यादीत समाविष्ट आहे?', ['कास पठार','नांदूर मधमेश्वर','मेळघाट','ताडोबा'], 1, 'नाशिक जिल्ह्यातील नांदूर मधमेश्वर हे महाराष्ट्रातील पहिले रामसर स्थळ (२०१९) आहे.'),
+        QQ('एल-निनो (El Niño) चा भारतीय मान्सूनवर साधारणपणे कोणता परिणाम दिसतो?', ['मान्सून नेहमीपेक्षा बळकट होतो','मान्सून कमकुवत होऊन दुष्काळाची शक्यता वाढते','मान्सूनवर काहीच परिणाम होत नाही','फक्त हिवाळ्यातील पाऊस वाढतो'], 1, 'प्रशांत महासागरातील पाणी तापल्याने (एल-निनो) भारतातील मान्सून साधारणपणे कमकुवत होतो.'),
+        QQ('भारतात पहिली नियमित दशवार्षिक जनगणना कोणत्या वर्षी झाली?', ['१८७२','१८८१','१९०१','१९५१'], 1, '१८७२ मध्ये पहिली जनगणना झाली, पण १८८१ पासून दर दहा वर्षांनी नियमित जनगणना सुरू झाली.'),
+        QQ('राज्यसभेचे पदसिद्ध सभापती कोण असतात?', ['राष्ट्रपती','पंतप्रधान','सरन्यायाधीश','उपराष्ट्रपती'], 3, 'उपराष्ट्रपती हे राज्यसभेचे पदसिद्ध सभापती असतात (कलम ६४ व ८९).'),
+        QQ('“Poverty and Un-British Rule in India” या ग्रंथाचे लेखक कोण?', ['दादाभाई नौरोजी','गोपाळ कृष्ण गोखले','लोकमान्य टिळक','फिरोजशाह मेहता'], 0, 'दादाभाई नौरोजी यांनी या ग्रंथात संपत्तीच्या निचऱ्याचा (Drain of Wealth) सिद्धांत मांडला.'),
+        QQ('भारतीय प्रतिभूती व विनिमय मंडळाचे (SEBI) मुख्यालय कुठे आहे?', ['नवी दिल्ली','चेन्नई','मुंबई','कोलकाता'], 2, 'SEBI ची स्थापना १९८८ मध्ये झाली, १९९२ मध्ये तिला वैधानिक दर्जा मिळाला; मुख्यालय मुंबईत आहे.'),
+        QQ('९७वी घटनादुरुस्ती (२०११) कशाशी संबंधित आहे?', ['पंचायतराज','सहकारी संस्था','शिक्षणाचा हक्क','GST'], 1, '९७व्या दुरुस्तीने सहकारी संस्थांना घटनात्मक दर्जा दिला व भाग ९-ब जोडला.'),
+        QQ('सरकारिया आयोग कशासाठी नेमला होता?', ['बँक सुधारणा','केंद्र-राज्य संबंध','पोलीस सुधारणा','निवडणूक सुधारणा'], 1, '१९८३ मध्ये नेमलेला सरकारिया आयोग केंद्र-राज्य संबंधांचा अभ्यास करण्यासाठी होता.'),
+        QQ('कलम ३१२ नुसार संसद काय निर्माण करू शकते?', ['नवे राज्य','अखिल भारतीय सेवा','नवा कर','आणीबाणीची घोषणा'], 1, 'राज्यसभेच्या ठरावानंतर संसद कलम ३१२ अन्वये नवीन अखिल भारतीय सेवा निर्माण करू शकते.'),
+        QQ('प्राथमिक तूट (Primary Deficit) म्हणजे काय?', ['महसुली तूट वजा अनुदाने','राजकोषीय तूट वजा व्याज देयके','एकूण खर्च वजा एकूण उत्पन्न','आयात वजा निर्यात'], 1, 'प्राथमिक तूट = राजकोषीय तूट − व्याज देयके; ती व्याजाशिवायची कर्ज गरज दाखवते.'),
+        QQ('८६व्या घटनादुरुस्तीने (२००२) कोणता हक्क मूलभूत हक्क म्हणून जोडला गेला?', ['मालमत्तेचा हक्क','६–१४ वयोगटातील मुलांचा मोफत व सक्तीचा शिक्षणाचा हक्क (कलम २१-अ)','मतदानाचा हक्क','कामाचा हक्क'], 1, 'कलम २१-अ अन्वये ६ ते १४ वयोगटातील मुलांना मोफत व सक्तीच्या शिक्षणाचा मूलभूत हक्क मिळाला.'),
+        QQ('केशवानंद भारती खटल्याचा निकाल देणारे खंडपीठ किती न्यायाधीशांचे होते?', ['५','७','११','१३'], 3, '१३ न्यायाधीशांचे हे सर्वोच्च न्यायालयातील आजवरचे सर्वात मोठे खंडपीठ होते.'),
+        QQ('महानदी पाणीविवाद कोणत्या राज्यांदरम्यान आहे?', ['ओडिशा–छत्तीसगड','कर्नाटक–तामिळनाडू','पंजाब–हरियाणा','मध्य प्रदेश–गुजरात'], 0, 'महानदीच्या पाण्यावरून ओडिशा व छत्तीसगड यांच्यात विवाद आहे; कावेरी विवाद कर्नाटक-तामिळनाडूमधील आहे.'),
+        QQ('लाफर वक्र (Laffer Curve) कशाशी संबंधित आहे?', ['बेरोजगारी व महागाई','कर दर व कर महसूल','व्याजदर व गुंतवणूक','लोकसंख्या व अन्नधान्य'], 1, 'लाफर वक्र कर दर व सरकारी कर महसूल यांच्यातील संबंध दर्शवतो.'),
+        QQ('डंकन पॅसेज (Duncan Passage) कोणत्या बेटांदरम्यान आहे?', ['लक्षद्वीप–मिनिकॉय','दक्षिण अंदमान–छोटा अंदमान','भारत–श्रीलंका','गोवा–मुंबई'], 1, 'डंकन पॅसेज दक्षिण अंदमान व छोटा अंदमान (Little Andaman) यांच्यादरम्यान आहे.'),
+        QQ('नीती आयोगाचे उपाध्यक्ष कोण नेमतात?', ['राष्ट्रपती','पंतप्रधान','वित्त मंत्री','कॅबिनेट सचिव'], 1, 'नीती आयोगाचे उपाध्यक्ष पंतप्रधान नेमतात; पंतप्रधानच आयोगाचे पदसिद्ध अध्यक्ष असतात.')
+      ]}
+    ]},
+    'gat-b': { name:'गट-ब', stages:[
+      { label:'टप्पा १', sub:'सोपा · पायाभूत घटक', qs:[
+        QQ('“दिनकर” हा शब्द कोणाचा समानार्थी शब्द आहे?', ['चंद्र','सूर्य','तारा','अग्नी'], 1, 'दिनकर, रवी, भास्कर, आदित्य हे सूर्याचे समानार्थी शब्द आहेत.'),
+        QQ('२०० चे २५% म्हणजे किती?', ['२५','४०','५०','७५'], 2, '२०० × २५/१०० = ५०.'),
+        QQ('महाराष्ट्राचे पहिले मुख्यमंत्री कोण?', ['वसंतराव नाईक','यशवंतराव चव्हाण','शंकरराव चव्हाण','विलासराव देशमुख'], 1, '१ मे १९६० रोजी यशवंतराव चव्हाण महाराष्ट्राचे पहिले मुख्यमंत्री झाले.'),
+        QQ('जिल्हा परिषदेचा प्रशासकीय प्रमुख कोण असतो?', ['जिल्हाधिकारी','पोलीस अधीक्षक','मुख्य कार्यकारी अधिकारी (CEO)','जिल्हा न्यायाधीश'], 2, 'जिल्हा परिषदेचा प्रशासकीय प्रमुख हा मुख्य कार्यकारी अधिकारी असतो; जिल्हाधिकारी हे जिल्हा प्रशासनाचे प्रमुख असतात.'),
+        QQ('“Happy” या इंग्रजी शब्दाचा विरुद्धार्थी शब्द कोणता?', ['Glad','Joyful','Sad','Cheerful'], 2, 'Happy (आनंदी) × Sad (दुःखी).'),
+        QQ('तापी नदी कोणत्या समुद्राला मिळते?', ['बंगालचा उपसागर','अरबी समुद्र','हिंदी महासागर','खंभातचा अखात मार्गे अरबी समुद्र'], 3, 'तापी पश्चिम वाहिनी नदी असून ती खंभातच्या अखातातून अरबी समुद्राला मिळते.'),
+        QQ('१२ × ८ = किती?', ['८६','९२','९६','१०४'], 2, '१२ × ८ = ९६.'),
+        QQ('संविधान दिन (Constitution Day) कधी साजरा केला जातो?', ['२६ जानेवारी','१५ ऑगस्ट','२ ऑक्टोबर','२६ नोव्हेंबर'], 3, '२६ नोव्हेंबर १९४९ रोजी संविधान स्वीकारल्यामुळे तो दिवस संविधान दिन म्हणून साजरा होतो.'),
+        QQ('“अति तिथे ______” ही म्हण पूर्ण करा.', ['माती','पाणी','जाती','राती'], 0, '“अति तिथे माती” — कोणत्याही गोष्टीचा अतिरेक वाईट, असा या म्हणीचा अर्थ आहे.'),
+        QQ('क्षेत्रफळाने भारतातील सर्वात मोठे राज्य कोणते?', ['मध्य प्रदेश','महाराष्ट्र','राजस्थान','उत्तर प्रदेश'], 2, 'राजस्थान हे क्षेत्रफळाने सर्वात मोठे राज्य आहे; महाराष्ट्र तिसऱ्या क्रमांकावर आहे.'),
+        QQ('“चंद्र” या शब्दाचा समानार्थी शब्द कोणता?', ['रवी','शशी','तारा','अनल'], 1, 'शशी, इंदू, सोम हे चंद्राचे समानार्थी शब्द आहेत; रवी म्हणजे सूर्य.'),
+        QQ('१५ × ६ = किती?', ['८०','८५','९०','९६'], 2, '१५ × ६ = ९०.'),
+        QQ('९ चा वर्ग (Square) किती?', ['१८','७२','८१','९९'], 2, '९ × ९ = ८१.'),
+        QQ('१,००० चे ५% म्हणजे किती?', ['१०','२५','५०','१००'], 2, '१,००० × ५/१०० = ५०.'),
+        QQ('“Slow” या शब्दाचा विरुद्धार्थी शब्द कोणता?', ['Low','Fast','Soft','Weak'], 1, 'Slow (मंद) × Fast (जलद).'),
+        QQ('जिल्हा प्रशासनाचे प्रमुख कोण असतात?', ['तहसीलदार','जिल्हाधिकारी','सरपंच','मुख्य कार्यकारी अधिकारी'], 1, 'जिल्हाधिकारी हे जिल्हा प्रशासनाचे प्रमुख असतात; जिल्हा परिषदेचे प्रशासकीय प्रमुख CEO असतात.'),
+        QQ('“आंधळा मागतो एक डोळा, देव देतो ______” — म्हण पूर्ण करा.', ['काहीच नाही','दोन डोळे','एकच डोळा','धनदौलत'], 1, 'अपेक्षेपेक्षा जास्त मिळाले की ही म्हण वापरतात — “आंधळा मागतो एक डोळा, देव देतो दोन डोळे”.'),
+        QQ('महाराष्ट्राची उपराजधानी कोणती?', ['पुणे','नागपूर','छत्रपती संभाजीनगर','नाशिक'], 1, 'नागपूर ही उपराजधानी असून विधानसभेचे हिवाळी अधिवेशन तिथे भरते.'),
+        QQ('४५ + ५५ = किती?', ['९०','९५','१००','११०'], 2, '४५ + ५५ = १००.'),
+        QQ('“Book” या शब्दाचे अनेकवचन (Plural) कोणते?', ['Bookes','Books','Bookies','Boken'], 1, 'Book → Books हे नियमित अनेकवचन आहे.')
+      ]},
+      { label:'टप्पा २', sub:'मध्यम · मुख्य घटक', qs:[
+        QQ('माहिती अधिकार अधिनियम (RTI) कोणत्या वर्षी लागू झाला?', ['२००२','२००५','२०१०','२०१५'], 1, 'माहिती अधिकार अधिनियम २००५ मध्ये संमत झाला व १२ ऑक्टोबर २००५ पासून लागू झाला.'),
+        QQ('१५, ३०, ४५, ______ — या मालिकेतील पुढची संख्या कोणती?', ['५०','५५','६०','७५'], 2, 'प्रत्येक वेळी १५ ची वाढ होत आहे, म्हणून पुढची संख्या ६०.'),
+        QQ('मूलभूत हक्क संविधानाच्या कोणत्या भागात आहेत?', ['भाग २','भाग ३','भाग ४','भाग ५'], 1, 'भाग ३ मधील कलम १२ ते ३५ मध्ये मूलभूत हक्क आहेत; भाग ४ मध्ये मार्गदर्शक तत्त्वे आहेत.'),
+        QQ('महाराष्ट्रात एकूण किती जिल्हे आहेत?', ['३४','३५','३६','३८'], 2, 'महाराष्ट्रात ३६ जिल्हे व ६ प्रशासकीय विभाग आहेत.'),
+        QQ('खालीलपैकी शुद्ध शब्द कोणता?', ['उज्वल','उजवल','ऊज्वल','उज्ज्वल'], 3, 'बरोबर लेखन “उज्ज्वल” असे आहे.'),
+        QQ('एका संख्येचे ४०% म्हणजे ८०, तर ती संख्या कोणती?', ['१६०','२००','२४०','३२०'], 1, 'संख्या = ८० × १०० / ४० = २००.'),
+        QQ('ग्रामपंचायतीचा कार्यकाळ किती वर्षांचा असतो?', ['३ वर्षे','४ वर्षे','५ वर्षे','६ वर्षे'], 2, 'ग्रामपंचायत, पंचायत समिती व जिल्हा परिषद या तिन्हींचा कार्यकाळ ५ वर्षांचा असतो.'),
+        QQ('“Go” या क्रियापदाचे साधे भूतकाळी रूप (Simple Past) कोणते?', ['Gone','Going','Goes','Went'], 3, 'Go → Went (भूतकाळ) → Gone (भूतकाळवाचक धातुसाधित).'),
+        QQ('भारताचे पहिले गृहमंत्री कोण होते?', ['पंडित जवाहरलाल नेहरू','सरदार वल्लभभाई पटेल','डॉ. राजेंद्र प्रसाद','लाल बहादूर शास्त्री'], 1, 'सरदार पटेल हे पहिले गृहमंत्री व उपपंतप्रधान होते; संस्थानांच्या विलीनीकरणात त्यांची भूमिका महत्त्वाची होती.'),
+        QQ('नाशिक शहर कोणत्या नदीच्या काठावर वसले आहे?', ['कृष्णा','भीमा','गोदावरी','तापी'], 2, 'नाशिक गोदावरीच्या काठावर असून तिथे दर १२ वर्षांनी सिंहस्थ कुंभमेळा भरतो.'),
+        QQ('RTI अंतर्गत द्वितीय अपील (Second Appeal) करण्याची मुदत किती असते?', ['३० दिवस','६० दिवस','९० दिवस','१ वर्ष'], 2, 'प्रथम अपीलाच्या निर्णयानंतर ९० दिवसांत माहिती आयोगाकडे द्वितीय अपील करता येते.'),
+        QQ('२, ५, ११, २३, ______ — पुढची संख्या कोणती?', ['३५','४०','४६','४७'], 3, 'प्रत्येक संख्या = आधीची संख्या × २ + १: २→५→११→२३, म्हणून पुढे २३×२+१ = ४७.'),
+        QQ('“अग्नी” या शब्दाचा समानार्थी शब्द कोणता?', ['अनिल','अनल','जल','अंबर'], 1, 'अनल, पावक, वह्नि हे अग्नीचे समानार्थी शब्द आहेत; अनिल म्हणजे वारा.'),
+        QQ('६४० चे २५% म्हणजे किती?', ['१२०','१४०','१६०','१८०'], 2, '६४० × २५/१०० = १६०.'),
+        QQ('राज्यसभेत महाराष्ट्राला किती जागा आहेत?', ['१६','१९','२८','४८'], 1, 'राज्यसभेत महाराष्ट्राच्या १९ जागा आहेत; लोकसभेत महाराष्ट्राच्या ४८ जागा आहेत.'),
+        QQ('“She ______ reading a book.” — रिकाम्या जागी योग्य शब्द कोणता?', ['is','are','am','be'], 0, 'She या तृतीय पुरुषी एकवचनी कर्त्यासोबत “is” येते.'),
+        QQ('“विद्यार्थी” या शब्दाचे शुद्ध लेखन कोणते?', ['विद्यार्थि','विद्यार्थी','विदयार्थी','विद्यर्थी'], 1, 'बरोबर लेखन “विद्यार्थी” असे आहे.'),
+        QQ('५,००० रुपयांवर वार्षिक ८% दराने ३ वर्षांचे सरळव्याज किती?', ['८०० रुपये','१,००० रुपये','१,२०० रुपये','१,५०० रुपये'], 2, 'सरळव्याज = ५,००० × ८ × ३ / १०० = १,२०० रुपये.'),
+        QQ('लोकसंख्येने भारतातील सर्वात मोठे राज्य कोणते?', ['महाराष्ट्र','पश्चिम बंगाल','बिहार','उत्तर प्रदेश'], 3, 'उत्तर प्रदेश हे लोकसंख्येने सर्वात मोठे राज्य आहे; महाराष्ट्र दुसऱ्या क्रमांकावर आहे.'),
+        QQ('महाराष्ट्र लोकसेवा हक्क कायद्यातील “पदनिर्देशित अधिकारी” म्हणजे कोण?', ['सरपंच','ज्या अधिकाऱ्याकडे ती सेवा मागायची असते तो अधिकारी','जिल्हाधिकारीच','स्थानिक आमदार'], 1, 'प्रत्येक अधिसूचित सेवेसाठी पदनिर्देशित (Designated) अधिकारी ठरवलेला असतो; त्याच्याकडेच अर्ज करायचा असतो.')
+      ]},
+      { label:'टप्पा ३', sub:'कठीण · परीक्षा स्तर', qs:[
+        QQ('महाराष्ट्र लोकसेवा हक्क अधिनियम कोणत्या वर्षीचा आहे?', ['२००५','२०१०','२०१५','२०२०'], 2, 'महाराष्ट्र लोकसेवा हक्क अधिनियम २०१५ — गट-ब/गट-क मुख्य पेपर २ मधील हमखास गुणांचा घटक.'),
+        QQ('A = १, B = २, …, Z = २६ मानल्यास CAT या शब्दाची बेरीज किती?', ['२२','२४','२६','२७'], 1, 'C(३) + A(१) + T(२०) = २४.'),
+        QQ('कलम २२६ कशाशी संबंधित आहे?', ['सर्वोच्च न्यायालयाचे रिट अधिकार','उच्च न्यायालयाचे रिट अधिकार','मूलभूत कर्तव्ये','आणीबाणीच्या तरतुदी'], 1, 'कलम २२६ नुसार उच्च न्यायालय रिट काढू शकते; कलम ३२ हा सर्वोच्च न्यायालयाचा रिट अधिकार आहे.'),
+        QQ('१०,००० रुपयांवर वार्षिक १०% दराने २ वर्षांचे सरळव्याज किती?', ['१,००० रुपये','१,५०० रुपये','२,००० रुपये','२,१०० रुपये'], 2, 'सरळव्याज = १०,००० × १० × २ / १०० = २,००० रुपये. (२,१०० हे चक्रवाढ व्याज होईल.)'),
+        QQ('“पुस्तक” हे कोणत्या प्रकारचे नाम आहे?', ['विशेष नाम','सामान्य (सर्वसाधारण) नाम','भाववाचक नाम','समूहवाचक नाम'], 1, 'एखाद्या वर्गातील सर्व वस्तूंना लागू होणारे नाव म्हणजे सामान्य नाम — उदा. पुस्तक, नदी, शहर.'),
+        QQ('भारताच्या पहिल्या महिला IPS अधिकारी कोण?', ['किरण बेदी','कांचन चौधरी','मीरा बोरवणकर','अर्चना रामसुंदरम'], 0, 'किरण बेदी १९७२ च्या तुकडीतून पहिल्या महिला IPS अधिकारी झाल्या.'),
+        QQ('महाराष्ट्रात जिल्हा नियोजन समितीचे अध्यक्ष कोण असतात?', ['जिल्हाधिकारी','जिल्ह्याचे पालकमंत्री','जिल्हा परिषद अध्यक्ष','विभागीय आयुक्त'], 1, 'जिल्हा नियोजन समितीचे अध्यक्ष हे त्या जिल्ह्याचे पालकमंत्री असतात.'),
+        QQ('२, ६, १२, २०, ३०, ______ — पुढची संख्या कोणती?', ['३६','४०','४२','४४'], 2, 'ही मालिका n² + n या स्वरूपाची आहे: १+१, ४+२, ९+३, १६+४, २५+५, म्हणून पुढे ३६+६ = ४२.'),
+        QQ('“Candid” या इंग्रजी शब्दाचा जवळचा अर्थ कोणता?', ['Rude (उद्धट)','Shy (लाजाळू)','Frank (प्रांजळ / स्पष्टवक्ता)','Clever (चतुर)'], 2, 'Candid म्हणजे प्रांजळ, मनमोकळा व स्पष्ट बोलणारा.'),
+        QQ('माहिती अधिकार कायद्यानुसार माहिती देण्याची सर्वसाधारण मुदत किती असते?', ['७ दिवस','१५ दिवस','३० दिवस','६० दिवस'], 2, 'RTI अर्जानंतर ३० दिवसांत माहिती देणे बंधनकारक असते; जीविताशी संबंधित माहितीसाठी मुदत ४८ तासांची असते.'),
+        QQ('RTI कायद्याचे कलम ८ कशाशी संबंधित आहे?', ['अर्ज शुल्क','माहिती देण्यास सूट असलेले विषय','अपील प्रक्रिया','दंड'], 1, 'कलम ८ मध्ये कोणती माहिती देण्यास सूट आहे (उदा. देशाची सुरक्षा, गोपनीय माहिती) याची यादी आहे.'),
+        QQ('घटनादुरुस्तीची तरतूद संविधानाच्या कोणत्या कलमात आहे?', ['कलम ३५२','कलम ३६०','कलम ३६८','कलम ३७०'], 2, 'कलम ३६८ मध्ये घटनादुरुस्तीची पद्धत दिली आहे; कलम ३५२ राष्ट्रीय आणीबाणीशी संबंधित आहे.'),
+        QQ('१०,००० रुपयांवर वार्षिक १०% दराने २ वर्षांचे चक्रवाढ व्याज किती?', ['२,००० रुपये','२,१०० रुपये','२,२०० रुपये','१,०२१ रुपये'], 1, 'रक्कम = १०,००० × (१.१)² = १२,१००; म्हणून चक्रवाढ व्याज = २,१०० रुपये.'),
+        QQ('१, ४, ९, १६, २५, ______ — पुढची संख्या कोणती?', ['३०','३२','३६','४९'], 2, 'हे सलग संख्यांचे वर्ग आहेत: १², २², ३², ४², ५², म्हणून पुढे ६² = ३६.'),
+        QQ('“अध्यक्ष” या शब्दाचा संधीविग्रह कोणता?', ['अध्य + अक्ष','अधि + अक्ष','अध्या + क्ष','अ + ध्यक्ष'], 1, 'अधि + अक्ष = अध्यक्ष (इ + अ = य, यण संधी).'),
+        QQ('भारताच्या पहिल्या महिला राज्यपाल कोण?', ['सरोजिनी नायडू','विजयालक्ष्मी पंडित','सुचेता कृपलानी','इंदिरा गांधी'], 0, 'सरोजिनी नायडू या उत्तर प्रदेशच्या राज्यपाल म्हणून देशातील पहिल्या महिला राज्यपाल झाल्या.'),
+        QQ('“Ubiquitous” या इंग्रजी शब्दाचा अर्थ कोणता?', ['दुर्मिळ','सर्वत्र आढळणारा','महागडा','गुप्त'], 1, 'Ubiquitous म्हणजे सर्वत्र उपस्थित असणारा / सर्वत्र आढळणारा.'),
+        QQ('महाराष्ट्र लोकसेवा हक्क कायद्यांतर्गत प्रथम अपील कोणाकडे व किती दिवसांत करता येते?', ['जिल्हाधिकाऱ्याकडे · ६० दिवसांत','प्रथम अपील अधिकाऱ्याकडे · ३० दिवसांत','थेट न्यायालयात · ९० दिवसांत','मुख्यमंत्र्यांकडे · १५ दिवसांत'], 1, 'सेवा मुदतीत न मिळाल्यास ३० दिवसांत प्रथम अपील अधिकाऱ्याकडे अपील करता येते.'),
+        QQ('जर CAT = २४ असेल, तर DOG = किती? (अक्षरांच्या स्थानांची बेरीज)', ['२३','२४','२६','२८'], 2, 'D(४) + O(१५) + G(७) = २६.'),
+        QQ('राज्य निवडणूक आयुक्ताची नेमणूक कोण करतात?', ['राष्ट्रपती','मुख्यमंत्री','राज्यपाल','मुख्य निवडणूक आयुक्त'], 2, 'राज्य निवडणूक आयुक्ताची नेमणूक राज्यपाल करतात (कलम २४३-K).')
+      ]}
+    ]},
+    'gat-c': { name:'गट-क', stages:[
+      { label:'टप्पा १', sub:'सोपा · पायाभूत घटक', qs:[
+        QQ('“पाणी” या शब्दाचा समानार्थी शब्द कोणता?', ['अग्नी','जल','वायू','माती'], 1, 'जल, नीर, उदक, तोय हे पाण्याचे समानार्थी शब्द आहेत.'),
+        QQ('५० + ७५ = किती?', ['१०५','११५','१२५','१३५'], 2, '५० + ७५ = १२५.'),
+        QQ('तलाठी (ग्राम महसूल अधिकारी) हे पद कोणत्या गटात येते?', ['गट-अ','गट-ब','गट-क','गट-ड'], 2, 'तलाठी हे गट-क मधील पद असून त्याची भरती MPSC गट-क संयुक्त परीक्षेतून होते.'),
+        QQ('महाराष्ट्र दिन कधी साजरा केला जातो?', ['१ मे','१५ ऑगस्ट','२६ जानेवारी','१ नोव्हेंबर'], 0, '१ मे १९६० रोजी महाराष्ट्र राज्याची स्थापना झाल्यामुळे १ मे हा महाराष्ट्र दिन आहे.'),
+        QQ('सातबारा उतारा कशाशी संबंधित आहे?', ['वाहन नोंदणी','जमिनीच्या हक्कांची नोंद','शैक्षणिक दाखला','आरोग्य विमा'], 1, 'सातबारा हा जमिनीच्या मालकी व हक्कांचा उतारा (अधिकार अभिलेख) आहे.'),
+        QQ('राष्ट्रपती भवन कोणत्या शहरात आहे?', ['मुंबई','कोलकाता','चेन्नई','नवी दिल्ली'], 3, 'राष्ट्रपती भवन नवी दिल्लीतील रायसीना टेकडीवर आहे.'),
+        QQ('१०० चे १०% म्हणजे किती?', ['५','१०','१५','२०'], 1, '१०० × १०/१०० = १०.'),
+        QQ('खालीलपैकी अनेकवचनी शब्द कोणता?', ['पुस्तक','मुलगा','पुस्तके','शाळा'], 2, 'पुस्तक → पुस्तके, हे अनेकवचन आहे.'),
+        QQ('भारताचा राष्ट्रीय प्राणी कोणता?', ['आशियाई हत्ती','बंगाल वाघ','एकशिंगी गेंडा','आशियाई सिंह'], 1, 'बंगाल वाघ (रॉयल बंगाल टायगर) हा भारताचा राष्ट्रीय प्राणी आहे.'),
+        QQ('“Child” या शब्दाचे अनेकवचन (Plural) कोणते?', ['Childs','Childes','Children','Childrens'], 2, 'Child चे अनेकवचन Children असे अनियमित स्वरूपात होते.'),
+        QQ('“घर” या शब्दाचा समानार्थी शब्द कोणता?', ['वाट','सदन','शाळा','बाग'], 1, 'सदन, गृह, निवास हे घराचे समानार्थी शब्द आहेत.'),
+        QQ('३० + ४० = किती?', ['६०','७०','८०','१००'], 1, '३० + ४० = ७०.'),
+        QQ('ग्रामपंचायतीचे प्रमुख कोण असतात?', ['तलाठी','ग्रामसेवक','सरपंच','पोलीस पाटील'], 2, 'सरपंच हे ग्रामपंचायतीचे प्रमुख असतात; ग्रामसेवक हे प्रशासकीय काम पाहतात.'),
+        QQ('८-अ उतारा कशाशी संबंधित आहे?', ['पीक पाहणी','खातेदाराच्या नावे असलेल्या एकूण जमिनीची नोंद (खाते उतारा)','घरपट्टीची नोंद','वाहन नोंदणी'], 1, 'गाव नमुना ८-अ हा खाते उतारा असून एका खातेदाराच्या नावे गावात असलेल्या सर्व जमिनींची नोंद त्यात असते.'),
+        QQ('६ × ७ = किती?', ['३६','४०','४२','४८'], 2, '६ × ७ = ४२.'),
+        QQ('“मुले” या शब्दाचे एकवचन कोणते?', ['मुलगा','मूल','मुलगी','बालके'], 1, 'मूल → मुले, असे एकवचन-अनेकवचन होते.'),
+        QQ('“Hot” या शब्दाचा विरुद्धार्थी शब्द कोणता?', ['Warm','Cold','Dry','Wet'], 1, 'Hot (गरम) × Cold (थंड).'),
+        QQ('२०० चे ५०% म्हणजे किती?', ['५०','७५','१००','१५०'], 2, '२०० × ५०/१०० = १००.'),
+        QQ('भारताचा स्वातंत्र्यदिन कोणता?', ['२६ जानेवारी','१५ ऑगस्ट','२ ऑक्टोबर','१ मे'], 1, '१५ ऑगस्ट १९४७ रोजी भारत स्वतंत्र झाला; २६ जानेवारी हा प्रजासत्ताक दिन आहे.'),
+        QQ('तलाठ्याच्या अखत्यारीतील गावांच्या समूहाला काय म्हणतात?', ['सज्जा','तालुका','वाडी','मंडळ'], 0, 'तलाठी ज्या गावांसाठी काम करतो, त्या गावांच्या समूहाला “सज्जा” म्हणतात.')
+      ]},
+      { label:'टप्पा २', sub:'मध्यम · मुख्य घटक', qs:[
+        QQ('७/१२ उताऱ्यातील “१२” (बारा) हा नमुना कशाची नोंद असतो?', ['जमिनीचा नकाशा','पीक पाहणीची नोंद','पाणीपट्टी','घरपट्टी'], 1, 'गाव नमुना ७ = हक्कांची नोंद, गाव नमुना १२ = पीक पाहणीची नोंद; म्हणून “७/१२ उतारा”.'),
+        QQ('१०, २०, ३०, ४० या संख्यांची सरासरी किती?', ['२०','२५','३०','३५'], 1, 'सरासरी = (१०+२०+३०+४०) / ४ = १००/४ = २५.'),
+        QQ('“मुलांनी अभ्यास केला” — या वाक्यातील कर्ता कोण?', ['अभ्यास','केला','मुलांनी','यापैकी नाही'], 2, 'क्रिया करणारा म्हणजे कर्ता — इथे “मुलांनी” हा कर्ता आहे.'),
+        QQ('महाराष्ट्रातील सर्वात उंच शिखर कोणते?', ['साल्हेर','कळसूबाई','तोरणा','हरिश्चंद्रगड'], 1, 'कळसूबाई शिखराची उंची १,६४६ मीटर असून ते राज्यातील सर्वात उंच शिखर आहे.'),
+        QQ('ग्राम महसूल अधिकारी (तलाठी) प्रशासकीयदृष्ट्या कोणाच्या अधीन काम करतो?', ['जिल्हाधिकारी','सरपंच','तहसीलदार','गटविकास अधिकारी'], 2, 'तलाठी हा तहसीलदार यांच्या अधीन राहून गावपातळीवर महसूल कामे करतो.'),
+        QQ('“Begin” या शब्दाचा विरुद्धार्थी शब्द कोणता?', ['Start','End','Open','Move'], 1, 'Begin (सुरू करणे) × End (संपवणे).'),
+        QQ('एखादी वस्तू ५०० रुपयांना खरेदी करून १०% नफ्याने विकल्यास विक्री किंमत किती?', ['५१० रुपये','५४० रुपये','५५० रुपये','६०० रुपये'], 2, 'नफा = ५०० चे १०% = ५०; विक्री किंमत = ५०० + ५० = ५५० रुपये.'),
+        QQ('भारतीय नागरिकत्वासंबंधीच्या तरतुदी संविधानाच्या कोणत्या भागात आहेत?', ['भाग १','भाग २','भाग ३','भाग ४'], 1, 'भाग २ मधील कलम ५ ते ११ मध्ये नागरिकत्वाच्या तरतुदी आहेत.'),
+        QQ('रत्नागिरी जिल्हा कोणत्या फळासाठी विशेष प्रसिद्ध आहे?', ['केशर आंबा','हापूस (अल्फान्सो) आंबा','संत्री','केळी'], 1, 'रत्नागिरीचा हापूस आंबा GI मानांकनासाठी जगप्रसिद्ध आहे.'),
+        QQ('५, १०, २०, ४०, ______ — पुढची संख्या कोणती?', ['५०','६०','८०','१००'], 2, 'प्रत्येक संख्या आधीच्या दुप्पट आहे, म्हणून पुढची संख्या ८०.'),
+        QQ('सातबारा उतारा तयार करण्याचे व तो अद्ययावत ठेवण्याचे काम कोणाचे असते?', ['सरपंच','तलाठी (ग्राम महसूल अधिकारी)','पोलीस पाटील','ग्रामसेवक'], 1, 'गावातील अधिकार अभिलेख (७/१२, ८-अ) तयार व अद्ययावत ठेवण्याचे काम तलाठ्याचे असते.'),
+        QQ('५, १५, २५ या संख्यांची सरासरी किती?', ['१०','१५','२०','२५'], 1, 'सरासरी = (५+१५+२५) / ३ = ४५/३ = १५.'),
+        QQ('“ती हसते” — या वाक्याचा प्रयोग कोणता?', ['कर्मणी प्रयोग','भावे प्रयोग','कर्तरी प्रयोग','यापैकी नाही'], 2, 'कर्त्याप्रमाणे क्रियापद बदलते (तो हसतो / ती हसते), म्हणून हा कर्तरी प्रयोग आहे.'),
+        QQ('कळसूबाई शिखर कोणत्या जिल्ह्यात आहे?', ['नाशिक','अहिल्यानगर','पुणे','ठाणे'], 1, 'कळसूबाई शिखर अहिल्यानगर जिल्ह्यातील अकोले तालुक्यात आहे.'),
+        QQ('“Arrive” या शब्दाचा विरुद्धार्थी शब्द कोणता?', ['Come','Reach','Depart','Enter'], 2, 'Arrive (पोहोचणे) × Depart (निघणे).'),
+        QQ('३०० चे १५% म्हणजे किती?', ['३०','४०','४५','६०'], 2, '३०० × १५/१०० = ४५.'),
+        QQ('भाषण व अभिव्यक्ती स्वातंत्र्याचा हक्क कोणत्या कलमात आहे?', ['कलम १४','कलम १९','कलम २१','कलम ३२'], 1, 'कलम १९(१)(अ) मध्ये भाषण व अभिव्यक्ती स्वातंत्र्याचा हक्क आहे.'),
+        QQ('जायकवाडी धरण कोणत्या नदीवर आहे?', ['कृष्णा','भीमा','गोदावरी','तापी'], 2, 'छत्रपती संभाजीनगर जिल्ह्यातील जायकवाडी (नाथसागर) धरण गोदावरी नदीवर आहे.'),
+        QQ('७, १४, २१, ______ — पुढची संख्या कोणती?', ['२४','२६','२८','३५'], 2, 'प्रत्येक वेळी ७ ची वाढ होत आहे, म्हणून पुढची संख्या २८.'),
+        QQ('तालुका पातळीवरील महसूल प्रशासनाचे प्रमुख कोण?', ['जिल्हाधिकारी','तहसीलदार','उपविभागीय अधिकारी','गटविकास अधिकारी'], 1, 'तालुका पातळीवर महसूल प्रशासनाचे प्रमुख तहसीलदार असतात; तलाठी त्यांच्या अधीन काम करतो.')
+      ]},
+      { label:'टप्पा ३', sub:'कठीण · परीक्षा स्तर', qs:[
+        QQ('फेरफार नोंद (Mutation Entry) कशासाठी घेतली जाते?', ['नवीन गाव वसवण्यासाठी','जमिनीच्या हक्कांमध्ये झालेल्या बदलाची नोंद करण्यासाठी','पीक मोजणीसाठी','घर बांधणी परवान्यासाठी'], 1, 'खरेदी-विक्री, वारसा किंवा वाटणीमुळे हक्क बदलल्यास त्याची नोंद फेरफार पत्रकात घेतली जाते.'),
+        QQ('दोन संख्यांचे गुणोत्तर ३ : ५ असून त्यांची बेरीज ८० आहे, तर मोठी संख्या कोणती?', ['३०','४०','५०','६०'], 2, 'एकूण भाग = ८; प्रत्येक भाग = १०; मोठी संख्या = ५ × १० = ५०.'),
+        QQ('“तो गाणे गातो” — या वाक्याचा प्रयोग कोणता?', ['कर्मणी प्रयोग','कर्तरी प्रयोग','भावे प्रयोग','यापैकी नाही'], 1, 'कर्त्याच्या लिंग-वचनानुसार क्रियापद बदलते तो कर्तरी प्रयोग — “ती गाणे गाते” असे रूप बदलेल.'),
+        QQ('कलम ३४३ नुसार संघ शासनाची (केंद्राची) राजभाषा कोणती?', ['इंग्रजी','हिंदी (देवनागरी लिपी)','मराठी','संस्कृत'], 1, 'कलम ३४३ नुसार देवनागरी लिपीतील हिंदी ही केंद्र शासनाची राजभाषा आहे; इंग्रजीचा वापरही सुरू आहे.'),
+        QQ('महाराष्ट्र जमीन महसूल संहिता कोणत्या वर्षी अस्तित्वात आली?', ['१९५०','१९६०','१९६६','१९७२'], 2, 'महाराष्ट्र जमीन महसूल संहिता १९६६ ही तलाठी व महसूल कामकाजाचा पायाभूत कायदा आहे.'),
+        QQ('DOG = ४ + १५ + ७ = २६ या पद्धतीने CAT ची किंमत किती?', ['२२','२४','२५','२७'], 1, 'अक्षरांच्या स्थानांची बेरीज: C(३) + A(१) + T(२०) = २४.'),
+        QQ('“He ______ to school daily.” — रिकाम्या जागी योग्य शब्द कोणता?', ['go','going','goes','gone'], 2, 'He या तृतीय पुरुषी एकवचनी कर्त्यासोबत वर्तमानकाळात “goes” येते.'),
+        QQ('पश्चिम घाटाला UNESCO जागतिक नैसर्गिक वारसा यादीत कोणत्या वर्षी स्थान मिळाले?', ['२००८','२०१०','२०१२','२०१५'], 2, '२०१२ मध्ये पश्चिम घाटाचा जागतिक वारसा यादीत समावेश झाला; महाराष्ट्रातील कास पठार त्याचा भाग आहे.'),
+        QQ('“रेपो दर” (Repo Rate) म्हणजे काय?', ['बँका जनतेला देतात तो व्याजदर','RBI व्यापारी बँकांना ज्या दराने अल्पमुदतीचे कर्ज देते तो दर','सरकारचा कर दर','शेअर बाजाराचा निर्देशांक'], 1, 'रेपो दर हा RBI च्या मौद्रिक धोरणाचा मुख्य दर आहे; तो वाढल्यास कर्जे महागतात.'),
+        QQ('ऑनलाईन सातबारा उतारा पाहण्यासाठी महाराष्ट्र शासनाचे अधिकृत पोर्टल कोणते?', ['महाऑनलाईन','महाभूलेख (Mahabhulekh)','आपले सरकार','महाडीबीटी'], 1, 'महाभूलेख पोर्टलवर ७/१२ व ८-अ उतारे ऑनलाईन पाहता व डाउनलोड करता येतात.'),
+        QQ('महाराष्ट्रात महसूल वर्ष (Revenue Year) कधी सुरू होते?', ['१ एप्रिल','१ जानेवारी','१ ऑगस्ट','१ ऑक्टोबर'], 2, 'महाराष्ट्रात महसूल वर्ष १ ऑगस्टला सुरू होऊन ३१ जुलैला संपते.'),
+        QQ('दोन संख्यांचे गुणोत्तर २ : ३ असून त्यांची बेरीज ५० आहे, तर मोठी संख्या कोणती?', ['२०','२५','३०','३५'], 2, 'एकूण भाग = ५; प्रत्येक भाग = १०; मोठी संख्या = ३ × १० = ३०.'),
+        QQ('“महोत्सव” या शब्दाचा संधीविग्रह कोणता?', ['महा + उत्सव','महो + त्सव','महत + सव','महा + त्सव'], 0, 'आ + उ = ओ हा गुण संधीचा नियम: महा + उत्सव = महोत्सव.'),
+        QQ('पंचायतराज संस्थांसंबंधीच्या तरतुदी संविधानाच्या कोणत्या भागात आहेत?', ['भाग ३','भाग ४','भाग ९','भाग ११'], 2, '७३व्या घटनादुरुस्तीने भाग ९ (कलम २४३ ते २४३-O) मध्ये पंचायतींच्या तरतुदी समाविष्ट केल्या.'),
+        QQ('PEN या शब्दाची अक्षरस्थान बेरीज किती?', ['३०','३२','३५','४०'], 2, 'P(१६) + E(५) + N(१४) = ३५.'),
+        QQ('“They ______ playing football.” — रिकाम्या जागी योग्य शब्द कोणता?', ['is','am','are','be'], 2, 'They या अनेकवचनी कर्त्यासोबत “are” येते.'),
+        QQ('अजिंठा-वेरूळ लेण्यांना UNESCO जागतिक वारसा दर्जा कोणत्या वर्षी मिळाला?', ['१९८३','१९९०','२००४','२०१२'], 0, '१९८३ मध्ये अजिंठा व वेरूळ लेण्यांचा जागतिक वारसा यादीत समावेश झाला.'),
+        QQ('GST परिषदेचे (GST Council) अध्यक्ष कोण असतात?', ['पंतप्रधान','केंद्रीय अर्थमंत्री','RBI चे गव्हर्नर','नीती आयोगाचे उपाध्यक्ष'], 1, 'केंद्रीय अर्थमंत्री हे GST परिषदेचे अध्यक्ष असतात; राज्यांचे अर्थमंत्री सदस्य असतात.'),
+        QQ('डिजिटल सातबारा उताऱ्यावर कोणाची डिजिटल स्वाक्षरी असते?', ['सरपंचाची','तलाठ्याची','जिल्हाधिकाऱ्याची','मुख्यमंत्र्यांची'], 1, 'डिजिटल स्वाक्षरीत सातबारा उताऱ्यावर तलाठ्याची डिजिटल स्वाक्षरी असते, त्यामुळे तो अधिकृत मानला जातो.'),
+        QQ('जिरायत व बागायत हे कशाचे प्रकार आहेत?', ['पिकांचे','पाण्याच्या उपलब्धतेनुसार जमीन लागवडीचे प्रकार','करांचे प्रकार','धरणांचे प्रकार'], 1, 'पावसावर अवलंबून असलेली शेती म्हणजे जिरायत आणि सिंचनावरची म्हणजे बागायत.')
+      ]}
+    ]}
+  };
+
+  /* ===== संच विस्तार: प्रत्येक टप्प्यात १,००० प्रश्न = सलग १०० फेऱ्या, प्रत्येक फेरीत वेगळे १० प्रश्न =====
+     हाताने लिहिलेल्या प्रश्नांबरोबर खालील तयार संच (सामान्य ज्ञान, शब्दसंग्रह, महसूल/RTI घटक)
+     आणि सूत्रावर आधारित अंकगणित-बुद्धिमत्ता प्रश्न (प्रत्येकाचे उत्तर व स्पष्टीकरण सूत्राने पडताळलेले)
+     मिळून प्रत्येक टप्प्याचा संच १,००० प्रश्नांचा होतो. संचातील प्रश्न संपेपर्यंत एकही प्रश्न परत येत नाही. */
+  var TARGET_POOL = 1000;
+  function D(n){ return toDevDigits(String(n)); }
+  function ri(a, b){ return a + Math.floor(Math.random() * (b - a + 1)); }
+  function pk(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+  function mkOpts(correct, wrongs){
+    var opts = [String(correct)], seen = {}; seen[String(correct)] = 1;
+    for(var i = 0; i < wrongs.length && opts.length < 4; i++){ var w = String(wrongs[i]); if(!seen[w]){ seen[w] = 1; opts.push(w); } }
+    if(opts.length < 4) return null;
+    for(var j = opts.length - 1; j > 0; j--){ var k = Math.floor(Math.random() * (j + 1)); var t = opts[j]; opts[j] = opts[k]; opts[k] = t; }
+    return { o: opts, a: opts.indexOf(String(correct)) };
+  }
+  function numQ(qText, value, unit, explain){
+    var offs = [1, 2, 5, 10, Math.max(2, Math.round(value * 0.1)), Math.max(3, Math.round(value * 0.25)), 3, 7, 20, 50, 100];
+    var wrongs = [];
+    for(var i = 0; i < offs.length; i++){ wrongs.push(value + offs[i]); if(value - offs[i] > 0) wrongs.push(value - offs[i]); }
+    var m = mkOpts(D(value) + unit, wrongs.map(function(w){ return D(w) + unit; }));
+    if(!m) return null;
+    return QQ(qText, m.o, m.a, explain);
+  }
+  var GK = [
+    ['संविधानातील कलम १४ कशाशी संबंधित आहे?','कायद्यासमोर समानता','भाषण स्वातंत्र्य','धर्म स्वातंत्र्य','मालमत्तेचा हक्क'],
+    ['कलम २१ मध्ये कोणता हक्क दिला आहे?','जीवन व वैयक्तिक स्वातंत्र्याचा हक्क','समानतेचा हक्क','शोषणाविरुद्धचा हक्क','संस्कृती व शिक्षणाचा हक्क'],
+    ['कलम १९(१)(अ) मध्ये कोणता हक्क आहे?','भाषण व अभिव्यक्ती स्वातंत्र्य','समानतेचा हक्क','धर्म स्वातंत्र्य','जीवनाचा हक्क'],
+    ['कलम ३२ कशाशी संबंधित आहे?','घटनात्मक उपायांचा हक्क (रिट)','आणीबाणीची घोषणा','घटनादुरुस्ती','वित्त विधेयक'],
+    ['घटनादुरुस्तीची तरतूद कोणत्या कलमात आहे?','कलम ३६८','कलम ३५२','कलम ३२४','कलम ३१२'],
+    ['राष्ट्रपतींचा कार्यकाळ किती वर्षांचा असतो?','५ वर्षे','४ वर्षे','६ वर्षे','७ वर्षे'],
+    ['उपराष्ट्रपतींची निवड कोण करतात?','संसदेच्या दोन्ही सभागृहांचे सदस्य','फक्त लोकसभेचे सदस्य','फक्त राज्यसभेचे सदस्य','राज्य विधिमंडळांचे सदस्य'],
+    ['राज्यसभा सदस्याचा कार्यकाळ किती वर्षांचा असतो?','६ वर्षे','३ वर्षे','४ वर्षे','५ वर्षे'],
+    ['वित्त आयोग दर किती वर्षांनी नेमला जातो?','५ वर्षांनी','३ वर्षांनी','७ वर्षांनी','१० वर्षांनी'],
+    ['निवडणूक आयोगाची तरतूद कोणत्या कलमात आहे?','कलम ३२४','कलम २८०','कलम ३१२','कलम ३६८'],
+    ['केंद्रीय लोकसेवा आयोगाची (UPSC) तरतूद कोणत्या कलमात आहे?','कलम ३१५','कलम २८०','कलम ३२४','कलम ३७०'],
+    ['पंचायतींच्या तरतुदी संविधानाच्या कोणत्या भागात आहेत?','भाग ९','भाग ३','भाग ४','भाग ११'],
+    ['नगरपालिकांना घटनात्मक दर्जा कोणत्या दुरुस्तीने मिळाला?','७४वी घटनादुरुस्ती','५२वी घटनादुरुस्ती','६१वी घटनादुरुस्ती','८६वी घटनादुरुस्ती'],
+    ['शिक्षणाचा मूलभूत हक्क कोणत्या दुरुस्तीने जोडला गेला?','८६वी घटनादुरुस्ती','४२वी घटनादुरुस्ती','५२वी घटनादुरुस्ती','९७वी घटनादुरुस्ती'],
+    ['मूलभूत कर्तव्ये कोणत्या दुरुस्तीने जोडली गेली?','४२वी घटनादुरुस्ती','४४वी घटनादुरुस्ती','५२वी घटनादुरुस्ती','८६वी घटनादुरुस्ती'],
+    ['मतदानाचे वय २१ वरून १८ कोणत्या दुरुस्तीने झाले?','६१वी घटनादुरुस्ती','४२वी घटनादुरुस्ती','७३वी घटनादुरुस्ती','९७वी घटनादुरुस्ती'],
+    ['GST साठी कोणती घटनादुरुस्ती करण्यात आली?','१०१वी घटनादुरुस्ती','९७वी घटनादुरुस्ती','८६वी घटनादुरुस्ती','७३वी घटनादुरुस्ती'],
+    ['सहकारी संस्थांसाठी कोणती घटनादुरुस्ती आहे?','९७वी घटनादुरुस्ती','७४वी घटनादुरुस्ती','६१वी घटनादुरुस्ती','१०१वी घटनादुरुस्ती'],
+    ['राष्ट्रीय आणीबाणीची तरतूद कोणत्या कलमात आहे?','कलम ३५२','कलम ३१२','कलम ३२४','कलम ३६८'],
+    ['लोकसभाध्यक्षांची निवड कोण करते?','लोकसभेचे सदस्य','राष्ट्रपती','पंतप्रधान','राज्यसभा'],
+    ['क्षेत्रफळाने भारतातील सर्वात मोठे राज्य कोणते?','राजस्थान','मध्य प्रदेश','महाराष्ट्र','उत्तर प्रदेश'],
+    ['क्षेत्रफळाने भारतातील सर्वात लहान राज्य कोणते?','गोवा','सिक्कीम','त्रिपुरा','मिझोराम'],
+    ['भारतातील सर्वात लांब किनारपट्टी कोणत्या राज्याला आहे?','गुजरात','आंध्र प्रदेश','तामिळनाडू','महाराष्ट्र'],
+    ['महाराष्ट्राच्या किनारपट्टीची लांबी सुमारे किती आहे?','सुमारे ७२० किमी','सुमारे ४०० किमी','सुमारे ९०० किमी','सुमारे १,०५० किमी'],
+    ['जोग धबधबा कोणत्या राज्यात आहे?','कर्नाटक','महाराष्ट्र','केरळ','तामिळनाडू'],
+    ['चिल्का सरोवर कोणत्या राज्यात आहे?','ओडिशा','आंध्र प्रदेश','पश्चिम बंगाल','केरळ'],
+    ['वुलर सरोवर कुठे आहे?','जम्मू-काश्मीर','हिमाचल प्रदेश','उत्तराखंड','पंजाब'],
+    ['थारचे वाळवंट प्रामुख्याने कोणत्या राज्यात आहे?','राजस्थान','गुजरात','हरियाणा','मध्य प्रदेश'],
+    ['नर्मदा नदीचा उगम कुठे होतो?','अमरकंटक','त्र्यंबकेश्वर','महाबळेश्वर','मुलताई'],
+    ['तापी नदीचा उगम कुठे होतो?','मुलताई (मध्य प्रदेश)','अमरकंटक','त्र्यंबकेश्वर','महाबळेश्वर'],
+    ['भीमा नदीचा उगम कुठे होतो?','भीमाशंकर','महाबळेश्वर','त्र्यंबकेश्वर','कास'],
+    ['कोयना धरण कोणत्या नदीवर आहे?','कोयना नदी (कृष्णेची उपनदी)','भीमा नदी','गोदावरी नदी','तापी नदी'],
+    ['उजनी धरण कोणत्या नदीवर आहे?','भीमा नदी','कृष्णा नदी','गोदावरी नदी','तापी नदी'],
+    ['भारतातील सर्वात लांब धरण कोणते?','हिराकूड (महानदी)','भाक्रा (सतलज)','नागार्जुन सागर (कृष्णा)','सरदार सरोवर (नर्मदा)'],
+    ['भाक्रा धरण कोणत्या नदीवर आहे?','सतलज','बियास','रावी','झेलम'],
+    ['सरदार सरोवर धरण कोणत्या नदीवर आहे?','नर्मदा','तापी','माही','साबरमती'],
+    ['कावेरी पाणीविवाद कोणत्या राज्यांदरम्यान आहे?','कर्नाटक–तामिळनाडू','ओडिशा–छत्तीसगड','पंजाब–हरियाणा','महाराष्ट्र–कर्नाटक'],
+    ['सुंदरबन हा कोणत्या नद्यांचा त्रिभुज प्रदेश आहे?','गंगा–ब्रह्मपुत्रा','गोदावरी–कृष्णा','नर्मदा–तापी','कावेरी–वैगई'],
+    ['महाराष्ट्रात सर्वाधिक पाऊस पडणारे ठिकाण कोणते?','आंबोली','महाबळेश्वर','माथेरान','लोणावळा'],
+    ['महाराष्ट्राचा राज्यवृक्ष कोणता?','आंबा','वड','पिंपळ','कडूलिंब'],
+    ['प्लासीची लढाई कोणत्या वर्षी झाली?','१७५७','१७६४','१७७२','१७८२'],
+    ['बक्सरची लढाई कोणत्या वर्षी झाली?','१७६४','१७५७','१७७२','१७९९'],
+    ['पहिले भारतीय स्वातंत्र्य युद्ध (उठाव) कोणत्या वर्षी झाले?','१८५७','१८८५','१९०५','१९४२'],
+    ['भारतीय राष्ट्रीय काँग्रेसची स्थापना कोणत्या वर्षी झाली?','१८८५','१८५७','१९०५','१९२०'],
+    ['बंगालची फाळणी कोणत्या वर्षी झाली?','१९०५','१८८५','१९११','१९१९'],
+    ['महात्मा गांधी दक्षिण आफ्रिकेहून भारतात कोणत्या वर्षी परतले?','१९१५','१९०९','१९२०','१९३०'],
+    ['जालियनवाला बाग हत्याकांड कोणत्या वर्षी घडले?','१९१९','१९१५','१९२१','१९३१'],
+    ['असहकार चळवळ कोणत्या वर्षी सुरू झाली?','१९२०','१९१९','१९३०','१९४२'],
+    ['दांडी यात्रा (मीठ सत्याग्रह) कोणत्या वर्षी झाली?','१९३०','१९२०','१९३२','१९४२'],
+    ['छोडो भारत चळवळ कोणत्या वर्षी सुरू झाली?','१९४२','१९३०','१९४५','१९४७'],
+    ['छत्रपती शिवाजी महाराजांचा राज्याभिषेक कोणत्या वर्षी झाला?','१६७४','१६५९','१६८०','१६३०'],
+    ['अफजलखानाचा वध कोणत्या वर्षी झाला?','१६५९','१६७४','१६६३','१६७०'],
+    ['पानिपतची तिसरी लढाई कोणत्या वर्षी झाली?','१७६१','१५२६','१५५६','१७५७'],
+    ['आर्य समाजाची स्थापना कोणी केली?','स्वामी दयानंद सरस्वती','राजा राममोहन रॉय','स्वामी विवेकानंद','महात्मा फुले'],
+    ['ब्राह्मो समाजाची स्थापना कोणी केली?','राजा राममोहन रॉय','स्वामी दयानंद सरस्वती','स्वामी विवेकानंद','केशवचंद्र सेन'],
+    ['“गीतारहस्य” या ग्रंथाचे लेखक कोण?','लोकमान्य बाळ गंगाधर टिळक','महात्मा गांधी','पंडित जवाहरलाल नेहरू','विनायक दामोदर सावरकर'],
+    ['“माझे सत्याचे प्रयोग” हे आत्मचरित्र कोणाचे आहे?','महात्मा गांधी','पंडित जवाहरलाल नेहरू','लोकमान्य टिळक','डॉ. बाबासाहेब आंबेडकर'],
+    ['संविधान सभेची पहिली बैठक कधी झाली?','९ डिसेंबर १९४६','२६ जानेवारी १९५०','१५ ऑगस्ट १९४७','२६ नोव्हेंबर १९४९'],
+    ['पहिली पंचवार्षिक योजना कोणत्या वर्षी सुरू झाली?','१९५१','१९४७','१९५६','१९६१'],
+    ['भारतात हरित क्रांतीची सुरुवात साधारण कोणत्या काळात झाली?','१९६६–६७','१९५१–५२','१९८०–८१','१९९१–९२'],
+    ['शुद्ध पाण्याचा pH किती असतो?','७','१','१४','०'],
+    ['प्रकाशाचा वेग सुमारे किती असतो?','३ लाख किमी/सेकंद','१.५ लाख किमी/सेकंद','३०० किमी/सेकंद','३ किमी/सेकंद'],
+    ['प्रौढ मानवी शरीरात एकूण किती हाडे असतात?','२०६','२००','२१६','२२६'],
+    ['सर्वात हलका वायू कोणता?','हायड्रोजन','हेलियम','ऑक्सिजन','नायट्रोजन'],
+    ['विद्युत प्रवाहाचे एकक कोणते?','अँपिअर','व्होल्ट','ओहम','वॅट'],
+    ['शक्तीचे (Power) एकक कोणते?','वॅट','ज्यूल','न्यूटन','पास्कल'],
+    ['बलाचे (Force) एकक कोणते?','न्यूटन','वॅट','ज्यूल','ओहम'],
+    ['DNA च्या दुहेरी सर्पिल रचनेचा शोध कोणी लावला?','वॉटसन व क्रिक','डार्विन','न्यूटन','मेंडेल'],
+    ['गुरुत्वाकर्षणाचा नियम कोणी मांडला?','न्यूटन','आईनस्टाईन','गॅलिलिओ','बोहर'],
+    ['पेनिसिलिनचा शोध कोणी लावला?','अलेक्झांडर फ्लेमिंग','लुई पाश्चर','रॉबर्ट कोक','एडवर्ड जेनर'],
+    ['मानवी शरीरातील सर्वात मोठा अवयव कोणता?','त्वचा','यकृत','हृदय','मेंदू'],
+    ['प्रकाश संश्लेषणात झाडे कोणता वायू शोषतात?','कार्बन डायऑक्साइड','ऑक्सिजन','नायट्रोजन','हायड्रोजन'],
+    ['भारताचा अर्थसंकल्प संसदेत कोण सादर करतात?','केंद्रीय अर्थमंत्री','पंतप्रधान','राष्ट्रपती','RBI चे गव्हर्नर'],
+    ['SEBI ची स्थापना कोणत्या वर्षी झाली?','१९८८','१९८२','१९९२','२०००'],
+    ['नाबार्डची (NABARD) स्थापना कोणत्या वर्षी झाली?','१९८२','१९७५','१९८८','१९९०'],
+    ['१९९१ च्या आर्थिक सुधारणांच्या वेळी अर्थमंत्री कोण होते?','डॉ. मनमोहन सिंग','प्रणब मुखर्जी','यशवंत सिन्हा','पी. चिदंबरम'],
+    ['जागतिक बँकेचे मुख्यालय कुठे आहे?','वॉशिंग्टन डी.सी.','न्यूयॉर्क','जिनिव्हा','लंडन'],
+    ['संयुक्त राष्ट्रांचे (UNO) मुख्यालय कुठे आहे?','न्यूयॉर्क','जिनिव्हा','पॅरिस','व्हिएन्ना'],
+    ['२०२४ चे उन्हाळी ऑलिंपिक खेळ कोणत्या शहरात झाले?','पॅरिस','टोकियो','लॉस एंजेलिस','लंडन']
+  ];
+  var GBX = [
+    ['RTI अर्जासाठी सर्वसाधारण शुल्क किती असते?','१० रुपये','५० रुपये','१०० रुपये','५०० रुपये'],
+    ['RTI मध्ये प्रथम अपील करण्याची मुदत किती असते?','३० दिवस','६० दिवस','९० दिवस','१५ दिवस'],
+    ['एखाद्याच्या जीवनाशी संबंधित RTI माहिती किती वेळेत द्यावी लागते?','४८ तासांत','७ दिवसांत','३० दिवसांत','२४ तासांत'],
+    ['राज्य माहिती आयोगाचे मुख्यालय कुठे आहे?','मुंबई','पुणे','नागपूर','नवी दिल्ली'],
+    ['केंद्रीय माहिती आयोगाची स्थापना कोणत्या वर्षी झाली?','२००५','२००२','२०१०','२०१५'],
+    ['जन माहिती अधिकारी (PIO) म्हणजे कोण?','माहिती देण्यासाठी नेमलेला अधिकारी','जिल्हाधिकारी','सरपंच','पोलीस निरीक्षक'],
+    ['महाराष्ट्र लोकसेवा हक्क कायद्यानुसार सेवा मुदतीत न मिळाल्यास काय करता येते?','अपील करता येते','थेट शिक्षा होते','सेवा रद्द होते','काहीच करता येत नाही'],
+    ['लोकसेवा हक्क कायद्यात प्रत्येक सेवेसाठी सेवा देण्याची मुदत कशी ठरते?','शासन अधिसूचनेत ठरवलेली मुदत','एकच दिवस','एक वर्ष','अधिकाऱ्याच्या सोयीनुसार'],
+    ['RTI कायद्यात माहिती देण्यास सूट असलेल्या विषयांची यादी कोणत्या कलमात आहे?','कलम ८','कलम ४','कलम ११','कलम १९']
+  ];
+  var GCX = [
+    ['गाव नमुना ७ (सात) कशाची नोंद असतो?','जमिनीच्या हक्कांची नोंद','पीक पाहणीची नोंद','घरपट्टीची नोंद','पाणीपट्टीची नोंद'],
+    ['फेरफार पत्रक म्हणजे कोणता गाव नमुना?','गाव नमुना ६','गाव नमुना ७','गाव नमुना ८-अ','गाव नमुना १२'],
+    ['मंडळ अधिकारी (Circle Inspector) कोणाच्या कामावर देखरेख करतो?','तलाठ्याच्या कामावर','तहसीलदारांच्या कामावर','जिल्हाधिकाऱ्यांच्या कामावर','सरपंचांच्या कामावर'],
+    ['उपविभागीय अधिकारी (SDO) कोणत्या पातळीवर काम करतो?','उपविभाग (प्रांत) पातळीवर','गाव पातळीवर','तालुका पातळीवर','राज्य पातळीवर'],
+    ['गट नंबर (सर्व्हे नंबर) म्हणजे काय?','जमिनीच्या एका सलग तुकड्याचा क्रमांक','घराचा क्रमांक','मतदाराचा क्रमांक','वाहनाचा क्रमांक'],
+    ['ई-फेरफार प्रणाली कशासाठी वापरली जाते?','फेरफार नोंदी ऑनलाईन करण्यासाठी','परीक्षा अर्जासाठी','रेशन कार्डसाठी','वाहन नोंदणीसाठी'],
+    ['पीक पाहणीची नोंद कोणत्या गाव नमुन्यात असते?','गाव नमुना १२','गाव नमुना ६','गाव नमुना ७','गाव नमुना ८-अ'],
+    ['अधिकार अभिलेख म्हणजे काय?','सातबारा, ८-अ यांसारख्या जमीन हक्कांच्या नोंदी','पोलीस नोंदी','शाळेच्या नोंदी','बँक खात्याच्या नोंदी'],
+    ['गावपातळीवर जमीन महसूल वसुलीची मुख्य जबाबदारी कोणाची असते?','तलाठी (ग्राम महसूल अधिकारी)','सरपंच','पोलीस पाटील','ग्रामसेवक']
+  ];
+  var ENG_ANT = [['Hot','Cold'],['Big','Small'],['Fast','Slow'],['Happy','Sad'],['Rich','Poor'],['Strong','Weak'],['Bright','Dark'],['Ancient','Modern'],['Begin','End'],['Arrive','Depart'],['Accept','Reject'],['Victory','Defeat'],['Create','Destroy'],['Import','Export'],['Maximum','Minimum'],['Permanent','Temporary'],['Brave','Timid'],['Expand','Contract'],['Deep','Shallow'],['Wide','Narrow'],['Early','Late'],['True','False'],['Polite','Rude'],['Victory','Defeat']];
+  var ENG_SYN = [['Happy','Joyful'],['Begin','Start'],['Fast','Quick'],['Big','Large'],['Smart','Intelligent'],['Rich','Wealthy'],['Brave','Bold'],['Calm','Peaceful'],['Angry','Furious'],['Tired','Exhausted'],['Beautiful','Pretty'],['Difficult','Hard'],['Easy','Simple'],['Rapid','Swift'],['Silent','Quiet'],['Strong','Powerful'],['Important','Significant'],['Clever','Smart']];
+  var MR_SYN = [['सूर्य','दिनकर'],['चंद्र','शशी'],['पाणी','जल'],['अग्नी','अनल'],['वारा','अनिल'],['घर','सदन'],['आई','जननी'],['वडील','जनक'],['मित्र','सखा'],['राजा','नृप'],['हत्ती','गज'],['घोडा','अश्व'],['सिंह','केसरी'],['नदी','सरिता'],['समुद्र','सागर'],['डोंगर','गिरी'],['फूल','सुमन'],['झाड','वृक्ष'],['डोळा','नयन'],['शत्रू','अरी']];
+  var PLURALS = [['Book','Books'],['Child','Children'],['Man','Men'],['Woman','Women'],['Foot','Feet'],['Tooth','Teeth'],['Mouse','Mice'],['Leaf','Leaves'],['Knife','Knives'],['City','Cities'],['Baby','Babies'],['Box','Boxes'],['Watch','Watches'],['Hero','Heroes'],['Potato','Potatoes'],['Life','Lives'],['Wolf','Wolves'],['Bus','Buses'],['Class','Classes'],['Day','Days']];
+  var PASTS = [['Go','Went'],['Eat','Ate'],['Run','Ran'],['Write','Wrote'],['Speak','Spoke'],['Take','Took'],['Give','Gave'],['See','Saw'],['Come','Came'],['Buy','Bought'],['Teach','Taught'],['Catch','Caught'],['Bring','Brought'],['Think','Thought'],['Sing','Sang'],['Drink','Drank'],['Begin','Began'],['Break','Broke'],['Choose','Chose'],['Drive','Drove']];
+  var WORDS = ['CAT','DOG','PEN','BOOK','SUN','MOON','STAR','KING','INDIA','DELHI','PUNE','RIVER','TIGER','LION','APPLE','MANGO','WATER','EARTH','FIRE','GOLD','IRON','QUEEN','NASHIK','HORSE','HOUSE'];
+  function letterSum(w){ var s = 0; for(var i = 0; i < w.length; i++) s += w.charCodeAt(i) - 64; return s; }
+  function genQuant(si){
+    var t = ri(0, 11), v;
+    if(t === 0){ var base = pk([40,60,80,120,150,200,240,250,300,400,450,500,600,750,800,900,1000,1200,1500,2000,2500,3000,4000,5000]); var pc = pk([5,10,12,15,20,25,30,35,40,45,50,60,70,75,80,90]); if((base * pc) % 100 !== 0) return null; v = base * pc / 100; return numQ(D(base) + ' चे ' + D(pc) + '% म्हणजे किती?', v, '', 'उत्तर = ' + D(base) + ' × ' + D(pc) + ' / १०० = ' + D(v) + '.'); }
+    if(t === 1){ var a = ri(6, 15 + si * 12), b = ri(4, 12 + si * 8); v = a * b; return numQ(D(a) + ' × ' + D(b) + ' = किती?', v, '', D(a) + ' × ' + D(b) + ' = ' + D(v) + '.'); }
+    if(t === 2){ var x = ri(25, 400 + si * 600), y = ri(15, 300 + si * 400), z = ri(5, 200); if(Math.random() < 0.5){ v = x + y + z; return numQ(D(x) + ' + ' + D(y) + ' + ' + D(z) + ' = किती?', v, '', 'बेरीज = ' + D(x) + ' + ' + D(y) + ' + ' + D(z) + ' = ' + D(v) + '.'); } v = x + y - z; if(v <= 0) return null; return numQ(D(x) + ' + ' + D(y) + ' − ' + D(z) + ' = किती?', v, '', 'उत्तर = ' + D(x + y) + ' − ' + D(z) + ' = ' + D(v) + '.'); }
+    if(t === 3){ var n = ri(4, 25 + si * 10); if(Math.random() < 0.5){ v = n * n; return numQ(D(n) + ' चा वर्ग (Square) किती?', v, '', D(n) + ' × ' + D(n) + ' = ' + D(v) + '.'); } return numQ(D(n * n) + ' चे वर्गमूळ (Square Root) किती?', n, '', D(n) + ' × ' + D(n) + ' = ' + D(n * n) + ', म्हणून वर्गमूळ = ' + D(n) + '.'); }
+    if(t === 4){ var P = pk([1000,2000,2500,4000,5000,6000,8000,10000,12000,15000,20000,25000,30000,50000]); var r = ri(4, 12 + si * 3), tt = ri(1, 5); v = P * r * tt / 100; return numQ(D(P) + ' रुपयांवर वार्षिक ' + D(r) + '% दराने ' + D(tt) + ' वर्षांचे सरळव्याज किती?', v, ' रुपये', 'सरळव्याज = मुद्दल × दर × काळ / १०० = ' + D(P) + ' × ' + D(r) + ' × ' + D(tt) + ' / १०० = ' + D(v) + ' रुपये.'); }
+    if(t === 5){ if(si === 0){ var P2 = pk([2000,4000,5000,10000,20000]); var r2 = pk([5,10,20,25]); v = Math.round(P2 * (Math.pow(1 + r2 / 100, 2) - 1)); return numQ(D(P2) + ' रुपयांवर वार्षिक ' + D(r2) + '% दराने २ वर्षांचे चक्रवाढ व्याज किती?', v, ' रुपये', 'चक्रवाढ व्याज = मुद्दल × [(१ + दर/१००)² − १] = ' + D(v) + ' रुपये. (सरळव्याजापेक्षा हे थोडे जास्त असते, कारण दुसऱ्या वर्षी व्याजावरही व्याज मिळते.)'); } var a3 = ri(2, 9), b3 = a3 + ri(1, 8), k = ri(2, 12); v = b3 * k; return numQ('दोन संख्यांचे गुणोत्तर ' + D(a3) + ' : ' + D(b3) + ' असून त्यांची बेरीज ' + D((a3 + b3) * k) + ' आहे, तर मोठी संख्या कोणती?', v, '', 'एकूण भाग = ' + D(a3 + b3) + '; प्रत्येक भाग = ' + D((a3 + b3) * k) + ' / ' + D(a3 + b3) + ' = ' + D(k) + '; मोठी संख्या = ' + D(b3) + ' × ' + D(k) + ' = ' + D(v) + '.'); }
+    if(t === 6){ var cnt = ri(3, 5), nums = [], sum = 0; for(var i = 0; i < cnt; i++){ var nn = ri(2, 40 + si * 30) * pk([1, 2, 5]); nums.push(nn); sum += nn; } if(sum % cnt !== 0) return null; v = sum / cnt; return numQ(nums.map(function(q){ return D(q); }).join(', ') + ' या संख्यांची सरासरी किती?', v, '', 'सरासरी = बेरीज / एकूण संख्या = ' + D(sum) + ' / ' + D(cnt) + ' = ' + D(v) + '.'); }
+    if(t === 7){ var cp = pk([100,200,250,400,500,600,800,1000,1200,1500,2000,2500,3000,5000]); var pf = pk([5,10,12,15,20,25,30,40,50]); if((cp * pf) % 100 !== 0) return null; v = cp + cp * pf / 100; return numQ('एखादी वस्तू ' + D(cp) + ' रुपयांना खरेदी करून ' + D(pf) + '% नफ्याने विकल्यास विक्री किंमत किती?', v, ' रुपये', 'नफा = ' + D(cp) + ' चे ' + D(pf) + '% = ' + D(cp * pf / 100) + ' रुपये; विक्री किंमत = ' + D(cp) + ' + ' + D(cp * pf / 100) + ' = ' + D(v) + ' रुपये.'); }
+    if(t === 8){ var s0 = ri(2, 60), d0 = ri(2, 15), terms = [s0, s0 + d0, s0 + 2 * d0, s0 + 3 * d0]; v = s0 + 4 * d0; return numQ(terms.map(function(q){ return D(q); }).join(', ') + ', ______ — या मालिकेतील पुढची संख्या कोणती?', v, '', 'प्रत्येक वेळी ' + D(d0) + ' ची वाढ होत आहे, म्हणून पुढची संख्या ' + D(terms[3]) + ' + ' + D(d0) + ' = ' + D(v) + '.'); }
+    if(t === 9){ var kind = ri(0, 3), seq, vv, ex; if(kind === 0){ var st = ri(2, 9); seq = [st, st * 2, st * 4, st * 8]; vv = st * 16; ex = 'प्रत्येक संख्या आधीच्या दुप्पट आहे, म्हणून पुढची संख्या ' + D(seq[3]) + ' × २ = ' + D(vv) + '.'; } else if(kind === 1){ var b0 = ri(1, 5); seq = [b0 * b0, (b0 + 1) * (b0 + 1), (b0 + 2) * (b0 + 2), (b0 + 3) * (b0 + 3)]; vv = (b0 + 4) * (b0 + 4); ex = 'हे सलग संख्यांचे वर्ग आहेत (' + D(b0) + '², ' + D(b0 + 1) + '², …), म्हणून पुढची संख्या ' + D(b0 + 4) + '² = ' + D(vv) + '.'; } else if(kind === 2){ var c0 = ri(2, 20); seq = [c0, c0 * 2 + 1, (c0 * 2 + 1) * 2 + 1, ((c0 * 2 + 1) * 2 + 1) * 2 + 1]; vv = seq[3] * 2 + 1; ex = 'प्रत्येक संख्या = आधीची संख्या × २ + १, म्हणून पुढची संख्या ' + D(seq[3]) + ' × २ + १ = ' + D(vv) + '.'; } else { var d1 = ri(1, 6); seq = [d1 * d1 + d1, (d1 + 1) * (d1 + 1) + (d1 + 1), (d1 + 2) * (d1 + 2) + (d1 + 2), (d1 + 3) * (d1 + 3) + (d1 + 3)]; vv = (d1 + 4) * (d1 + 4) + (d1 + 4); ex = 'ही मालिका n² + n या स्वरूपाची आहे, म्हणून पुढची संख्या ' + D(vv) + '.'; } return numQ(seq.map(function(q){ return D(q); }).join(', ') + ', ______ — या मालिकेतील पुढची संख्या कोणती?', vv, '', ex); }
+    if(t === 10){ var w = pk(WORDS); v = letterSum(w); return numQ('A = १, B = २, …, Z = २६ मानल्यास ' + w + ' या शब्दाच्या अक्षरस्थानांची बेरीज किती?', v, '', w + ' मधील प्रत्येक अक्षराचे स्थान मिळवून बेरीज ' + D(v) + ' होते.'); }
+    var L = String.fromCharCode(65 + ri(0, 25)); var pos = L.charCodeAt(0) - 64; if(Math.random() < 0.5){ return numQ('इंग्रजी वर्णमालेत ' + L + ' हे अक्षर कितव्या स्थानी आहे?', pos, '', L + ' हे अक्षर वर्णमालेत ' + D(pos) + ' व्या स्थानी आहे.'); } v = 27 - pos; return numQ('इंग्रजी वर्णमालेत शेवटून (Z कडून) मोजल्यास ' + L + ' हे अक्षर कितव्या स्थानी आहे?', v, '', 'शेवटून स्थान = २७ − ' + D(pos) + ' = ' + D(v) + '.');
+  }
+  function vocabQ(kind, pair, all){
+    var wrongs = [];
+    all.forEach(function(x){ if(x !== pair) wrongs.push(x[1]); });
+    wrongs = shuffleArr(wrongs);
+    var m = mkOpts(pair[1], wrongs);
+    if(!m) return null;
+    if(kind === 'ant') return QQ('“' + pair[0] + '” या इंग्रजी शब्दाचा विरुद्धार्थी शब्द कोणता?', m.o, m.a, pair[0] + ' × ' + pair[1] + ' — हे विरुद्धार्थी शब्द आहेत.');
+    if(kind === 'syn') return QQ('“' + pair[0] + '” या इंग्रजी शब्दाचा समानार्थी शब्द कोणता?', m.o, m.a, pair[0] + ' ≈ ' + pair[1] + ' — हे समानार्थी शब्द आहेत.');
+    if(kind === 'mr') return QQ('“' + pair[0] + '” या शब्दाचा समानार्थी शब्द कोणता?', m.o, m.a, pair[0] + ' ≈ ' + pair[1] + ' — हे समानार्थी शब्द आहेत.');
+    if(kind === 'pl') return QQ('“' + pair[0] + '” या शब्दाचे अनेकवचन (Plural) कोणते?', m.o, m.a, pair[0] + ' → ' + pair[1] + ' असे अनेकवचन होते.');
+    return QQ('“' + pair[0] + '” या क्रियापदाचे साधे भूतकाळी रूप (Simple Past) कोणते?', m.o, m.a, pair[0] + ' → ' + pair[1] + ' असे भूतकाळी रूप होते.');
+  }
+  Object.keys(QUIZZES).forEach(function(key){
+    QUIZZES[key].stages.forEach(function(stage, si){
+      var used = {}; stage.qs.forEach(function(x){ used[x.q] = 1; });
+      var extra = [];
+      function add(q){ if(q && !used[q.q]){ used[q.q] = 1; extra.push(q); } }
+      GK.forEach(function(g, i){ if(i % 3 === si) add(QQ(g[0], [g[1], g[2], g[3], g[4]], 0, 'बरोबर उत्तर: ' + g[1] + '.')); });
+      var exList = key === 'gat-b' ? GBX : (key === 'gat-c' ? GCX : []);
+      exList.forEach(function(g, i){ if(i % 3 === si) add(QQ(g[0], [g[1], g[2], g[3], g[4]], 0, 'बरोबर उत्तर: ' + g[1] + '.')); });
+      ENG_ANT.forEach(function(p, i){ if(i % 3 === si) add(vocabQ('ant', p, ENG_ANT)); });
+      ENG_SYN.forEach(function(p, i){ if(i % 3 === si) add(vocabQ('syn', p, ENG_SYN)); });
+      MR_SYN.forEach(function(p, i){ if(i % 3 === si) add(vocabQ('mr', p, MR_SYN)); });
+      PLURALS.forEach(function(p, i){ if(i % 3 === si) add(vocabQ('pl', p, PLURALS)); });
+      PASTS.forEach(function(p, i){ if(i % 3 === si) add(vocabQ('past', p, PASTS)); });
+      var guard = 0;
+      while(stage.qs.length + extra.length < TARGET_POOL && guard++ < 40000){ add(genQuant(si)); }
+      stage.qs = stage.qs.concat(extra);
+    });
+  });
+  var quizState = {};
+  var LETTERS = ['अ','ब','क','ड'];
+
+  var ROUND_SIZE = 10;
+
+  function shuffleArr(arr){
+    var a = arr.slice();
+    for(var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function resetRun(st){
+    st.round = 0; st.totalScore = 0; st.totalQ = 0; st.totalRounds = 0; st.totalSkipped = 0;
+    st.idx = 0; st.score = 0; st.skipped = 0; st.answered = false; st.picked = -1; st.queue = [];
+  }
+
+  function buildRound(key){
+    var st = quizState[key];
+    var pool = QUIZZES[key].stages[st.stage].qs;
+    if(!st.seen) st.seen = {};
+    var seen = st.seen[st.stage] || [];
+    var unseen = [];
+    var i;
+    for(i = 0; i < pool.length; i++){ if(seen.indexOf(i) === -1) unseen.push(i); }
+    unseen = shuffleArr(unseen);
+    var picks = unseen.slice(0, ROUND_SIZE);
+    if(picks.length < ROUND_SIZE){
+      var rest = [];
+      for(i = 0; i < pool.length; i++){ if(picks.indexOf(i) === -1) rest.push(i); }
+      rest = shuffleArr(rest);
+      picks = picks.concat(rest.slice(0, ROUND_SIZE - picks.length));
+      seen = picks.slice();
+    } else {
+      seen = seen.concat(picks);
+    }
+    st.seen[st.stage] = seen;
+    st.queue = picks.map(function(pi){
+      var src = pool[pi];
+      var order = shuffleArr(src.o.map(function(_, oi){ return oi; }));
+      return { q: src.q, e: src.e, a: order.indexOf(src.a), o: order.map(function(oi){ return src.o[oi]; }) };
+    });
+    st.idx = 0; st.score = 0; st.skipped = 0; st.answered = false; st.picked = -1;
+  }
+
+  function stageButtons(key, st){
+    var quiz = QUIZZES[key];
+    return '<div class="stage-row" role="group" aria-label="क्विझचा टप्पा निवडा">' + quiz.stages.map(function(s, i){
+      var best = st.best[i];
+      var bestHtml = (best !== undefined) ? '<span class="best">एका फेरीतील सर्वोत्तम गुण: ' + toDevDigits(best) + ' / ' + toDevDigits(ROUND_SIZE) + '</span>' : '';
+      return '<button type="button" class="stage-btn" data-stage="' + i + '" aria-pressed="' + String(st.stage === i) + '">' + s.label + '<small>' + s.sub + ' · संचात ' + toDevDigits(s.qs.length) + ' प्रश्न · प्रत्येक फेरीत १०</small>' + bestHtml + '</button>';
+    }).join('') + '</div>';
+  }
+
+  function renderQuiz(key){
+    var mount = document.querySelector('[data-quiz-mount="' + key + '"]');
+    if(!mount) return;
+    var quiz = QUIZZES[key];
+    var st = quizState[key];
+    var stage = quiz.stages[st.stage];
+    var html = stageButtons(key, st);
+    if(!st.started){
+      html += '<div class="quiz-start"><p><b>' + stage.label + ' — ' + stage.sub + '</b></p>'
+        + '<p class="small">प्रत्येक फेरीत ' + toDevDigits(ROUND_SIZE) + ' प्रश्न · या टप्प्याच्या संचात एकूण ' + toDevDigits(stage.qs.length) + ' प्रश्न आहेत · फेरी संपल्यावर निकालाच्या पानावरचं “पुढील १० प्रश्न” बटण दाबताच लगेच पुढची फेरी सुरू होते — या संचातून सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · उत्तर येत नसेल तर “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडून पुढे जाता येतं (सोडलेल्या प्रश्नाला गुण मिळत नाहीत) · गुण फक्त या भेटीपुरते राहतात.</p>'
+        + '<div class="quiz-actions"><button type="button" class="qbtn saffron" data-act="start">क्विझ सुरू करा →</button></div></div>';
+    } else if(st.finished){
+      var pct = Math.round(st.score / ROUND_SIZE * 100);
+      var msg = pct >= 80 ? 'उत्तम! या टप्प्यावर तुमची तयारी भक्कम आहे.' : (pct >= 50 ? 'चांगला प्रयत्न! चुकलेले प्रश्न पुन्हा वाचा आणि पुढची फेरी सोडवा.' : 'हरकत नाही — आधी अभ्यासक्रमातील संबंधित घटक वाचा आणि पुढची फेरी सोडवा.');
+      var totalPct = st.totalQ ? Math.round(st.totalScore / st.totalQ * 100) : 0;
+      html += '<div class="quiz-result" aria-live="polite"><div class="score">' + toDevDigits(st.score) + ' / ' + toDevDigits(ROUND_SIZE) + '</div>'
+        + '<p class="msg">' + msg + '</p>'
+        + '<p class="sub2">' + quiz.name + ' · ' + stage.label + ' (' + stage.sub + ') · फेरी ' + toDevDigits(st.round) + ' पूर्ण · या फेरीत बरोबर उत्तरे: ' + toDevDigits(pct) + '%' + (st.skipped ? ' · सोडलेले (Skip): ' + toDevDigits(st.skipped) : '') + '</p>'
+        + '<p class="cumul">एकूण सराव: <b>' + toDevDigits(st.totalRounds) + ' फेऱ्या</b> · <b>' + toDevDigits(st.totalQ) + ' प्रश्न</b> सोडवले · <b>' + toDevDigits(st.totalScore) + ' बरोबर</b> (' + toDevDigits(totalPct) + '%)' + (st.totalSkipped ? ' · एकूण सोडलेले: <b>' + toDevDigits(st.totalSkipped) + '</b>' : '') + '</p>'
+        + (st.totalRounds < 100 ? '<p class="cumul">या संचात अजून <b>' + toDevDigits(100 - st.totalRounds) + ' फेऱ्यांचे</b> वेगळे प्रश्न बाकी आहेत — तोपर्यंत एकही प्रश्न परत येणार नाही.</p>' : '<p class="cumul">या संचातील १,००० प्रश्नांच्या १०० फेऱ्या पूर्ण झाल्या — पुढील फेऱ्यांसाठी संच नव्याने मिसळला जाईल.</p>')
+        + '<button type="button" class="qbtn saffron next10" data-act="next-round">पुढील १० प्रश्न →</button>'
+        + '<div class="quiz-actions"><button type="button" class="qbtn alt" data-act="restart">एकूण गुण रीसेट करून पुन्हा सुरू करा</button>'
+        + (st.stage < quiz.stages.length - 1 ? '<button type="button" class="qbtn" data-act="next-stage">पुढचा टप्पा →</button>' : '')
+        + '</div></div>';
+    } else {
+      var q = st.queue[st.idx];
+      html += '<div class="quiz-meta"><span>फेरी <b>' + toDevDigits(st.round) + (st.round <= 100 ? ' / १००' : '') + '</b> · प्रश्न <b>' + toDevDigits(st.idx + 1) + ' / ' + toDevDigits(ROUND_SIZE) + '</b></span><span>या फेरीतील गुण: <b>' + toDevDigits(st.score) + '</b>' + (st.skipped ? ' · सोडलेले: <b>' + toDevDigits(st.skipped) + '</b>' : '') + ' · एकूण गुण: <b>' + toDevDigits(st.totalScore + st.score) + '</b></span></div>'
+        + '<div class="qbar" aria-hidden="true"><i style="width:' + (st.idx / ROUND_SIZE * 100) + '%"></i></div>'
+        + '<p class="qtext">' + q.q + '</p><div class="opts">'
+        + q.o.map(function(opt, i){
+            var cls = '';
+            if(st.answered){ if(i === q.a) cls = ' is-right'; else if(i === st.picked) cls = ' is-wrong'; }
+            return '<button type="button" class="opt' + cls + '" data-opt="' + i + '"' + (st.answered ? ' disabled' : '') + '><span class="ol">' + LETTERS[i] + '</span>' + opt + '</button>';
+          }).join('')
+        + '</div>'
+        + '<div class="explain' + (st.answered ? ' show' : '') + '" aria-live="polite">'
+        + (st.answered ? ('<span class="verdict ' + (st.picked === q.a ? 'ok">✓ बरोबर!' : 'no">✗ चूक — बरोबर उत्तर: ' + LETTERS[q.a] + ' · ' + q.o[q.a]) + '</span>' + q.e) : '')
+        + '</div>'
+        + (st.answered
+            ? '<div class="quiz-actions"><button type="button" class="qbtn" data-act="next">' + (st.idx === ROUND_SIZE - 1 ? 'फेरीचा निकाल पहा →' : 'पुढचा प्रश्न →') + '</button></div>'
+            : '<div class="quiz-actions"><button type="button" class="qbtn skip" data-act="skip">Skip — प्रश्न सोडा ⏭</button></div>');
+    }
+    mount.innerHTML = html;
+    mount.querySelectorAll('.stage-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        st.stage = parseInt(b.getAttribute('data-stage'), 10);
+        st.started = false; st.finished = false;
+        resetRun(st);
+        renderQuiz(key);
+      });
+    });
+    mount.querySelectorAll('[data-act]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var act = b.getAttribute('data-act');
+        if(act === 'start' || act === 'restart'){
+          resetRun(st);
+          st.round = 1;
+          buildRound(key);
+          st.started = true; st.finished = false;
+        }
+        if(act === 'next-round'){
+          st.round++;
+          buildRound(key);
+          st.started = true; st.finished = false;
+        }
+        if(act === 'next-stage'){
+          st.stage = Math.min(st.stage + 1, quiz.stages.length - 1);
+          resetRun(st);
+          st.round = 1;
+          buildRound(key);
+          st.started = true; st.finished = false;
+        }
+        if(act === 'skip'){
+          st.skipped++;
+          if(st.idx === ROUND_SIZE - 1){
+            st.finished = true;
+            st.totalRounds++;
+            st.totalQ += ROUND_SIZE;
+            st.totalScore += st.score;
+            st.totalSkipped += st.skipped;
+            if(st.best[st.stage] === undefined || st.score > st.best[st.stage]) st.best[st.stage] = st.score;
+          } else { st.idx++; st.answered = false; st.picked = -1; }
+        }
+        if(act === 'next'){
+          if(st.idx === ROUND_SIZE - 1){
+            st.finished = true;
+            st.totalRounds++;
+            st.totalQ += ROUND_SIZE;
+            st.totalScore += st.score;
+            st.totalSkipped += st.skipped;
+            if(st.best[st.stage] === undefined || st.score > st.best[st.stage]) st.best[st.stage] = st.score;
+          } else { st.idx++; st.answered = false; st.picked = -1; }
+        }
+        renderQuiz(key);
+      });
+    });
+    mount.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click', function(){
+        if(st.answered) return;
+        st.picked = parseInt(b.getAttribute('data-opt'), 10);
+        st.answered = true;
+        if(st.picked === st.queue[st.idx].a) st.score++;
+        renderQuiz(key);
+      });
+    });
+  }
+
+  Object.keys(QUIZZES).forEach(function(key){
+    quizState[key] = { stage:0, idx:0, score:0, skipped:0, answered:false, picked:-1, started:false, finished:false, best:{}, round:0, totalScore:0, totalQ:0, totalRounds:0, totalSkipped:0, seen:{}, queue:[] };
+    renderQuiz(key);
+  });
+})();
+</script>
+</body>
+</html>
