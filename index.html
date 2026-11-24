@@ -8,7 +8,6 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
-
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
@@ -194,6 +193,11 @@
   .quiz-result .cumul{font-size:15.5px;color:var(--ink2);margin:8px 0 2px}
   .quiz-result .cumul b{color:var(--ink)}
   .quiz-start p{margin:6px 0}
+  .quiz-start .qs-title{font-family:var(--head);font-size:22px;font-weight:800;margin:4px 0 2px}
+  .qs-stats{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+  .qs-stats span{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:14.5px;font-weight:700}
+  .qs-stats span b{font-family:var(--head);color:var(--saffron)}
+  .qs-pick-label{font-weight:700;font-size:15px;margin:12px 0 0}
   .readq{border-top:1px solid var(--line);padding:16px 0 6px;margin-top:6px}
   .readq .qnum{color:var(--saffron);font-family:var(--head)}
   .readq .opt{cursor:default}
@@ -672,8 +676,7 @@
 
   <footer>
     MPSC Career Hub — राज्यसेवा · गट-ब · गट-क · पूर्णपणे मोफत · माहितीचा स्त्रोत:
-    <a href="https://mpsc.gov.in/home" target="_blank" rel="noopener">महाराष्ट्र लोकसेवा आयोग</a>
-    · <a href="privacy.html">गोपनीयता धोरण</a>
+    <a href="https://mpsc.gov.in/home" target="_blank" rel="noopener">महाराष्ट्र लोकसेवा आयोग</a> · <a href="privacy.html">गोपनीयता धोरण</a>
   </footer>
 </div>
 
@@ -1217,7 +1220,9 @@
     var stage = quiz.stages[st.stage];
     var html = stageButtons(key, st);
     if(!st.started){
-      html += '<div class="quiz-start"><p><b>' + stage.label + ' — ' + stage.sub + '</b></p>'
+      html += '<div class="quiz-start"><p class="qs-title">' + quiz.name + ' — सराव क्विझ</p>'
+        + '<p><b>निवडलेला टप्पा: ' + stage.label + ' — ' + stage.sub + '</b></p>'
+        + '<div class="qs-stats"><span>एकूण प्रश्न: <b>' + toDevDigits(stage.qs.length) + '</b></span><span>फेऱ्या: <b>१००</b></span><span>प्रत्येक फेरीत: <b>' + toDevDigits(ROUND_SIZE) + ' प्रश्न</b></span></div>'
         + '<p class="small">प्रत्येक फेरीत ' + toDevDigits(ROUND_SIZE) + ' प्रश्न · या टप्प्याच्या संचात एकूण ' + toDevDigits(stage.qs.length) + ' प्रश्न आहेत · फेरी संपल्यावर निकालाच्या पानावरचं “पुढील १० प्रश्न” बटण दाबताच लगेच पुढची फेरी सुरू होते — या संचातून सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · उत्तर येत नसेल तर “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडून पुढे जाता येतं (सोडलेल्या प्रश्नाला गुण मिळत नाहीत) · गुण फक्त या भेटीपुरते राहतात.</p>'
         + '<div class="quiz-actions"><button type="button" class="qbtn saffron" data-act="start">क्विझ सुरू करा →</button></div></div>';
     } else if(st.finished){
@@ -1277,9 +1282,7 @@
         if(act === 'next-stage'){
           st.stage = Math.min(st.stage + 1, quiz.stages.length - 1);
           resetRun(st);
-          st.round = 1;
-          buildRound(key);
-          st.started = true; st.finished = false;
+          st.started = false; st.finished = false;
         }
         if(act === 'skip'){
           st.skipped++;
@@ -4690,6 +4693,7 @@
   window.__SUBJECT_POOLS = POOLS;
   /* ---------- विषय क्विझची अंमलबजावणी — प्रत्येक विषयाचा स्वतंत्र विभाग (विद्यमान क्विझप्रमाणेच) ---------- */
   var ROUND_SIZE=10, READ_SIZE=10, LETTERS=['अ','ब','क','ड'];
+  var INSTS={};
   function makeInstance(sd){
     return { key:sd.key, label:sd.label, idx:0, score:0, skipped:0, answered:false, picked:-1, started:false, finished:false, best:undefined, round:0, totalScore:0, totalQ:0, totalRounds:0, totalSkipped:0, seen:[], queue:[], mode:'idle', readPage:0, mount:null };
   }
@@ -4750,7 +4754,12 @@
         +(inst.best!==undefined?'<p class="small subj-best">एका फेरीतील सर्वोत्तम गुण: <b>'+toDev(inst.best)+' / '+toDev(ROUND_SIZE)+'</b></p>':'')
         +'<div class="quiz-actions"><button type="button" class="qbtn saffron" data-sact="open">क्विझ सोडवा</button><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button></div></div>';
     } else if(!inst.started){
-      html+='<div class="quiz-start"><p><b>'+inst.label+'</b></p>'
+      html+='<div class="quiz-start"><p class="qs-title">'+inst.label+' — सराव क्विझ</p>'
+        +'<div class="qs-stats"><span>एकूण प्रश्न: <b>'+toDev(POOLS[inst.key].length)+'</b></span><span>फेऱ्या: <b>१००</b></span><span>प्रत्येक फेरीत: <b>'+toDev(ROUND_SIZE)+' प्रश्न</b></span></div>'
+        +'<p class="qs-pick-label">विषय निवडा — दुसरा विषय हवा असल्यास इथून निवडा:</p>'
+        +'<div class="stage-row" role="group" aria-label="विषय निवडा">'
+        +SUBJECTS.map(function(sd){ return '<button type="button" class="stage-btn" data-subj="'+sd.key+'" aria-pressed="'+String(sd.key===inst.key)+'">'+sd.label+'</button>'; }).join('')
+        +'</div>'
         +'<p class="small">प्रत्येक फेरीत '+toDev(ROUND_SIZE)+' प्रश्न · या विषयाच्या संचात एकूण '+toDev(POOLS[inst.key].length)+' प्रश्न आहेत · फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने लगेच पुढची फेरी सुरू होते — सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडता येतो (गुण मिळत नाहीत, दंड नाही) · गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” बटणाने या विषयाचे सर्व प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>'
         +'<div class="quiz-actions"><button type="button" class="qbtn saffron" data-sact="start">क्विझ सुरू करा →</button><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button></div></div>';
     } else if(inst.finished){
@@ -4798,6 +4807,18 @@
         renderI(inst);
       });
     });
+    mount.querySelectorAll('[data-subj]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var k=b.getAttribute('data-subj');
+        if(k===inst.key) return;
+        var t=INSTS[k];
+        if(!t) return;
+        t.mode='quiz'; t.started=false; t.finished=false;
+        renderI(t);
+        var block=document.getElementById('subject-block-'+k);
+        if(block && block.scrollIntoView) block.scrollIntoView({block:'start'});
+      });
+    });
     mount.querySelectorAll('[data-ract]').forEach(function(b){
       b.addEventListener('click', function(){
         var act=b.getAttribute('data-ract');
@@ -4821,7 +4842,7 @@
   SUBJECTS.forEach(function(sd){
     var mount=document.querySelector('[data-subject-mount="'+sd.key+'"]');
     if(!mount) return;
-    var inst=makeInstance(sd); inst.mount=mount; renderI(inst);
+    var inst=makeInstance(sd); inst.mount=mount; INSTS[sd.key]=inst; renderI(inst);
   });
 
 
