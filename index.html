@@ -202,6 +202,8 @@
   .readq .opt.is-right:hover{border-color:var(--green)}
   .readq .opt .rans{color:var(--green);font-weight:800;white-space:nowrap}
   .readnav{justify-content:space-between}
+  .subj-best{margin:2px 0 0}
+  .subj-best b{color:var(--green)}
 
   .hidden{display:none !important}
   .noresult{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:22px;text-align:center;color:var(--ink2);margin-top:16px}
@@ -596,12 +598,43 @@
   <section class="exam" id="subject-quiz" data-exam="subject-quiz">
     <div class="exam-head">
       <h2>४. विषयानुसार सराव क्विझ</h2>
-      <p class="sub">प्रत्येक विषयासाठी स्वतंत्र क्विझ — विषय निवडा आणि सराव सुरू करा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. किंवा “प्रश्न वाचा” पर्यायाने तेच १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>
+      <p class="sub">प्रत्येक विषयासाठी स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. किंवा “प्रश्न वाचा” पर्यायाने तेच १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>
     </div>
-    <div class="card quiz-card" id="quiz-subject">
+    <div class="card quiz-card">
       <h3>विषयानुसार सराव क्विझ <span class="qbadge">८ विषय · प्रति विषय १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
-      <p class="small">विषय निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; फेरी संपल्यावर “पुढील १० प्रश्न →” बटणाने पुढची फेरी सुरू करा. उत्तर येत नसेल तर Skip बटणाने प्रश्न सोडता येतो — सोडलेल्या प्रश्नाला गुण मिळत नाहीत, पण दंडही नाही. प्रत्येक प्रश्नानंतर लगेच बरोबर/चूक व स्पष्टीकरण मिळते. गुण फक्त या भेटीपुरते राहतात. प्रत्येक विषयासाठी “प्रश्न वाचा” पर्यायही आहे — त्यात त्या विषयाचे सर्व प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात. चालू घडामोडींमध्ये नोव्हेंबर २०२६ पर्यंतच्या महत्त्वाच्या घडामोडींचा समावेश आहे.</p>
-      <div class="quiz-mount" data-subject-mount="subject"></div>
+      <p class="small">प्रत्येक विषयाचा स्वतंत्र विभाग खाली दिला आहे — त्या विभागातच त्या विषयाची क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक फेरीत १० प्रश्न; फेरी संपल्यावर “पुढील १० प्रश्न →” बटणाने पुढची फेरी सुरू करा. उत्तर येत नसेल तर Skip बटणाने प्रश्न सोडता येतो — सोडलेल्या प्रश्नाला गुण मिळत नाहीत, पण दंडही नाही. प्रत्येक प्रश्नानंतर लगेच बरोबर/चूक व स्पष्टीकरण मिळते. गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” पर्यायात त्या विषयाचे सर्व १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात. चालू घडामोडींमध्ये नोव्हेंबर २०२६ पर्यंतच्या महत्त्वाच्या घडामोडींचा समावेश आहे.</p>
+    </div>
+    <div class="card quiz-card" id="subject-block-history">
+      <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="history"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-geography">
+      <h3>भूगोल <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="geography"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-polity">
+      <h3>राज्यशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="polity"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-economy">
+      <h3>अर्थशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="economy"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-science">
+      <h3>विज्ञान व तंत्रज्ञान <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="science"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-current">
+      <h3>चालू घडामोडी <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="current"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-maths">
+      <h3>गणित व बुद्धिमत्ता <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="maths"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-environment">
+      <h3>पर्यावरण <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="environment"></div>
     </div>
   </section>
 
@@ -4655,14 +4688,15 @@
   if(POOLS.current && POOLS.current.length>TARGET) POOLS.current.length=TARGET;
   if(POOLS.environment && POOLS.environment.length>TARGET) POOLS.environment.length=TARGET;
   window.__SUBJECT_POOLS = POOLS;
-  /* ---------- विषय क्विझची अंमलबजावणी (विद्यमान क्विझप्रमाणेच) ---------- */
+  /* ---------- विषय क्विझची अंमलबजावणी — प्रत्येक विषयाचा स्वतंत्र विभाग (विद्यमान क्विझप्रमाणेच) ---------- */
   var ROUND_SIZE=10, READ_SIZE=10, LETTERS=['अ','ब','क','ड'];
-  var st={ subject:'history', idx:0, score:0, skipped:0, answered:false, picked:-1, started:false, finished:false, best:{}, round:0, totalScore:0, totalQ:0, totalRounds:0, totalSkipped:0, seen:{}, queue:[], mode:'quiz', readPage:0 };
-  function resetRun(){ st.round=0; st.totalScore=0; st.totalQ=0; st.totalRounds=0; st.totalSkipped=0; st.idx=0; st.score=0; st.skipped=0; st.answered=false; st.picked=-1; st.queue=[]; st.readPage=0; }
-  function buildRound(){
-    var pool=POOLS[st.subject];
-    if(!st.seen) st.seen={};
-    var seen=st.seen[st.subject]||[];
+  function makeInstance(sd){
+    return { key:sd.key, label:sd.label, idx:0, score:0, skipped:0, answered:false, picked:-1, started:false, finished:false, best:undefined, round:0, totalScore:0, totalQ:0, totalRounds:0, totalSkipped:0, seen:[], queue:[], mode:'idle', readPage:0, mount:null };
+  }
+  function resetRunI(inst){ inst.round=0; inst.totalScore=0; inst.totalQ=0; inst.totalRounds=0; inst.totalSkipped=0; inst.idx=0; inst.score=0; inst.skipped=0; inst.answered=false; inst.picked=-1; inst.queue=[]; inst.readPage=0; }
+  function buildRoundI(inst){
+    var pool=POOLS[inst.key];
+    var seen=inst.seen||[];
     var unseen=[], i;
     for(i=0;i<pool.length;i++){ if(seen.indexOf(i)===-1) unseen.push(i); }
     unseen=shuffleArr(unseen);
@@ -4671,27 +4705,23 @@
       var rest=[]; for(i=0;i<pool.length;i++){ if(picks.indexOf(i)===-1) rest.push(i); }
       rest=shuffleArr(rest); picks=picks.concat(rest.slice(0,ROUND_SIZE-picks.length)); seen=picks.slice();
     } else { seen=seen.concat(picks); }
-    st.seen[st.subject]=seen;
-    st.queue=picks.map(function(pi){ var src=pool[pi]; var order=shuffleArr(src.o.map(function(_,oi){ return oi; })); return { q:src.q, e:src.e, a:order.indexOf(src.a), o:order.map(function(oi){ return src.o[oi]; }) }; });
-    st.idx=0; st.score=0; st.skipped=0; st.answered=false; st.picked=-1;
+    inst.seen=seen;
+    inst.queue=picks.map(function(pi){ var src=pool[pi]; var order=shuffleArr(src.o.map(function(_,oi){ return oi; })); return { q:src.q, e:src.e, a:order.indexOf(src.a), o:order.map(function(oi){ return src.o[oi]; }) }; });
+    inst.idx=0; inst.score=0; inst.skipped=0; inst.answered=false; inst.picked=-1;
   }
-  function subjectButtons(){
-    return '<div class="stage-row" role="group" aria-label="विषय निवडा">'+SUBJECTS.map(function(sd){
-      var best=st.best[sd.key];
-      var bestHtml=(best!==undefined)?'<span class="best">एका फेरीतील सर्वोत्तम गुण: '+toDev(best)+' / '+toDev(ROUND_SIZE)+'</span>':'';
-      return '<button type="button" class="stage-btn" data-subject="'+sd.key+'" aria-pressed="'+String(st.subject===sd.key)+'">'+sd.label+'<small>संचात '+toDev(POOLS[sd.key].length)+' प्रश्न · प्रत्येक फेरीत १०</small>'+bestHtml+'</button>';
-    }).join('')+'</div>';
+  function finishRoundI(inst){
+    inst.finished=true; inst.totalRounds++; inst.totalQ+=ROUND_SIZE; inst.totalScore+=inst.score; inst.totalSkipped+=inst.skipped;
+    if(inst.best===undefined||inst.score>inst.best) inst.best=inst.score;
   }
-  function currentLabel(){ for(var i=0;i<SUBJECTS.length;i++){ if(SUBJECTS[i].key===st.subject) return SUBJECTS[i].label; } return ''; }
-  function readViewHtml(){
-    var pool=POOLS[st.subject];
+  function readViewHtmlI(inst){
+    var pool=POOLS[inst.key];
     var total=pool.length;
     var pages=Math.max(1,Math.ceil(total/READ_SIZE));
-    if(st.readPage>pages-1) st.readPage=pages-1;
-    if(st.readPage<0) st.readPage=0;
-    var start=st.readPage*READ_SIZE;
+    if(inst.readPage>pages-1) inst.readPage=pages-1;
+    if(inst.readPage<0) inst.readPage=0;
+    var start=inst.readPage*READ_SIZE;
     var end=Math.min(start+READ_SIZE,total);
-    var h='<div class="quiz-meta"><span><b>'+currentLabel()+'</b> — प्रश्न वाचा</span><span>प्रश्न <b>'+toDev(start+1)+'–'+toDev(end)+'</b> / '+toDev(total)+'</span></div>'
+    var h='<div class="quiz-meta"><span><b>'+inst.label+'</b> — प्रश्न वाचा</span><span>प्रश्न <b>'+toDev(start+1)+'–'+toDev(end)+'</b> / '+toDev(total)+'</span></div>'
       +'<p class="small">या विषयाचे प्रश्न बँकेतील क्रमानेच दिले आहेत. बरोबर उत्तर हिरव्या रंगात ठळक दाखवले आहे आणि प्रत्येक प्रश्नाखाली त्याचे स्पष्टीकरण दिले आहे.</p>';
     for(var i=start;i<end;i++){
       var q=pool[i];
@@ -4703,90 +4733,96 @@
         +'</div><div class="explain show">'+q.e+'</div></div>';
     }
     h+='<div class="quiz-actions readnav">'
-      +(st.readPage>0?'<button type="button" class="qbtn alt" data-ract="prev">← मागील १० प्रश्न</button>':'<span></span>')
+      +(inst.readPage>0?'<button type="button" class="qbtn alt" data-ract="prev">← मागील १० प्रश्न</button>':'<span></span>')
       +(end<total?'<button type="button" class="qbtn saffron" data-ract="next">पुढील १० प्रश्न →</button>':'')
       +'</div>'
       +'<div class="quiz-actions"><button type="button" class="qbtn alt" data-ract="quiz">क्विझ सोडवा →</button></div>';
     return h;
   }
-  function render(){
-    var mount=document.querySelector('[data-subject-mount="subject"]');
+  function renderI(inst){
+    var mount=inst.mount;
     if(!mount) return;
-    var html=subjectButtons();
-    if(st.mode==='read'){
-      html+=readViewHtml();
-    } else if(!st.started){
-      html+='<div class="quiz-start"><p><b>'+currentLabel()+'</b></p>'
-        +'<p class="small">प्रत्येक फेरीत '+toDev(ROUND_SIZE)+' प्रश्न · या विषयाच्या संचात एकूण '+toDev(POOLS[st.subject].length)+' प्रश्न आहेत · फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने लगेच पुढची फेरी सुरू होते — सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडता येतो (गुण मिळत नाहीत, दंड नाही) · गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” बटणाने या विषयाचे सर्व प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>'
-        +'<div class="quiz-actions"><button type="button" class="qbtn saffron" data-sact="start">क्विझ सोडवा →</button><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button></div></div>';
-    } else if(st.finished){
-      var pct=Math.round(st.score/ROUND_SIZE*100);
+    var html='';
+    if(inst.mode==='read'){
+      html+=readViewHtmlI(inst);
+    } else if(inst.mode==='idle'){
+      html+='<div class="subj-launch">'
+        +(inst.best!==undefined?'<p class="small subj-best">एका फेरीतील सर्वोत्तम गुण: <b>'+toDev(inst.best)+' / '+toDev(ROUND_SIZE)+'</b></p>':'')
+        +'<div class="quiz-actions"><button type="button" class="qbtn saffron" data-sact="open">क्विझ सोडवा</button><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button></div></div>';
+    } else if(!inst.started){
+      html+='<div class="quiz-start"><p><b>'+inst.label+'</b></p>'
+        +'<p class="small">प्रत्येक फेरीत '+toDev(ROUND_SIZE)+' प्रश्न · या विषयाच्या संचात एकूण '+toDev(POOLS[inst.key].length)+' प्रश्न आहेत · फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने लगेच पुढची फेरी सुरू होते — सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडता येतो (गुण मिळत नाहीत, दंड नाही) · गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” बटणाने या विषयाचे सर्व प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>'
+        +'<div class="quiz-actions"><button type="button" class="qbtn saffron" data-sact="start">क्विझ सुरू करा →</button><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button></div></div>';
+    } else if(inst.finished){
+      var pct=Math.round(inst.score/ROUND_SIZE*100);
       var msg=pct>=80?'उत्तम! या विषयावर तुमची तयारी भक्कम आहे.':(pct>=50?'चांगला प्रयत्न! चुकलेले प्रश्न पुन्हा वाचा आणि पुढची फेरी सोडवा.':'हरकत नाही — आधी अभ्यासक्रमातील संबंधित घटक वाचा आणि पुढची फेरी सोडवा.');
-      var totalPct=st.totalQ?Math.round(st.totalScore/st.totalQ*100):0;
-      html+='<div class="quiz-result" aria-live="polite"><div class="score">'+toDev(st.score)+' / '+toDev(ROUND_SIZE)+'</div>'
+      var totalPct=inst.totalQ?Math.round(inst.totalScore/inst.totalQ*100):0;
+      html+='<div class="quiz-result" aria-live="polite"><div class="score">'+toDev(inst.score)+' / '+toDev(ROUND_SIZE)+'</div>'
         +'<p class="msg">'+msg+'</p>'
-        +'<p class="sub2">'+currentLabel()+' · फेरी '+toDev(st.round)+' पूर्ण · या फेरीत बरोबर उत्तरे: '+toDev(pct)+'%'+(st.skipped?' · सोडलेले (Skip): '+toDev(st.skipped):'')+'</p>'
-        +'<p class="cumul">एकूण सराव: <b>'+toDev(st.totalRounds)+' फेऱ्या</b> · <b>'+toDev(st.totalQ)+' प्रश्न</b> सोडवले · <b>'+toDev(st.totalScore)+' बरोबर</b> ('+toDev(totalPct)+'%)'+(st.totalSkipped?' · एकूण सोडलेले: <b>'+toDev(st.totalSkipped)+'</b>':'')+'</p>'
-        +(st.totalRounds<100?'<p class="cumul">या संचात अजून <b>'+toDev(100-st.totalRounds)+' फेऱ्यांचे</b> वेगळे प्रश्न बाकी आहेत — तोपर्यंत एकही प्रश्न परत येणार नाही.</p>':'<p class="cumul">या संचातील १,००० प्रश्नांच्या १०० फेऱ्या पूर्ण झाल्या — पुढील फेऱ्यांसाठी संच नव्याने मिसळला जाईल.</p>')
+        +'<p class="sub2">'+inst.label+' · फेरी '+toDev(inst.round)+' पूर्ण · या फेरीत बरोबर उत्तरे: '+toDev(pct)+'%'+(inst.skipped?' · सोडलेले (Skip): '+toDev(inst.skipped):'')+'</p>'
+        +'<p class="cumul">एकूण सराव: <b>'+toDev(inst.totalRounds)+' फेऱ्या</b> · <b>'+toDev(inst.totalQ)+' प्रश्न</b> सोडवले · <b>'+toDev(inst.totalScore)+' बरोबर</b> ('+toDev(totalPct)+'%)'+(inst.totalSkipped?' · एकूण सोडलेले: <b>'+toDev(inst.totalSkipped)+'</b>':'')+'</p>'
+        +(inst.totalRounds<100?'<p class="cumul">या संचात अजून <b>'+toDev(100-inst.totalRounds)+' फेऱ्यांचे</b> वेगळे प्रश्न बाकी आहेत — तोपर्यंत एकही प्रश्न परत येणार नाही.</p>':'<p class="cumul">या संचातील १,००० प्रश्नांच्या १०० फेऱ्या पूर्ण झाल्या — पुढील फेऱ्यांसाठी संच नव्याने मिसळला जाईल.</p>')
         +'<button type="button" class="qbtn saffron next10" data-sact="next-round">पुढील १० प्रश्न →</button>'
         +'<div class="quiz-actions"><button type="button" class="qbtn alt" data-sact="read">प्रश्न वाचा</button><button type="button" class="qbtn alt" data-sact="restart">एकूण गुण रीसेट करून पुन्हा सुरू करा</button></div></div>';
     } else {
-      var q=st.queue[st.idx];
-      html+='<div class="quiz-meta"><span>फेरी <b>'+toDev(st.round)+(st.round<=100?' / १००':'')+'</b> · प्रश्न <b>'+toDev(st.idx+1)+' / '+toDev(ROUND_SIZE)+'</b></span><span>या फेरीतील गुण: <b>'+toDev(st.score)+'</b>'+(st.skipped?' · सोडलेले: <b>'+toDev(st.skipped)+'</b>':'')+' · एकूण गुण: <b>'+toDev(st.totalScore+st.score)+'</b></span></div>'
-        +'<div class="qbar" aria-hidden="true"><i style="width:'+(st.idx/ROUND_SIZE*100)+'%"></i></div>'
+      var q=inst.queue[inst.idx];
+      html+='<div class="quiz-meta"><span>फेरी <b>'+toDev(inst.round)+(inst.round<=100?' / १००':'')+'</b> · प्रश्न <b>'+toDev(inst.idx+1)+' / '+toDev(ROUND_SIZE)+'</b></span><span>या फेरीतील गुण: <b>'+toDev(inst.score)+'</b>'+(inst.skipped?' · सोडलेले: <b>'+toDev(inst.skipped)+'</b>':'')+' · एकूण गुण: <b>'+toDev(inst.totalScore+inst.score)+'</b></span></div>'
+        +'<div class="qbar" aria-hidden="true"><i style="width:'+(inst.idx/ROUND_SIZE*100)+'%"></i></div>'
         +'<p class="qtext">'+q.q+'</p><div class="opts">'
-        +q.o.map(function(opt,i){ var cls=''; if(st.answered){ if(i===q.a) cls=' is-right'; else if(i===st.picked) cls=' is-wrong'; } return '<button type="button" class="opt'+cls+'" data-sopt="'+i+'"'+(st.answered?' disabled':'')+'><span class="ol">'+LETTERS[i]+'</span>'+opt+'</button>'; }).join('')
+        +q.o.map(function(opt,i){ var cls=''; if(inst.answered){ if(i===q.a) cls=' is-right'; else if(i===inst.picked) cls=' is-wrong'; } return '<button type="button" class="opt'+cls+'" data-sopt="'+i+'"'+(inst.answered?' disabled':'')+'><span class="ol">'+LETTERS[i]+'</span>'+opt+'</button>'; }).join('')
         +'</div>'
-        +'<div class="explain'+(st.answered?' show':'')+'" aria-live="polite">'
-        +(st.answered?('<span class="verdict '+(st.picked===q.a?'ok">✓ बरोबर!':'no">✗ चूक — बरोबर उत्तर: '+LETTERS[q.a]+' · '+q.o[q.a])+'</span>'+q.e):'')
+        +'<div class="explain'+(inst.answered?' show':'')+'" aria-live="polite">'
+        +(inst.answered?('<span class="verdict '+(inst.picked===q.a?'ok">✓ बरोबर!':'no">✗ चूक — बरोबर उत्तर: '+LETTERS[q.a]+' · '+q.o[q.a])+'</span>'+q.e):'')
         +'</div>'
-        +(st.answered
-          ?'<div class="quiz-actions"><button type="button" class="qbtn" data-sact="next">'+(st.idx===ROUND_SIZE-1?'फेरीचा निकाल पहा →':'पुढचा प्रश्न →')+'</button></div>'
+        +(inst.answered
+          ?'<div class="quiz-actions"><button type="button" class="qbtn" data-sact="next">'+(inst.idx===ROUND_SIZE-1?'फेरीचा निकाल पहा →':'पुढचा प्रश्न →')+'</button></div>'
           :'<div class="quiz-actions"><button type="button" class="qbtn skip" data-sact="skip">Skip — प्रश्न सोडा ⏭</button></div>');
     }
     mount.innerHTML=html;
-    mount.querySelectorAll('[data-subject]').forEach(function(b){
-      b.addEventListener('click', function(){ st.subject=b.getAttribute('data-subject'); st.started=false; st.finished=false; resetRun(); render(); });
-    });
     mount.querySelectorAll('[data-sact]').forEach(function(b){
       b.addEventListener('click', function(){
         var act=b.getAttribute('data-sact');
-        if(act==='start'||act==='restart'){ resetRun(); st.round=1; buildRound(); st.started=true; st.finished=false; }
-        if(act==='read'){ st.mode='read'; st.readPage=0; st.started=false; st.finished=false; }
-        if(act==='next-round'){ st.round++; buildRound(); st.started=true; st.finished=false; }
+        if(act==='open'){ inst.mode='quiz'; inst.started=false; inst.finished=false; }
+        if(act==='start'||act==='restart'){ resetRunI(inst); inst.mode='quiz'; inst.round=1; buildRoundI(inst); inst.started=true; inst.finished=false; }
+        if(act==='read'){ inst.mode='read'; inst.readPage=0; inst.started=false; inst.finished=false; }
+        if(act==='next-round'){ inst.round++; buildRoundI(inst); inst.started=true; inst.finished=false; }
         if(act==='skip'){
-          st.skipped++;
-          if(st.idx===ROUND_SIZE-1){ st.finished=true; st.totalRounds++; st.totalQ+=ROUND_SIZE; st.totalScore+=st.score; st.totalSkipped+=st.skipped; if(st.best[st.subject]===undefined||st.score>st.best[st.subject]) st.best[st.subject]=st.score; }
-          else { st.idx++; st.answered=false; st.picked=-1; }
+          inst.skipped++;
+          if(inst.idx===ROUND_SIZE-1){ finishRoundI(inst); }
+          else { inst.idx++; inst.answered=false; inst.picked=-1; }
         }
         if(act==='next'){
-          if(st.idx===ROUND_SIZE-1){ st.finished=true; st.totalRounds++; st.totalQ+=ROUND_SIZE; st.totalScore+=st.score; st.totalSkipped+=st.skipped; if(st.best[st.subject]===undefined||st.score>st.best[st.subject]) st.best[st.subject]=st.score; }
-          else { st.idx++; st.answered=false; st.picked=-1; }
+          if(inst.idx===ROUND_SIZE-1){ finishRoundI(inst); }
+          else { inst.idx++; inst.answered=false; inst.picked=-1; }
         }
-        render();
+        renderI(inst);
       });
     });
     mount.querySelectorAll('[data-ract]').forEach(function(b){
       b.addEventListener('click', function(){
         var act=b.getAttribute('data-ract');
-        if(act==='prev' && st.readPage>0) st.readPage--;
-        if(act==='next') st.readPage++;
-        if(act==='quiz'){ st.mode='quiz'; st.started=false; st.finished=false; resetRun(); }
-        render();
-        if(act==='prev'||act==='next'){ var card=document.getElementById('quiz-subject'); if(card && card.scrollIntoView) card.scrollIntoView({block:'start'}); }
+        if(act==='prev' && inst.readPage>0) inst.readPage--;
+        if(act==='next') inst.readPage++;
+        if(act==='quiz'){ inst.mode='quiz'; inst.started=false; inst.finished=false; resetRunI(inst); }
+        renderI(inst);
+        if(act==='prev'||act==='next'){ var block=document.getElementById('subject-block-'+inst.key); if(block && block.scrollIntoView) block.scrollIntoView({block:'start'}); }
       });
     });
     mount.querySelectorAll('[data-sopt]').forEach(function(b){
       b.addEventListener('click', function(){
-        if(st.answered) return;
-        st.picked=parseInt(b.getAttribute('data-sopt'),10);
-        st.answered=true;
-        if(st.picked===st.queue[st.idx].a) st.score++;
-        render();
+        if(inst.answered) return;
+        inst.picked=parseInt(b.getAttribute('data-sopt'),10);
+        inst.answered=true;
+        if(inst.picked===inst.queue[inst.idx].a) inst.score++;
+        renderI(inst);
       });
     });
   }
-  render();
+  SUBJECTS.forEach(function(sd){
+    var mount=document.querySelector('[data-subject-mount="'+sd.key+'"]');
+    if(!mount) return;
+    var inst=makeInstance(sd); inst.mount=mount; renderI(inst);
+  });
 
 
 })();
