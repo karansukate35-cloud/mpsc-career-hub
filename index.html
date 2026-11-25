@@ -106,6 +106,11 @@
   .exam-head{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
   .exam-head h2{font-family:var(--head);font-size:clamp(24px,4.5vw,32px);margin:0;line-height:1.25}
   .exam-head .sub{color:var(--ink2);margin:2px 0 0;font-size:15.5px;flex-basis:100%}
+  .subject-index{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px;box-shadow:var(--shadow)}
+  .subject-index h2{font-family:var(--head);font-size:clamp(24px,4.5vw,32px);margin:0;line-height:1.25}
+  .subject-index h3{font-family:var(--head);font-size:18px;margin:16px 0 0}
+  .subject-index .sub{color:var(--ink2);margin:4px 0 0;font-size:15.5px}
+  a.stage-btn{text-decoration:none}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px;box-shadow:var(--shadow)}
   .card h3{font-family:var(--head);font-size:20px;margin:0 0 10px}
   .card h4{font-family:var(--head);font-size:17.5px;margin:18px 0 6px;color:var(--navy2)}
@@ -254,6 +259,45 @@
     </div>
   </header>
 
+  <!-- ================= SUBJECT INDEX ================= -->
+  <section class="subject-index" aria-label="विषय निवडा">
+    <h2>विषय निवडा</h2>
+    <p class="sub">आधी विषय निवडा — मग त्या विषयाची क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्न आहेत.</p>
+    <h3>राज्यसेवा</h3>
+    <div class="stage-row" role="group" aria-label="राज्यसेवा — विषय निवडा">
+      <a class="stage-btn" href="#subject-block-rajyaseva-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-environment">पर्यावरण</a>
+    </div>
+    <h3>गट-ब</h3>
+    <div class="stage-row" role="group" aria-label="गट-ब — विषय निवडा">
+      <a class="stage-btn" href="#subject-block-gat-b-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-gat-b-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-gat-b-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-b-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-b-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-gat-b-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-gat-b-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-gat-b-environment">पर्यावरण</a>
+    </div>
+    <h3>गट-क</h3>
+    <div class="stage-row" role="group" aria-label="गट-क — विषय निवडा">
+      <a class="stage-btn" href="#subject-block-gat-c-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-gat-c-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-gat-c-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-c-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-c-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-gat-c-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-gat-c-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-gat-c-environment">पर्यावरण</a>
+    </div>
+  </section>
+
   <!-- ================= OVERVIEW ================= -->
   <section class="overview" aria-label="परीक्षांचा आढावा">
     <article class="ocard">
@@ -327,6 +371,17 @@
     <div class="exam-head">
       <h2>१. राज्यसेवा परीक्षा</h2>
       <p class="sub">महाराष्ट्र नागरी सेवा राजपत्रित संयुक्त पूर्व परीक्षा → राज्यसेवा मुख्य परीक्षा (वर्णनात्मक) → मुलाखत. पूर्व परीक्षा सर्व राजपत्रित गट-अ व गट-ब संवर्गांसाठी एकच असते; तिचे गुण अंतिम निवडीत धरले जात नाहीत, ती फक्त मुख्य परीक्षेची पात्रता ठरवते.</p>
+    </div>
+    <p class="qs-pick-label">विषय निवडा:</p>
+    <div class="stage-row" role="group" aria-label="विषय निवडा">
+      <a class="stage-btn" href="#subject-block-rajyaseva-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-rajyaseva-environment">पर्यावरण</a>
     </div>
 
     <div class="card">
@@ -441,6 +496,42 @@
       <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
       <div class="quiz-mount" data-quiz-mount="rajyaseva"></div>
     </div>
+    <div class="card quiz-card">
+      <h3>राज्यसेवा — विषयानुसार सराव क्विझ <span class="qbadge">८ विषय · प्रति विषय १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">प्रत्येक विषयाचा स्वतंत्र विभाग खाली दिला आहे — त्या विभागातच त्या विषयाची क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक फेरीत १० प्रश्न; फेरी संपल्यावर “पुढील १० प्रश्न →” बटणाने पुढची फेरी सुरू करा. उत्तर येत नसेल तर Skip बटणाने प्रश्न सोडता येतो — सोडलेल्या प्रश्नाला गुण मिळत नाहीत, पण दंडही नाही. प्रत्येक प्रश्नानंतर लगेच बरोबर/चूक व स्पष्टीकरण मिळते. गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” पर्यायात त्या विषयाचे सर्व १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात. चालू घडामोडींमध्ये नोव्हेंबर २०२६ पर्यंतच्या महत्त्वाच्या घडामोडींचा समावेश आहे.</p>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-history">
+      <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-history"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-geography">
+      <h3>भूगोल <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-geography"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-polity">
+      <h3>राज्यशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-polity"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-economy">
+      <h3>अर्थशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-economy"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-science">
+      <h3>विज्ञान व तंत्रज्ञान <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-science"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-current">
+      <h3>चालू घडामोडी <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-current"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-maths">
+      <h3>गणित व बुद्धिमत्ता <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-maths"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-rajyaseva-environment">
+      <h3>पर्यावरण <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="rajyaseva-environment"></div>
+    </div>
   </section>
 
   <!-- ================= GROUP B ================= -->
@@ -448,6 +539,17 @@
     <div class="exam-head">
       <h2>२. गट-ब संयुक्त परीक्षा (अराजपत्रित)</h2>
       <p class="sub">पदे: सहायक कक्ष अधिकारी (ASO), राज्य कर निरीक्षक (STI), पोलीस उपनिरीक्षक (PSI), दुय्यम निरीक्षक / मुद्रांक निरीक्षक. संयुक्त पूर्व परीक्षा → गट-ब मुख्य परीक्षा. फक्त PSI साठी शारीरिक चाचणी व मुलाखत जास्तीची असते.</p>
+    </div>
+    <p class="qs-pick-label">विषय निवडा:</p>
+    <div class="stage-row" role="group" aria-label="विषय निवडा">
+      <a class="stage-btn" href="#subject-block-gat-b-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-gat-b-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-gat-b-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-b-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-b-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-gat-b-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-gat-b-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-gat-b-environment">पर्यावरण</a>
     </div>
 
     <div class="card">
@@ -520,6 +622,42 @@
       <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
       <div class="quiz-mount" data-quiz-mount="gat-b"></div>
     </div>
+    <div class="card quiz-card">
+      <h3>गट-ब — विषयानुसार सराव क्विझ <span class="qbadge">८ विषय · प्रति विषय १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">गट-ब परीक्षेसाठी विषयानुसार स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. या संचातील काही प्रश्न आयोगाच्या मागील प्रश्नपत्रिकांमधील (PYQ) असून त्यांच्यावर ती परीक्षा व वर्ष दिले आहे.</p>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-history">
+      <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-history"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-geography">
+      <h3>भूगोल <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-geography"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-polity">
+      <h3>राज्यशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-polity"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-economy">
+      <h3>अर्थशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-economy"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-science">
+      <h3>विज्ञान व तंत्रज्ञान <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-science"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-current">
+      <h3>चालू घडामोडी <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-current"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-maths">
+      <h3>गणित व बुद्धिमत्ता <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-maths"></div>
+    </div>
+    <div class="card quiz-card" id="subject-block-gat-b-environment">
+      <h3>पर्यावरण <span class="qbadge">१,००० प्रश्न</span></h3>
+      <div class="quiz-mount" data-subject-mount="gat-b-environment"></div>
+    </div>
   </section>
 
   <!-- ================= GROUP C ================= -->
@@ -527,6 +665,17 @@
     <div class="exam-head">
       <h2>३. गट-क संयुक्त परीक्षा (अराजपत्रित)</h2>
       <p class="sub">पदे: तलाठी (ग्राम महसूल अधिकारी), लिपिक-टंकलेखक (मराठी / इंग्रजी), कर सहाय्यक, उद्योग निरीक्षक, दुय्यम निरीक्षक (राज्य उत्पादन शुल्क), तांत्रिक सहाय्यक. संयुक्त पूर्व परीक्षा → गट-क मुख्य परीक्षा. (सहायक मोटार वाहन निरीक्षक — AMVI — या पदाची मुख्य परीक्षा स्वतंत्र ३०० गुणांची असते.)</p>
+    </div>
+    <p class="qs-pick-label">विषय निवडा:</p>
+    <div class="stage-row" role="group" aria-label="विषय निवडा">
+      <a class="stage-btn" href="#subject-block-gat-c-history">इतिहास</a>
+      <a class="stage-btn" href="#subject-block-gat-c-geography">भूगोल</a>
+      <a class="stage-btn" href="#subject-block-gat-c-polity">राज्यशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-c-economy">अर्थशास्त्र</a>
+      <a class="stage-btn" href="#subject-block-gat-c-science">विज्ञान व तंत्रज्ञान</a>
+      <a class="stage-btn" href="#subject-block-gat-c-current">चालू घडामोडी</a>
+      <a class="stage-btn" href="#subject-block-gat-c-maths">गणित व बुद्धिमत्ता</a>
+      <a class="stage-btn" href="#subject-block-gat-c-environment">पर्यावरण</a>
     </div>
 
     <div class="card">
@@ -599,97 +748,9 @@
       <p class="small">टप्पा निवडा आणि क्विझ सुरू करा. प्रत्येक फेरीत १० प्रश्न; प्रत्येक टप्प्यात १,००० प्रश्नांचा संच असल्याने सलग १०० फेऱ्या एकही प्रश्न परत न येता खेळता येतात. फेरी संपल्यावर “पुढील १० प्रश्न” बटणाने पुढची फेरी सुरू करा.</p>
       <div class="quiz-mount" data-quiz-mount="gat-c"></div>
     </div>
-  </section>
-
-  <!-- ================= SUBJECT-WISE QUIZ ================= -->
-  <section class="exam" id="subject-quiz" data-exam="subject-quiz">
-    <div class="exam-head">
-      <h2>४. राज्यसेवा — विषयानुसार सराव क्विझ</h2>
-      <p class="sub">प्रत्येक विषयासाठी स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. किंवा “प्रश्न वाचा” पर्यायाने तेच १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात.</p>
-    </div>
     <div class="card quiz-card">
-      <h3>राज्यसेवा — विषयानुसार सराव क्विझ <span class="qbadge">८ विषय · प्रति विषय १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
-      <p class="small">प्रत्येक विषयाचा स्वतंत्र विभाग खाली दिला आहे — त्या विभागातच त्या विषयाची क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक फेरीत १० प्रश्न; फेरी संपल्यावर “पुढील १० प्रश्न →” बटणाने पुढची फेरी सुरू करा. उत्तर येत नसेल तर Skip बटणाने प्रश्न सोडता येतो — सोडलेल्या प्रश्नाला गुण मिळत नाहीत, पण दंडही नाही. प्रत्येक प्रश्नानंतर लगेच बरोबर/चूक व स्पष्टीकरण मिळते. गुण फक्त या भेटीपुरते राहतात. “प्रश्न वाचा” पर्यायात त्या विषयाचे सर्व १,००० प्रश्न बरोबर उत्तरे व स्पष्टीकरणासह क्रमाने वाचता येतात. चालू घडामोडींमध्ये नोव्हेंबर २०२६ पर्यंतच्या महत्त्वाच्या घडामोडींचा समावेश आहे.</p>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-history">
-      <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-history"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-geography">
-      <h3>भूगोल <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-geography"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-polity">
-      <h3>राज्यशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-polity"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-economy">
-      <h3>अर्थशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-economy"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-science">
-      <h3>विज्ञान व तंत्रज्ञान <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-science"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-current">
-      <h3>चालू घडामोडी <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-current"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-maths">
-      <h3>गणित व बुद्धिमत्ता <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-maths"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-rajyaseva-environment">
-      <h3>पर्यावरण <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="rajyaseva-environment"></div>
-    </div>
-  </section>
-
-  <!-- ================= GROUP B SUBJECT-WISE QUIZ ================= -->
-  <section class="exam" id="subject-quiz-gat-b" data-exam="gat-b">
-    <div class="exam-head">
-      <h2>५. गट-ब — विषयानुसार सराव क्विझ</h2>
-      <p class="sub">गट-ब परीक्षेसाठी विषयानुसार स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. या संचातील काही प्रश्न आयोगाच्या मागील प्रश्नपत्रिकांमधील (PYQ) असून त्यांच्यावर ती परीक्षा व वर्ष दिले आहे.</p>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-history">
-      <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-history"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-geography">
-      <h3>भूगोल <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-geography"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-polity">
-      <h3>राज्यशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-polity"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-economy">
-      <h3>अर्थशास्त्र <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-economy"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-science">
-      <h3>विज्ञान व तंत्रज्ञान <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-science"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-current">
-      <h3>चालू घडामोडी <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-current"></div>
-    </div>
-    <div class="card quiz-card" id="subject-block-gat-b-maths">
-      <h3>गणित व बुद्धिमत्ता <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-maths"></div>
-    </div>
-      <div class="card quiz-card" id="subject-block-gat-b-environment">
-      <h3>पर्यावरण <span class="qbadge">१,००० प्रश्न</span></h3>
-      <div class="quiz-mount" data-subject-mount="gat-b-environment"></div>
-    </div>
-  </section>
-
-  <!-- ================= GROUP C SUBJECT-WISE QUIZ ================= -->
-  <section class="exam" id="subject-quiz-gat-c" data-exam="gat-c">
-    <div class="exam-head">
-      <h2>६. गट-क — विषयानुसार सराव क्विझ</h2>
-      <p class="sub">गट-क परीक्षेसाठी विषयानुसार स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. या संचातील काही प्रश्न आयोगाच्या मागील प्रश्नपत्रिकांमधील (PYQ) असून त्यांच्यावर ती परीक्षा व वर्ष दिले आहे.</p>
+      <h3>गट-क — विषयानुसार सराव क्विझ <span class="qbadge">८ विषय · प्रति विषय १,००० प्रश्न · १०० फेऱ्या वेगळे प्रश्न</span></h3>
+      <p class="small">गट-क परीक्षेसाठी विषयानुसार स्वतंत्र विभाग — त्या विषयाच्या विभागातच क्विझ सोडवा किंवा प्रश्न वाचा. प्रत्येक विषयात १,००० प्रश्नांचा संच आहे; प्रत्येक फेरीत १० प्रश्न, सलग १०० फेऱ्या एकही प्रश्न परत न येता सोडवता येतात. या संचातील काही प्रश्न आयोगाच्या मागील प्रश्नपत्रिकांमधील (PYQ) असून त्यांच्यावर ती परीक्षा व वर्ष दिले आहे.</p>
     </div>
     <div class="card quiz-card" id="subject-block-gat-c-history">
       <h3>इतिहास <span class="qbadge">१,००० प्रश्न</span></h3>
@@ -1240,6 +1301,11 @@
     });
   });
   var quizState = {};
+  var EXAM_SUBJECTS = {
+    'rajyaseva': [{key:'rajyaseva-history', label:'इतिहास'}, {key:'rajyaseva-geography', label:'भूगोल'}, {key:'rajyaseva-polity', label:'राज्यशास्त्र'}, {key:'rajyaseva-economy', label:'अर्थशास्त्र'}, {key:'rajyaseva-science', label:'विज्ञान व तंत्रज्ञान'}, {key:'rajyaseva-current', label:'चालू घडामोडी'}, {key:'rajyaseva-maths', label:'गणित व बुद्धिमत्ता'}, {key:'rajyaseva-environment', label:'पर्यावरण'}],
+    'gat-b': [{key:'gat-b-history', label:'इतिहास'}, {key:'gat-b-geography', label:'भूगोल'}, {key:'gat-b-polity', label:'राज्यशास्त्र'}, {key:'gat-b-economy', label:'अर्थशास्त्र'}, {key:'gat-b-science', label:'विज्ञान व तंत्रज्ञान'}, {key:'gat-b-current', label:'चालू घडामोडी'}, {key:'gat-b-maths', label:'गणित व बुद्धिमत्ता'}, {key:'gat-b-environment', label:'पर्यावरण'}],
+    'gat-c': [{key:'gat-c-history', label:'इतिहास'}, {key:'gat-c-geography', label:'भूगोल'}, {key:'gat-c-polity', label:'राज्यशास्त्र'}, {key:'gat-c-economy', label:'अर्थशास्त्र'}, {key:'gat-c-science', label:'विज्ञान व तंत्रज्ञान'}, {key:'gat-c-current', label:'चालू घडामोडी'}, {key:'gat-c-maths', label:'गणित व बुद्धिमत्ता'}, {key:'gat-c-environment', label:'पर्यावरण'}]
+  };
   var LETTERS = ['अ','ब','क','ड'];
 
   var ROUND_SIZE = 10;
@@ -1306,6 +1372,8 @@
       html += '<div class="quiz-start"><p class="qs-title">' + quiz.name + ' — सराव क्विझ</p>'
         + '<p><b>निवडलेला टप्पा: ' + stage.label + ' — ' + stage.sub + '</b></p>'
         + '<div class="qs-stats"><span>एकूण प्रश्न: <b>' + toDevDigits(stage.qs.length) + '</b></span><span>फेऱ्या: <b>१००</b></span><span>प्रत्येक फेरीत: <b>' + toDevDigits(ROUND_SIZE) + ' प्रश्न</b></span></div>'
+        + '<p class="qs-pick-label">विषय निवडा — आधी विषय निवडा, मग क्विझ सुरू करा:</p>'
+        + '<div class="stage-row" role="group" aria-label="विषय निवडा">' + (EXAM_SUBJECTS[key] || []).map(function(sd){ return '<button type="button" class="stage-btn" data-stage-subj="' + sd.key + '" aria-pressed="false">' + sd.label + '</button>'; }).join('') + '</div>'
         + '<p class="small">प्रत्येक फेरीत ' + toDevDigits(ROUND_SIZE) + ' प्रश्न · या टप्प्याच्या संचात एकूण ' + toDevDigits(stage.qs.length) + ' प्रश्न आहेत · फेरी संपल्यावर निकालाच्या पानावरचं “पुढील १० प्रश्न” बटण दाबताच लगेच पुढची फेरी सुरू होते — या संचातून सलग १०० फेऱ्या (१,००० प्रश्न) एकही प्रश्न परत न येता खेळता येतात; १०० फेऱ्यांनंतर संच नव्याने मिसळून सराव पुढे चालू राहतो · प्रत्येक प्रश्नानंतर लगेच उत्तर व स्पष्टीकरण · नकारात्मक गुण नाहीत · उत्तर येत नसेल तर “Skip — प्रश्न सोडा” बटणाने प्रश्न सोडून पुढे जाता येतं (सोडलेल्या प्रश्नाला गुण मिळत नाहीत) · गुण फक्त या भेटीपुरते राहतात.</p>'
         + '<div class="quiz-actions"><button type="button" class="qbtn saffron" data-act="start">क्विझ सुरू करा →</button></div></div>';
     } else if(st.finished){
@@ -1340,7 +1408,7 @@
             : '<div class="quiz-actions"><button type="button" class="qbtn skip" data-act="skip">Skip — प्रश्न सोडा ⏭</button></div>');
     }
     mount.innerHTML = html;
-    mount.querySelectorAll('.stage-btn').forEach(function(b){
+    mount.querySelectorAll('.stage-btn[data-stage]').forEach(function(b){
       b.addEventListener('click', function(){
         st.stage = parseInt(b.getAttribute('data-stage'), 10);
         st.started = false; st.finished = false;
@@ -1389,6 +1457,14 @@
           } else { st.idx++; st.answered = false; st.picked = -1; }
         }
         renderQuiz(key);
+      });
+    });
+    mount.querySelectorAll('[data-stage-subj]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var k = b.getAttribute('data-stage-subj');
+        if(typeof window.MPSC_openSubject === 'function'){ if(window.MPSC_openSubject(k)) return; }
+        var block = document.getElementById('subject-block-' + k);
+        if(block && block.scrollIntoView) block.scrollIntoView({block:'start'});
       });
     });
     mount.querySelectorAll('.opt').forEach(function(b){
@@ -8144,6 +8220,15 @@ var GBM_RAW = [["संजय दरमहा ३०,००० रुपये �
     if(!mount) return;
     var inst=makeInstance(sd); inst.subs=GATC_SUBJECTS; inst.mount=mount; INSTS[sd.key]=inst; renderI(inst);
   });
+  window.MPSC_openSubject=function(key){
+    var t=INSTS[key];
+    if(!t) return false;
+    t.mode='quiz'; t.started=false; t.finished=false;
+    renderI(t);
+    var block=document.getElementById('subject-block-'+key);
+    if(block && block.scrollIntoView) block.scrollIntoView({block:'start'});
+    return true;
+  };
 
 
 })();
